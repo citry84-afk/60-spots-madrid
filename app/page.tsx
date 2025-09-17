@@ -22,6 +22,17 @@ export default function Home() {
     const nearbySpots = getNearbySpots(lat, lng, 5000); // 5km radius
     setSpots(nearbySpots);
     setIsLoading(false);
+
+    // Pre-cache media for offline via Service Worker
+    const urls: string[] = [];
+    nearbySpots.slice(0, 25).forEach((s) => {
+      urls.push(s.imageUrl);
+      const content = isKidsMode ? s.kidsContent : s.adultContent;
+      urls.push(content.videoUrl);
+    });
+    if (navigator.serviceWorker?.controller && urls.length) {
+      navigator.serviceWorker.controller.postMessage({ type: 'CACHE_URLS', urls });
+    }
   };
 
   const handleLocationError = (errorMessage: string) => {
