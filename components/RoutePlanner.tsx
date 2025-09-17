@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, Play, RotateCcw, CheckCircle } from 'lucide-react';
+import { MapPin, Play, RotateCcw, CheckCircle, Clock } from 'lucide-react';
 import { POI } from '@/lib/content';
 
 interface RoutePlannerProps {
