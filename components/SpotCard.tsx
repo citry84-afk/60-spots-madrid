@@ -1,5 +1,6 @@
 'use client';
 
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { MapPin, Clock, Play, Share2, Check } from 'lucide-react';
 import { Spot } from '@/lib/data';
