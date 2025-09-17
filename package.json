@@ -1,7 +1,7 @@
 {
-  "name": "60-spots-madrid",
+  "name": "60secondstrip",
   "version": "1.0.0",
-  "description": "Una app PWA de viajes con filosofía Apple para descubrir Madrid en 60 segundos",
+  "description": "PWA de viajes global para descubrir lugares en 60 segundos",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -53,7 +53,7 @@
     "type": "git",
     "url": "https://github.com/tu-usuario/60-spots-madrid.git"
   },
-  "homepage": "https://60-spots-madrid.netlify.app",
+  "homepage": "https://60secondstrip-app.netlify.app",
   "engines": {
     "node": ">=18.0.0"
   }

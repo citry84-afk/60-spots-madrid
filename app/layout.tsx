@@ -2,8 +2,8 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: '60 Spots - Descubre Madrid en 60 segundos',
-  description: 'Una app visual para descubrir lugares curiosos cerca de ti en Madrid. Simplicidad como Apple.',
+  title: '60secondstrip — Descubre el mundo en 60 segundos',
+  description: 'App visual, mobile-first, para descubrir lugares y curiosidades cerca de ti en 60 segundos. Simplicidad como Apple.',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
@@ -17,6 +17,17 @@ export const metadata: Metadata = {
     'mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
+  },
+  openGraph: {
+    title: '60secondstrip — Descubre el mundo en 60 segundos',
+    description: 'Explora spots cercanos con vídeos de 60s. Visual-first, zero cognitive load.',
+    url: 'https://60secondstrip-app.netlify.app',
+    siteName: '60secondstrip',
+    images: [
+      { url: '/icon-512x512.png', width: 1200, height: 630, alt: '60secondstrip' },
+    ],
+    type: 'website',
+    locale: 'es_ES',
   },
 }
 

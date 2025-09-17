@@ -1,7 +1,7 @@
 {
-  "name": "60 Spots - Madrid",
-  "short_name": "60 Spots",
-  "description": "Descubre lugares curiosos de Madrid en 60 segundos",
+  "name": "60secondstrip",
+  "short_name": "60sTrip",
+  "description": "Descubre lugares curiosos cerca de ti en 60 segundos",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#F2F2F7",

@@ -30,7 +30,7 @@ export default function SpotCard({ spot, isKidsMode, onClick, index }: SpotCardP
       }}
       whileHover={{ scale: 1.02 }}
       whileTap={{ scale: 0.98 }}
-      className="relative w-full h-96 rounded-3xl overflow-hidden shadow-ios-lg cursor-pointer"
+      className="relative w-full h-96 rounded-3xl overflow-hidden shadow-ios-lg cursor-pointer shine"
       onClick={onClick}
     >
       {/* Imagen de fondo */}

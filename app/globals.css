@@ -81,6 +81,37 @@ button:active {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Shine sweep effect */
+.shine::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -50%;
+  width: 40%;
+  height: 140%;
+  background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.35) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-20deg);
+  filter: blur(2px);
+  pointer-events: none;
+  animation: shineMove 2.4s ease-in-out infinite;
+}
+
+@keyframes shineMove {
+  0% { transform: translateX(-150%) skewX(-20deg); }
+  60% { transform: translateX(250%) skewX(-20deg); }
+  100% { transform: translateX(250%) skewX(-20deg); }
+}
+
+/* Marker pop animation */
+.marker-pop {
+  animation: markerPop 500ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+}
+@keyframes markerPop {
+  0% { transform: scale(0.5); opacity: 0; }
+  60% { transform: scale(1.15); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
 /* Hide elements on mobile */
 @media (max-width: 768px) {
   .hide-mobile {

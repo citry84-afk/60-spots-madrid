@@ -1,6 +1,6 @@
-# 60 Spots - Madrid
+# 60secondstrip
 
-Una app PWA de viajes con filosofía Apple: simplicidad visual, zero cognitive load, tap y ya está.
+Una app PWA de viajes, global, con filosofía Apple: simplicidad visual, zero cognitive load, tap y ya está.
 
 ## 🎯 Características
 
@@ -9,7 +9,7 @@ Una app PWA de viajes con filosofía Apple: simplicidad visual, zero cognitive l
 - **60 segundos**: Videos cortos y curiosos sobre lugares
 - **Modo Adultos/Niños**: Contenido adaptado
 - **PWA completa**: Funciona offline, instalable
-- **Geolocalización**: Detecta ubicación automáticamente
+- **Geolocalización**: Detecta ubicación automáticamente en cualquier ciudad
 
 ## 🚀 Tecnologías
 
@@ -65,17 +65,7 @@ lib/
 └── data.ts             # Datos de Madrid + utilidades
 ```
 
-## 🗺️ Datos de Madrid
-
-25 spots incluyendo:
-- Plaza Mayor
-- Templo de Debod  
-- Palacio Real
-- Parque del Retiro
-- Puerta del Sol
-- Museo del Prado
-- Gran Vía
-- Y más...
+## 🗺️ Datos de lugares (global)
 
 Cada spot incluye:
 - Coordenadas GPS

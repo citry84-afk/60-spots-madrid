@@ -25,6 +25,7 @@ export default function VideoPlayer({
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(60);
   const [showControls, setShowControls] = useState(true);
+  const [showLikeBurst, setShowLikeBurst] = useState(false);
   const videoRef = useRef<HTMLVideoElement>(null);
   const controlsTimeoutRef = useRef<NodeJS.Timeout>();
 
@@ -89,6 +90,11 @@ export default function VideoPlayer({
 
   const progress = (currentTime / duration) * 100;
 
+  const handleDoubleTap = () => {
+    setShowLikeBurst(true);
+    setTimeout(() => setShowLikeBurst(false), 600);
+  };
+
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -99,7 +105,7 @@ export default function VideoPlayer({
       onTouchMove={handleMouseMove}
     >
       {/* Video */}
-      <div className="relative w-full h-full">
+      <div className="relative w-full h-full" onDoubleClick={handleDoubleTap}>
         <video
           ref={videoRef}
           className="w-full h-full object-cover"
@@ -212,6 +218,21 @@ export default function VideoPlayer({
             }}
           />
         </div>
+
+        {/* Like burst */}
+        <AnimatePresence>
+          {showLikeBurst && (
+            <motion.div
+              initial={{ scale: 0.6, opacity: 0 }}
+              animate={{ scale: 1.2, opacity: 1 }}
+              exit={{ scale: 0.8, opacity: 0 }}
+              transition={{ duration: 0.4 }}
+              className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+            >
+              <div className="text-6xl select-none">💙</div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </div>
     </motion.div>
   );

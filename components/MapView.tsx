@@ -82,6 +82,11 @@ export default function MapView({ spots, userLocation, onSpotSelect }: MapViewPr
           const marker = L.marker([spot.coordinates[0], spot.coordinates[1]], { 
             icon: spotIcon 
           }).addTo(map);
+          // pop animation
+          const el = (marker as any)._icon as HTMLElement | undefined;
+          if (el) {
+            el.classList.add('marker-pop');
+          }
 
           marker.on('click', () => {
             onSpotSelect(spot);
