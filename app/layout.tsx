@@ -1,9 +1,11 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
+import SwRegister from '@/components/SwRegister'
 
 export const metadata: Metadata = {
   title: '60secondstrip — Descubre el mundo en 60 segundos',
   description: 'App visual, mobile-first, para descubrir lugares y curiosidades cerca de ti en 60 segundos. Simplicidad como Apple.',
+  metadataBase: new URL('https://60secondstrip-app.netlify.app'),
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
@@ -29,6 +31,13 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'es_ES',
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: '60secondstrip — Descubre el mundo en 60 segundos',
+    description: 'Explora spots cercanos con vídeos de 60s. Visual-first, zero cognitive load.',
+    site: '@60secondstrip',
+    images: ['/icon-512x512.png']
+  }
 }
 
 export const viewport: Viewport = {
@@ -52,6 +61,7 @@ export default function RootLayout({
       </head>
       <body className="font-sf-pro antialiased">
         {children}
+        <SwRegister />
       </body>
     </html>
   )

@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { MapPin, Clock, Play } from 'lucide-react';
+import { MapPin, Clock, Play, Share2, Check } from 'lucide-react';
 import { Spot } from '@/lib/data';
 
 interface SpotCardProps {
@@ -12,6 +12,7 @@ interface SpotCardProps {
 }
 
 export default function SpotCard({ spot, isKidsMode, onClick, index }: SpotCardProps) {
+  const [copied, setCopied] = useState(false);
   const formatDistance = (distance: number) => {
     if (distance < 1000) {
       return `${Math.round(distance)}m`;
@@ -75,7 +76,7 @@ export default function SpotCard({ spot, isKidsMode, onClick, index }: SpotCardP
             <span className="text-sm font-medium">60 segundos</span>
           </div>
 
-          {/* Botón de play */}
+        {/* Botón de play */}
           <motion.div
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -83,6 +84,34 @@ export default function SpotCard({ spot, isKidsMode, onClick, index }: SpotCardP
           >
             <Play className="w-6 h-6 text-white ml-1" />
           </motion.div>
+
+        {/* Compartir */}
+        <div className="absolute bottom-6 right-6">
+          <button
+            className="glass rounded-full px-3 py-2 flex items-center space-x-2 touch-target"
+            onClick={async (e) => {
+              e.stopPropagation();
+              const shareUrl = window.location.origin + `/?spot=${spot.id}`;
+              const shareData = {
+                title: spot.name,
+                text: 'Descubre este lugar en 60 segundos',
+                url: shareUrl,
+              };
+              if (navigator.share) {
+                try { await navigator.share(shareData); } catch {}
+              } else {
+                try {
+                  await navigator.clipboard.writeText(shareUrl);
+                  setCopied(true);
+                  setTimeout(() => setCopied(false), 1500);
+                } catch {}
+              }
+            }}
+          >
+            {copied ? <Check className="w-4 h-4 text-ios-blue" /> : <Share2 className="w-4 h-4 text-ios-blue" />}
+            <span className="text-sm font-medium text-gray-900">{copied ? 'Copiado' : 'Compartir'}</span>
+          </button>
+        </div>
         </div>
       </div>
 
