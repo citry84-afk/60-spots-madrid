@@ -1,0 +1,27 @@
+{
+  "name": "60 Spots - Madrid",
+  "short_name": "60 Spots",
+  "description": "Descubre lugares curiosos de Madrid en 60 segundos",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F2F2F7",
+  "theme_color": "#007AFF",
+  "orientation": "portrait",
+  "icons": [
+    {
+      "src": "/icon-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["travel", "lifestyle", "entertainment"],
+  "lang": "es",
+  "dir": "ltr"
+}

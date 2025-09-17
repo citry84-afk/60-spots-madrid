@@ -1,0 +1,60 @@
+{
+  "name": "60-spots-madrid",
+  "version": "1.0.0",
+  "description": "Una app PWA de viajes con filosofía Apple para descubrir Madrid en 60 segundos",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "export": "next build && next export",
+    "deploy": "npm run build && netlify deploy --prod",
+    "preview": "next build && next start"
+  },
+  "dependencies": {
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "tailwindcss": "^3.3.0",
+    "autoprefixer": "^10.0.1",
+    "postcss": "^8",
+    "framer-motion": "^10.16.16",
+    "leaflet": "^1.9.4",
+    "react-leaflet": "^4.2.1",
+    "@types/leaflet": "^1.9.8",
+    "lucide-react": "^0.294.0"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.0.4",
+    "netlify-cli": "^17.0.0"
+  },
+  "keywords": [
+    "pwa",
+    "madrid",
+    "travel",
+    "nextjs",
+    "react",
+    "typescript",
+    "tailwind",
+    "ios",
+    "apple",
+    "netlify",
+    "github"
+  ],
+  "author": "60 Spots Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tu-usuario/60-spots-madrid.git"
+  },
+  "homepage": "https://60-spots-madrid.netlify.app",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
