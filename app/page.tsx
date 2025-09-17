@@ -11,6 +11,7 @@ import CitySelector from '@/components/CitySelector';
 import POIDetail from '@/components/POIDetail';
 import RoutePlanner from '@/components/RoutePlanner';
 import { loadContentManifest, getNearbyPOIs, calculateOptimalRoute, City, POI } from '@/lib/content';
+import { MapPin, Play, Star, Heart, Share2, Download, Sparkles, Compass, Globe } from 'lucide-react';
 
 export default function Home() {
   const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
@@ -23,6 +24,7 @@ export default function Home() {
   const [isDetectingLocation, setIsDetectingLocation] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [showRoutePlanner, setShowRoutePlanner] = useState(false);
+  const [showHero, setShowHero] = useState(true);
 
   // Cargar manifest de contenidos al inicio
   useEffect(() => {
@@ -42,6 +44,7 @@ export default function Home() {
   const handleLocationFound = (lat: number, lng: number) => {
     setUserLocation([lat, lng]);
     setIsDetectingLocation(false);
+    setShowHero(false);
     
     // Buscar ciudad más cercana
     let closestCity = cities[0];
@@ -71,11 +74,12 @@ export default function Home() {
 
   const handleUseLocation = () => {
     setIsDetectingLocation(true);
-    // El LocationDetector se encargará de llamar handleLocationFound
+    setShowHero(false);
   };
 
   const handleCitySelect = (city: City) => {
     setSelectedCity(city);
+    setShowHero(false);
     if (userLocation) {
       const pois = getNearbyPOIs(userLocation[0], userLocation[1], city, 10000);
       setNearbyPOIs(pois);
@@ -93,7 +97,6 @@ export default function Home() {
   };
 
   const handleNavigate = () => {
-    // Implementar navegación (abrir Maps/Google Maps)
     if (selectedPOI) {
       const url = `https://www.google.com/maps/dir/?api=1&destination=${selectedPOI.coordinates.lat},${selectedPOI.coordinates.lng}`;
       window.open(url, '_blank');
@@ -104,7 +107,6 @@ export default function Home() {
     if (selectedPOI) {
       const videoUrl = isKids ? selectedPOI.videoUrlKids : selectedPOI.videoUrlAdult;
       if (videoUrl) {
-        // Implementar reproductor de vídeo
         console.log('Playing video:', videoUrl);
       }
     }
@@ -112,21 +114,38 @@ export default function Home() {
 
   const handleStartRoute = (route: POI[]) => {
     setShowRoutePlanner(false);
-    // Implementar navegación por ruta
     console.log('Starting route:', route);
   };
 
   if (isLoading) {
-    return <LocationDetector onLocationFound={handleLocationFound} onLocationError={handleLocationError} />;
+    return (
+      <div className="min-h-screen bg-gradient-aurora flex items-center justify-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="text-center"
+        >
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
+            className="w-16 h-16 mx-auto mb-6"
+          >
+            <Compass className="w-full h-full text-white" />
+          </motion.div>
+          <h2 className="text-2xl font-bold text-white mb-2">60secondstrip</h2>
+          <p className="text-white/80">Cargando aventuras...</p>
+        </motion.div>
+      </div>
+    );
   }
 
   if (error) {
     return (
-      <div className="min-h-screen bg-ios-background flex items-center justify-center p-6">
+      <div className="min-h-screen bg-gradient-aurora flex items-center justify-center p-6">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
-          className="glass rounded-3xl p-8 max-w-sm w-full text-center shadow-ios"
+          className="glass rounded-3xl p-8 max-w-sm w-full text-center shadow-ios-xl"
         >
           <div className="text-6xl mb-4">😔</div>
           <h2 className="text-xl font-semibold text-gray-900 mb-2">
@@ -137,7 +156,7 @@ export default function Home() {
           </p>
           <button
             onClick={() => window.location.reload()}
-            className="w-full bg-ios-blue text-white py-3 px-6 rounded-2xl font-medium transition-ios hover:bg-blue-600 touch-target"
+            className="btn-primary w-full"
           >
             Intentar de nuevo
           </button>
@@ -147,124 +166,290 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-ios-background">
-      {/* Selector de ciudad */}
-      <div className="p-6">
-        <CitySelector
-          cities={cities}
-          selectedCity={selectedCity}
-          onCitySelect={handleCitySelect}
-          onUseLocation={handleUseLocation}
-          isDetectingLocation={isDetectingLocation}
-        />
-      </div>
-
-      {/* Mapa principal */}
-      <div className="h-96 relative mx-6 rounded-3xl overflow-hidden shadow-ios-lg">
-        {userLocation && selectedCity && (
-          <MapView
-            spots={nearbyPOIs}
-            userLocation={userLocation}
-            onSpotSelect={handlePOISelect}
-          />
-        )}
-      </div>
-
-      {/* Toggle de modo */}
-      <div className="absolute top-6 right-6 z-30">
-        <ModeToggle
-          isKidsMode={isKidsMode}
-          onToggle={() => setIsKidsMode(!isKidsMode)}
-        />
-      </div>
-
-      {/* Indicador de ubicación */}
-      {userLocation && (
-        <div className="absolute top-6 left-6 z-30">
+    <div className="min-h-screen bg-gradient-aurora">
+      {/* Hero Section */}
+      <AnimatePresence>
+        {showHero && (
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            className="glass rounded-2xl px-4 py-2 shadow-ios"
+            initial={{ opacity: 1 }}
+            exit={{ opacity: 0, y: -100 }}
+            transition={{ duration: 0.5 }}
+            className="min-h-screen flex flex-col items-center justify-center p-6 relative overflow-hidden"
           >
-            <div className="flex items-center space-x-2">
-              <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-              <span className="text-sm font-medium text-gray-900">
-                Ubicación detectada
-              </span>
+            {/* Background Elements */}
+            <div className="absolute inset-0 overflow-hidden">
+              <motion.div
+                animate={{ 
+                  scale: [1, 1.2, 1],
+                  rotate: [0, 180, 360]
+                }}
+                transition={{ 
+                  duration: 20, 
+                  repeat: Infinity, 
+                  ease: "linear" 
+                }}
+                className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl"
+              />
+              <motion.div
+                animate={{ 
+                  scale: [1.2, 1, 1.2],
+                  rotate: [360, 180, 0]
+                }}
+                transition={{ 
+                  duration: 25, 
+                  repeat: Infinity, 
+                  ease: "linear" 
+                }}
+                className="absolute -bottom-40 -left-40 w-96 h-96 bg-pink-300/20 rounded-full blur-3xl"
+              />
             </div>
-          </motion.div>
-        </div>
-      )}
 
-      {/* Lista de POIs o Route Planner */}
-      {nearbyPOIs.length > 0 && (
-        <div className="p-6">
-          {showRoutePlanner ? (
-            <RoutePlanner
-              pois={nearbyPOIs}
-              userLocation={userLocation!}
-              onStartRoute={handleStartRoute}
-              onPOISelect={handlePOISelect}
-            />
-          ) : (
-            <div className="space-y-4">
-              <div className="flex items-center justify-between">
-                <h3 className="text-lg font-bold text-gray-900">
-                  Lugares cerca de ti
-                </h3>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setShowRoutePlanner(true)}
-                  className="glass rounded-full p-3 touch-target"
-                >
-                  <span className="text-ios-blue font-semibold text-sm">
-                    Planificar
-                  </span>
-                </motion.button>
-              </div>
+            {/* Main Content */}
+            <motion.div
+              initial={{ opacity: 0, y: 50 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2 }}
+              className="text-center z-10"
+            >
+              <motion.div
+                animate={{ 
+                  scale: [1, 1.05, 1],
+                  rotate: [0, 5, -5, 0]
+                }}
+                transition={{ 
+                  duration: 4, 
+                  repeat: Infinity, 
+                  ease: "easeInOut" 
+                }}
+                className="text-8xl mb-6"
+              >
+                🌍
+              </motion.div>
               
-              <div className="space-y-2">
-                {nearbyPOIs.slice(0, 5).map((poi, index) => (
+              <h1 className="text-5xl font-black text-white mb-4 gradient-text">
+                60secondstrip
+              </h1>
+              
+              <p className="text-xl text-white/90 mb-8 max-w-md mx-auto leading-relaxed">
+                Descubre el mundo en 60 segundos. 
+                <br />
+                <span className="font-semibold">Aventuras instantáneas</span> que te harán viajar sin moverte.
+              </p>
+
+              {/* City Selector */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="max-w-md mx-auto mb-8"
+              >
+                <CitySelector
+                  cities={cities}
+                  selectedCity={selectedCity}
+                  onCitySelect={handleCitySelect}
+                  onUseLocation={handleUseLocation}
+                  isDetectingLocation={isDetectingLocation}
+                />
+              </motion.div>
+
+              {/* Features */}
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.6 }}
+                className="grid grid-cols-3 gap-4 max-w-sm mx-auto"
+              >
+                {[
+                  { icon: <Play className="w-6 h-6" />, text: "Videos 60s" },
+                  { icon: <MapPin className="w-6 h-6" />, text: "GPS" },
+                  { icon: <Heart className="w-6 h-6" />, text: "Offline" }
+                ].map((feature, index) => (
                   <motion.div
-                    key={poi.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
-                    onClick={() => handlePOISelect(poi)}
-                    className="glass rounded-2xl p-4 cursor-pointer touch-target"
+                    key={index}
+                    whileHover={{ scale: 1.1, y: -5 }}
+                    className="glass rounded-2xl p-4 text-center"
                   >
-                    <div className="flex items-center space-x-3">
-                      <div className="w-12 h-12 rounded-xl overflow-hidden">
-                        <img
-                          src={poi.imageUrl}
-                          alt={poi.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h5 className="font-semibold text-gray-900 truncate">
-                          {poi.name}
-                        </h5>
-                        <p className="text-sm text-ios-gray">
-                          {poi.category}
-                        </p>
-                        <div className="flex items-center space-x-2 mt-1">
-                          <span className="text-xs text-ios-gray">
-                            {poi.distance ? `${Math.round(poi.distance)}m` : 'Cerca'}
-                          </span>
-                        </div>
-                      </div>
+                    <div className="text-white mb-2 flex justify-center">
+                      {feature.icon}
                     </div>
+                    <p className="text-white/80 text-sm font-medium">
+                      {feature.text}
+                    </p>
                   </motion.div>
                 ))}
-              </div>
+              </motion.div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* Main App Content */}
+      <AnimatePresence>
+        {!showHero && (
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 100 }}
+            transition={{ duration: 0.5 }}
+            className="min-h-screen"
+          >
+            {/* Header */}
+            <div className="p-6 pb-0">
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex items-center justify-between mb-6"
+              >
+                <div className="flex items-center space-x-3">
+                  <motion.div
+                    animate={{ rotate: 360 }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "linear" }}
+                    className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center"
+                  >
+                    <Globe className="w-5 h-5 text-white" />
+                  </motion.div>
+                  <div>
+                    <h2 className="text-xl font-bold text-white">
+                      {selectedCity?.name || 'Explorar'}
+                    </h2>
+                    <p className="text-white/70 text-sm">
+                      {nearbyPOIs.length} lugares cerca
+                    </p>
+                  </div>
+                </div>
+                
+                <ModeToggle
+                  isKidsMode={isKidsMode}
+                  onToggle={() => setIsKidsMode(!isKidsMode)}
+                />
+              </motion.div>
+
+              {/* City Selector */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1 }}
+              >
+                <CitySelector
+                  cities={cities}
+                  selectedCity={selectedCity}
+                  onCitySelect={handleCitySelect}
+                  onUseLocation={handleUseLocation}
+                  isDetectingLocation={isDetectingLocation}
+                />
+              </motion.div>
             </div>
-          )}
-        </div>
-      )}
+
+            {/* Map */}
+            <div className="px-6 mb-6">
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ delay: 0.2 }}
+                className="h-80 relative rounded-3xl overflow-hidden shadow-ios-xl"
+              >
+                {userLocation && selectedCity && (
+                  <MapView
+                    spots={nearbyPOIs}
+                    userLocation={userLocation}
+                    onSpotSelect={handlePOISelect}
+                  />
+                )}
+              </motion.div>
+            </div>
+
+            {/* Content */}
+            <div className="px-6 pb-24">
+              {nearbyPOIs.length > 0 && (
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                >
+                  {showRoutePlanner ? (
+                    <RoutePlanner
+                      pois={nearbyPOIs}
+                      userLocation={userLocation!}
+                      onStartRoute={handleStartRoute}
+                      onPOISelect={handlePOISelect}
+                    />
+                  ) : (
+                    <div className="space-y-6">
+                      <div className="flex items-center justify-between">
+                        <h3 className="text-2xl font-bold text-white">
+                          Lugares increíbles
+                        </h3>
+                        <motion.button
+                          whileHover={{ scale: 1.05 }}
+                          whileTap={{ scale: 0.95 }}
+                          onClick={() => setShowRoutePlanner(true)}
+                          className="glass rounded-full p-3 touch-target"
+                        >
+                          <Sparkles className="w-5 h-5 text-white" />
+                        </motion.button>
+                      </div>
+                      
+                      <div className="space-y-3">
+                        {nearbyPOIs.slice(0, 5).map((poi, index) => (
+                          <motion.div
+                            key={poi.id}
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ delay: index * 0.1 }}
+                            whileHover={{ scale: 1.02, y: -5 }}
+                            whileTap={{ scale: 0.98 }}
+                            onClick={() => handlePOISelect(poi)}
+                            className="glass card-hover rounded-3xl p-4 cursor-pointer touch-target relative overflow-hidden"
+                          >
+                            <div className="flex items-center space-x-4">
+                              <motion.div
+                                whileHover={{ scale: 1.1, rotate: 5 }}
+                                className="w-16 h-16 rounded-2xl overflow-hidden shadow-ios"
+                              >
+                                <img
+                                  src={poi.imageUrl}
+                                  alt={poi.name}
+                                  className="w-full h-full object-cover"
+                                />
+                              </motion.div>
+                              <div className="flex-1 min-w-0">
+                                <h5 className="font-bold text-gray-900 text-lg truncate">
+                                  {poi.name}
+                                </h5>
+                                <p className="text-ios-gray text-sm mb-1">
+                                  {poi.category}
+                                </p>
+                                <div className="flex items-center space-x-3">
+                                  <div className="flex items-center space-x-1">
+                                    <MapPin className="w-3 h-3 text-ios-blue" />
+                                    <span className="text-xs text-ios-gray">
+                                      {poi.distance ? `${Math.round(poi.distance)}m` : 'Cerca'}
+                                    </span>
+                                  </div>
+                                  <div className="flex items-center space-x-1">
+                                    <Star className="w-3 h-3 text-yellow-500" />
+                                    <span className="text-xs text-ios-gray">4.8</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <motion.div
+                                whileHover={{ scale: 1.2, rotate: 10 }}
+                                className="w-8 h-8 bg-ios-blue/20 rounded-full flex items-center justify-center"
+                              >
+                                <Play className="w-4 h-4 text-ios-blue" />
+                              </motion.div>
+                            </div>
+                          </motion.div>
+                        ))}
+                      </div>
+                    </div>
+                  )}
+                </motion.div>
+              )}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* POI Detail Modal */}
       <AnimatePresence>
@@ -280,29 +465,46 @@ export default function Home() {
       </AnimatePresence>
 
       {/* PWA Install Prompt */}
-      <div className="fixed bottom-6 left-6 right-6 z-20">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 2 }}
-          className="glass rounded-2xl p-4 shadow-ios"
-        >
-          <div className="flex items-center space-x-3">
-            <div className="text-2xl">📱</div>
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 3 }}
+        className="fixed bottom-6 left-6 right-6 z-20"
+      >
+        <div className="glass rounded-3xl p-4 shadow-ios-xl">
+          <div className="flex items-center space-x-4">
+            <motion.div
+              animate={{ 
+                scale: [1, 1.1, 1],
+                rotate: [0, 10, -10, 0]
+              }}
+              transition={{ 
+                duration: 2, 
+                repeat: Infinity, 
+                ease: "easeInOut" 
+              }}
+              className="text-3xl"
+            >
+              📱
+            </motion.div>
             <div className="flex-1">
-              <h3 className="font-semibold text-gray-900 text-sm">
+              <h3 className="font-bold text-gray-900 text-lg">
                 Instala 60secondstrip
               </h3>
-              <p className="text-xs text-ios-gray">
-                Acceso rápido desde tu pantalla de inicio
+              <p className="text-ios-gray text-sm">
+                Acceso instantáneo desde tu pantalla de inicio
               </p>
             </div>
-            <button className="text-ios-blue font-medium text-sm">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="btn-primary px-6 py-2 text-sm"
+            >
               Instalar
-            </button>
+            </motion.button>
           </div>
-        </motion.div>
-      </div>
+        </div>
+      </motion.div>
     </div>
   );
 }

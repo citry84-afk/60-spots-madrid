@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { User, Baby } from 'lucide-react';
+import { User, Baby, Sparkles } from 'lucide-react';
 
 interface ModeToggleProps {
   isKidsMode: boolean;
@@ -10,49 +10,42 @@ interface ModeToggleProps {
 
 export default function ModeToggle({ isKidsMode, onToggle }: ModeToggleProps) {
   return (
-    <motion.div
-      initial={{ opacity: 0, scale: 0.8 }}
-      animate={{ opacity: 1, scale: 1 }}
-      className="glass rounded-full p-1 shadow-ios"
+    <motion.button
+      whileHover={{ scale: 1.05, y: -2 }}
+      whileTap={{ scale: 0.95 }}
+      onClick={onToggle}
+      className="glass-colored rounded-2xl p-3 touch-target shadow-ios-lg relative overflow-hidden"
     >
-      <div className="flex relative">
-        {/* Indicador deslizante */}
+      {/* Shine effect */}
+      <div className="shine absolute inset-0" />
+      
+      <div className="flex items-center space-x-2 relative z-10">
         <motion.div
-          className="absolute top-0 bottom-0 bg-ios-blue rounded-full"
-          initial={false}
-          animate={{
-            x: isKidsMode ? 40 : 0,
-            width: isKidsMode ? 40 : 40,
-          }}
-          transition={{
-            type: "spring",
-            stiffness: 500,
-            damping: 30
-          }}
-        />
-        
-        {/* Botón Adultos */}
-        <button
-          onClick={() => !isKidsMode && onToggle()}
-          className={`relative z-10 flex items-center space-x-2 px-4 py-2 rounded-full transition-colors touch-target ${
-            !isKidsMode ? 'text-white' : 'text-ios-gray'
-          }`}
+          animate={isKidsMode ? { scale: [1, 1.2, 1] } : {}}
+          transition={{ duration: 0.3 }}
+          className="text-2xl"
         >
-          <User className="w-4 h-4" />
-          <span className="text-sm font-medium">Adultos</span>
-        </button>
+          {isKidsMode ? '👶' : '👨‍💼'}
+        </motion.div>
         
-        {/* Botón Niños */}
-        <button
-          onClick={() => isKidsMode && onToggle()}
-          className={`relative z-10 flex items-center space-x-2 px-4 py-2 rounded-full transition-colors touch-target ${
-            isKidsMode ? 'text-white' : 'text-ios-gray'
-          }`}
+        <div className="flex items-center space-x-1">
+          {isKidsMode ? (
+            <Baby className="w-4 h-4 text-pink-500" />
+          ) : (
+            <User className="w-4 h-4 text-ios-blue" />
+          )}
+          <span className="text-sm font-bold text-gray-900">
+            {isKidsMode ? 'Niños' : 'Adultos'}
+          </span>
+        </div>
+        
+        <motion.div
+          animate={{ rotate: isKidsMode ? 180 : 0 }}
+          transition={{ duration: 0.3 }}
         >
-          <Baby className="w-4 h-4" />
-          <span className="text-sm font-medium">Niños</span>
-        </button>
+          <Sparkles className="w-4 h-4 text-ios-blue" />
+        </motion.div>
       </div>
-    </motion.div>
+    </motion.button>
   );
 }
