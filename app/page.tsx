@@ -7,59 +7,113 @@ import MapView from '@/components/MapView';
 import SpotList from '@/components/SpotList';
 import VideoPlayer from '@/components/VideoPlayer';
 import ModeToggle from '@/components/ModeToggle';
-import { Spot, getNearbySpots } from '@/lib/data';
+import CitySelector from '@/components/CitySelector';
+import POIDetail from '@/components/POIDetail';
+import RoutePlanner from '@/components/RoutePlanner';
+import { loadContentManifest, getNearbyPOIs, calculateOptimalRoute, City, POI } from '@/lib/content';
 
 export default function Home() {
   const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
-  const [spots, setSpots] = useState<Spot[]>([]);
+  const [cities, setCities] = useState<City[]>([]);
+  const [selectedCity, setSelectedCity] = useState<City | null>(null);
+  const [nearbyPOIs, setNearbyPOIs] = useState<POI[]>([]);
   const [isKidsMode, setIsKidsMode] = useState(false);
-  const [selectedSpot, setSelectedSpot] = useState<Spot | null>(null);
+  const [selectedPOI, setSelectedPOI] = useState<POI | null>(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [isDetectingLocation, setIsDetectingLocation] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [showRoutePlanner, setShowRoutePlanner] = useState(false);
+
+  // Cargar manifest de contenidos al inicio
+  useEffect(() => {
+    const loadContent = async () => {
+      try {
+        const manifest = await loadContentManifest();
+        setCities(manifest.cities);
+        setIsLoading(false);
+      } catch (error) {
+        setError('Error al cargar contenidos');
+        setIsLoading(false);
+      }
+    };
+    loadContent();
+  }, []);
 
   const handleLocationFound = (lat: number, lng: number) => {
     setUserLocation([lat, lng]);
-    const nearbySpots = getNearbySpots(lat, lng, 5000); // 5km radius
-    setSpots(nearbySpots);
-    setIsLoading(false);
-
-    // Pre-cache media for offline via Service Worker
-    const urls: string[] = [];
-    nearbySpots.slice(0, 25).forEach((s) => {
-      urls.push(s.imageUrl);
-      const content = isKidsMode ? s.kidsContent : s.adultContent;
-      urls.push(content.videoUrl);
+    setIsDetectingLocation(false);
+    
+    // Buscar ciudad más cercana
+    let closestCity = cities[0];
+    let minDistance = Infinity;
+    
+    cities.forEach(city => {
+      const distance = Math.sqrt(
+        Math.pow(city.center.lat - lat, 2) + Math.pow(city.center.lng - lng, 2)
+      );
+      if (distance < minDistance) {
+        minDistance = distance;
+        closestCity = city;
+      }
     });
-    if (navigator.serviceWorker?.controller && urls.length) {
-      navigator.serviceWorker.controller.postMessage({ type: 'CACHE_URLS', urls });
+    
+    if (closestCity) {
+      setSelectedCity(closestCity);
+      const pois = getNearbyPOIs(lat, lng, closestCity, 10000);
+      setNearbyPOIs(pois);
     }
   };
 
   const handleLocationError = (errorMessage: string) => {
     setError(errorMessage);
-    setIsLoading(false);
+    setIsDetectingLocation(false);
   };
 
-  const handleSpotSelect = (spot: Spot) => {
-    setSelectedSpot(spot);
+  const handleUseLocation = () => {
+    setIsDetectingLocation(true);
+    // El LocationDetector se encargará de llamar handleLocationFound
   };
 
-  const handleCloseVideo = () => {
-    setSelectedSpot(null);
+  const handleCitySelect = (city: City) => {
+    setSelectedCity(city);
+    if (userLocation) {
+      const pois = getNearbyPOIs(userLocation[0], userLocation[1], city, 10000);
+      setNearbyPOIs(pois);
+    } else {
+      setNearbyPOIs(city.pois);
+    }
   };
 
-  const handleNextSpot = () => {
-    if (!selectedSpot) return;
-    const currentIndex = spots.findIndex(spot => spot.id === selectedSpot.id);
-    const nextIndex = (currentIndex + 1) % spots.length;
-    setSelectedSpot(spots[nextIndex]);
+  const handlePOISelect = (poi: POI) => {
+    setSelectedPOI(poi);
   };
 
-  const handlePreviousSpot = () => {
-    if (!selectedSpot) return;
-    const currentIndex = spots.findIndex(spot => spot.id === selectedSpot.id);
-    const prevIndex = currentIndex === 0 ? spots.length - 1 : currentIndex - 1;
-    setSelectedSpot(spots[prevIndex]);
+  const handleClosePOI = () => {
+    setSelectedPOI(null);
+  };
+
+  const handleNavigate = () => {
+    // Implementar navegación (abrir Maps/Google Maps)
+    if (selectedPOI) {
+      const url = `https://www.google.com/maps/dir/?api=1&destination=${selectedPOI.coordinates.lat},${selectedPOI.coordinates.lng}`;
+      window.open(url, '_blank');
+    }
+  };
+
+  const handleVideoPlay = (isKids: boolean) => {
+    if (selectedPOI) {
+      const videoUrl = isKids ? selectedPOI.videoUrlKids : selectedPOI.videoUrlAdult;
+      if (videoUrl) {
+        // Implementar reproductor de vídeo
+        console.log('Playing video:', videoUrl);
+      }
+    }
+  };
+
+  const handleStartRoute = (route: POI[]) => {
+    setShowRoutePlanner(false);
+    // Implementar navegación por ruta
+    console.log('Starting route:', route);
   };
 
   if (isLoading) {
@@ -94,25 +148,38 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-ios-background">
+      {/* Selector de ciudad */}
+      <div className="p-6">
+        <CitySelector
+          cities={cities}
+          selectedCity={selectedCity}
+          onCitySelect={handleCitySelect}
+          onUseLocation={handleUseLocation}
+          isDetectingLocation={isDetectingLocation}
+        />
+      </div>
+
       {/* Mapa principal */}
-      <div className="h-screen relative">
-        {userLocation && (
+      <div className="h-96 relative mx-6 rounded-3xl overflow-hidden shadow-ios-lg">
+        {userLocation && selectedCity && (
           <MapView
-            spots={spots}
+            spots={nearbyPOIs}
             userLocation={userLocation}
-            onSpotSelect={handleSpotSelect}
+            onSpotSelect={handlePOISelect}
           />
         )}
+      </div>
 
-        {/* Toggle de modo */}
-        <div className="absolute top-6 right-6 z-30">
-          <ModeToggle
-            isKidsMode={isKidsMode}
-            onToggle={() => setIsKidsMode(!isKidsMode)}
-          />
-        </div>
+      {/* Toggle de modo */}
+      <div className="absolute top-6 right-6 z-30">
+        <ModeToggle
+          isKidsMode={isKidsMode}
+          onToggle={() => setIsKidsMode(!isKidsMode)}
+        />
+      </div>
 
-        {/* Indicador de ubicación */}
+      {/* Indicador de ubicación */}
+      {userLocation && (
         <div className="absolute top-6 left-6 z-30">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -127,32 +194,93 @@ export default function Home() {
             </div>
           </motion.div>
         </div>
-      </div>
-
-      {/* Lista de spots */}
-      {spots.length > 0 && (
-        <SpotList
-          spots={spots}
-          isKidsMode={isKidsMode}
-          onSpotSelect={handleSpotSelect}
-        />
       )}
 
-      {/* Video Player */}
+      {/* Lista de POIs o Route Planner */}
+      {nearbyPOIs.length > 0 && (
+        <div className="p-6">
+          {showRoutePlanner ? (
+            <RoutePlanner
+              pois={nearbyPOIs}
+              userLocation={userLocation!}
+              onStartRoute={handleStartRoute}
+              onPOISelect={handlePOISelect}
+            />
+          ) : (
+            <div className="space-y-4">
+              <div className="flex items-center justify-between">
+                <h3 className="text-lg font-bold text-gray-900">
+                  Lugares cerca de ti
+                </h3>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => setShowRoutePlanner(true)}
+                  className="glass rounded-full p-3 touch-target"
+                >
+                  <span className="text-ios-blue font-semibold text-sm">
+                    Planificar
+                  </span>
+                </motion.button>
+              </div>
+              
+              <div className="space-y-2">
+                {nearbyPOIs.slice(0, 5).map((poi, index) => (
+                  <motion.div
+                    key={poi.id}
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: index * 0.1 }}
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => handlePOISelect(poi)}
+                    className="glass rounded-2xl p-4 cursor-pointer touch-target"
+                  >
+                    <div className="flex items-center space-x-3">
+                      <div className="w-12 h-12 rounded-xl overflow-hidden">
+                        <img
+                          src={poi.imageUrl}
+                          alt={poi.name}
+                          className="w-full h-full object-cover"
+                        />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h5 className="font-semibold text-gray-900 truncate">
+                          {poi.name}
+                        </h5>
+                        <p className="text-sm text-ios-gray">
+                          {poi.category}
+                        </p>
+                        <div className="flex items-center space-x-2 mt-1">
+                          <span className="text-xs text-ios-gray">
+                            {poi.distance ? `${Math.round(poi.distance)}m` : 'Cerca'}
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          )}
+        </div>
+      )}
+
+      {/* POI Detail Modal */}
       <AnimatePresence>
-        {selectedSpot && (
-          <VideoPlayer
-            spot={selectedSpot}
+        {selectedPOI && (
+          <POIDetail
+            poi={selectedPOI}
             isKidsMode={isKidsMode}
-            onClose={handleCloseVideo}
-            onNext={handleNextSpot}
-            onPrevious={handlePreviousSpot}
+            onClose={handleClosePOI}
+            onNavigate={handleNavigate}
+            onVideoPlay={handleVideoPlay}
           />
         )}
       </AnimatePresence>
 
       {/* PWA Install Prompt */}
-      <div className="fixed bottom-24 left-6 right-6 z-20">
+      <div className="fixed bottom-6 left-6 right-6 z-20">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -163,7 +291,7 @@ export default function Home() {
             <div className="text-2xl">📱</div>
             <div className="flex-1">
               <h3 className="font-semibold text-gray-900 text-sm">
-                Instala 60 Spots
+                Instala 60secondstrip
               </h3>
               <p className="text-xs text-ios-gray">
                 Acceso rápido desde tu pantalla de inicio

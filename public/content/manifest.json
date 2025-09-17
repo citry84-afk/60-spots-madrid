@@ -1,0 +1,61 @@
+{
+  "version": "1.0",
+  "cities": [
+    {
+      "id": "madrid-es",
+      "name": "Madrid",
+      "center": { "lat": 40.4168, "lng": -3.7038 },
+      "pois": [
+        { "id": "plaza-mayor", "name": "Plaza Mayor", "category": "Histórico", "coordinates": { "lat": 40.4155, "lng": -3.7074 }, "imageUrl": "https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
+        { "id": "templo-de-debod", "name": "Templo de Debod", "category": "Místico", "coordinates": { "lat": 40.4240, "lng": -3.7177 }, "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
+        { "id": "palacio-real", "name": "Palacio Real", "category": "Real", "coordinates": { "lat": 40.4170, "lng": -3.7144 }, "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
+        { "id": "retiro", "name": "Parque del Retiro", "category": "Naturaleza", "coordinates": { "lat": 40.4153, "lng": -3.6844 }, "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
+        { "id": "puerta-del-sol", "name": "Puerta del Sol", "category": "Céntrico", "coordinates": { "lat": 40.4170, "lng": -3.7034 }, "imageUrl": "https://images.unsplash.com/photo-1533236897111-3e94666b2edf?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
+        { "id": "prado", "name": "Museo del Prado", "category": "Arte", "coordinates": { "lat": 40.4138, "lng": -3.6921 }, "imageUrl": "https://images.unsplash.com/photo-1533236897111-3e94666b2edf?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" }
+      ]
+    },
+    {
+      "id": "barcelona-es",
+      "name": "Barcelona",
+      "center": { "lat": 41.3874, "lng": 2.1686 },
+      "pois": [
+        { "id": "sagrada-familia", "name": "Sagrada Familia", "category": "Arquitectura", "coordinates": { "lat": 41.4036, "lng": 2.1744 }, "imageUrl": "https://images.unsplash.com/photo-1542219550-37153d387c5f?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
+        { "id": "park-guell", "name": "Park Güell", "category": "Parque", "coordinates": { "lat": 41.4145, "lng": 2.1527 }, "imageUrl": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
+        { "id": "casa-batllo", "name": "Casa Batlló", "category": "Arquitectura", "coordinates": { "lat": 41.3917, "lng": 2.1649 }, "imageUrl": "https://images.unsplash.com/photo-1536160928513-3d2b3b5ee716?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
+        { "id": "la-rambla", "name": "La Rambla", "category": "Paseo", "coordinates": { "lat": 41.3809, "lng": 2.1730 }, "imageUrl": "https://images.unsplash.com/photo-1528747045269-390fe33c19d6?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
+        { "id": "barri-gotic", "name": "Barri Gòtic", "category": "Histórico", "coordinates": { "lat": 41.3839, "lng": 2.1763 }, "imageUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" }
+      ]
+    },
+    {
+      "id": "granada-es",
+      "name": "Granada",
+      "center": { "lat": 37.1773, "lng": -3.5986 },
+      "pois": [
+        { "id": "alhambra", "name": "La Alhambra", "category": "Patrimonio", "coordinates": { "lat": 37.1761, "lng": -3.5881 }, "imageUrl": "https://images.unsplash.com/photo-1520697222860-1ce8b2a3f6da?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
+        { "id": "mirador-san-nicolas", "name": "Mirador de San Nicolás", "category": "Mirador", "coordinates": { "lat": 37.1815, "lng": -3.5900 }, "imageUrl": "https://images.unsplash.com/photo-1615388161217-03ad3cbf29d2?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
+        { "id": "albaicin", "name": "Albaicín", "category": "Barrio", "coordinates": { "lat": 37.1811, "lng": -3.5922 }, "imageUrl": "https://images.unsplash.com/photo-1615388179199-3a39b4a2a3b9?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" }
+      ]
+    },
+    {
+      "id": "sevilla-es",
+      "name": "Sevilla",
+      "center": { "lat": 37.3891, "lng": -5.9845 },
+      "pois": [
+        { "id": "giralda", "name": "La Giralda", "category": "Monumento", "coordinates": { "lat": 37.3860, "lng": -5.9920 }, "imageUrl": "https://images.unsplash.com/photo-1522439515276-1b4b1bce9d5d?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
+        { "id": "plaza-espana", "name": "Plaza de España", "category": "Plaza", "coordinates": { "lat": 37.3772, "lng": -5.9869 }, "imageUrl": "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
+        { "id": "alcazar", "name": "Real Alcázar", "category": "Palacio", "coordinates": { "lat": 37.3831, "lng": -5.9903 }, "imageUrl": "https://images.unsplash.com/photo-1625660566817-6b7d7f8d7bd8?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" }
+      ]
+    },
+    {
+      "id": "cordoba-es",
+      "name": "Córdoba",
+      "center": { "lat": 37.8882, "lng": -4.7794 },
+      "pois": [
+        { "id": "mezquita", "name": "Mezquita-Catedral", "category": "Patrimonio", "coordinates": { "lat": 37.8790, "lng": -4.7794 }, "imageUrl": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
+        { "id": "alcazar-cordoba", "name": "Alcázar de los Reyes Cristianos", "category": "Palacio", "coordinates": { "lat": 37.8765, "lng": -4.7840 }, "imageUrl": "https://images.unsplash.com/photo-1558980394-0a3a49b0ec7d?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
+        { "id": "puente-romano", "name": "Puente Romano", "category": "Puente", "coordinates": { "lat": 37.8760, "lng": -4.7775 }, "imageUrl": "https://images.unsplash.com/photo-1558980343-3ecfbbefa8c4?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" }
+      ]
+    }
+  ]
+}
+
