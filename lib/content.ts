@@ -9,6 +9,7 @@ export interface POI {
   summaryAdult?: string;
   summaryKids?: string;
   curiosityFacts?: string[];
+  distance?: number;
 }
 
 export interface City {
