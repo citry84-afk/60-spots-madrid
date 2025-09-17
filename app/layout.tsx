@@ -1,12 +1,9 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
   title: '60 Spots - Descubre Madrid en 60 segundos',
   description: 'Una app visual para descubrir lugares curiosos cerca de ti en Madrid. Simplicidad como Apple.',
-  manifest: '/manifest.json',
-  themeColor: '#007AFF',
-  viewport: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no',
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
@@ -21,6 +18,14 @@ export const metadata: Metadata = {
     'apple-mobile-web-app-capable': 'yes',
     'apple-mobile-web-app-status-bar-style': 'default',
   },
+}
+
+export const viewport: Viewport = {
+  themeColor: '#007AFF',
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
 }
 
 export default function RootLayout({

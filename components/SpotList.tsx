@@ -25,28 +25,30 @@ export default function SpotList({ spots, isKidsMode, onSpotSelect }: SpotListPr
     }
   };
 
+  const startXRef = useRef<number | null>(null);
+  const startYRef = useRef<number | null>(null);
+
   const handleTouchStart = (e: React.TouchEvent) => {
-    const startX = e.touches[0].clientX;
-    const startY = e.touches[0].clientY;
-    
-    const handleTouchEnd = (e: React.TouchEvent) => {
-      const endX = e.changedTouches[0].clientX;
-      const endY = e.changedTouches[0].clientY;
-      const deltaX = endX - startX;
-      const deltaY = endY - startY;
-      
-      // Solo procesar swipe horizontal si no es vertical
+    startXRef.current = e.touches[0].clientX;
+    startYRef.current = e.touches[0].clientY;
+
+    const handleTouchEnd = (ev: TouchEvent) => {
+      if (startXRef.current === null || startYRef.current === null) return;
+      const endX = ev.changedTouches[0]?.clientX ?? 0;
+      const endY = ev.changedTouches[0]?.clientY ?? 0;
+      const deltaX = endX - startXRef.current;
+      const deltaY = endY - startYRef.current;
+
       if (Math.abs(deltaX) > Math.abs(deltaY) && Math.abs(deltaX) > 50) {
-        if (deltaX > 0) {
-          handleSwipe('right');
-        } else {
-          handleSwipe('left');
-        }
+        if (deltaX > 0) handleSwipe('right');
+        else handleSwipe('left');
       }
-      
+
+      startXRef.current = null;
+      startYRef.current = null;
       document.removeEventListener('touchend', handleTouchEnd);
     };
-    
+
     document.addEventListener('touchend', handleTouchEnd);
   };
 
