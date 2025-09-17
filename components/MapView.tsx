@@ -1,12 +1,12 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
-import { Spot } from '@/lib/data';
+import { POI } from '@/lib/content';
 
 interface MapViewProps {
-  spots: Spot[];
+  spots: POI[];
   userLocation: [number, number];
-  onSpotSelect: (spot: Spot) => void;
+  onSpotSelect: (spot: POI) => void;
 }
 
 export default function MapView({ spots, userLocation, onSpotSelect }: MapViewProps) {
@@ -79,7 +79,7 @@ export default function MapView({ spots, userLocation, onSpotSelect }: MapViewPr
             iconAnchor: [8, 8]
           });
 
-          const marker = L.marker([spot.coordinates[0], spot.coordinates[1]], { 
+          const marker = L.marker([spot.coordinates.lat, spot.coordinates.lng], { 
             icon: spotIcon 
           }).addTo(map);
           // pop animation
