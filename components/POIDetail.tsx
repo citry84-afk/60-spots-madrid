@@ -8,6 +8,7 @@ import { POI } from '@/lib/content';
 interface POIDetailProps {
   poi: POI;
   isKidsMode: boolean;
+  setIsKidsMode: (isKids: boolean) => void;
   onClose: () => void;
   onNavigate: () => void;
   onVideoPlay: (isKids: boolean) => void;
@@ -16,6 +17,7 @@ interface POIDetailProps {
 export default function POIDetail({ 
   poi, 
   isKidsMode, 
+  setIsKidsMode,
   onClose, 
   onNavigate, 
   onVideoPlay 
@@ -171,11 +173,11 @@ export default function POIDetail({
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              onClick={() => setShowSummary(!showSummary)}
+              onClick={() => setIsKidsMode(!isKidsMode)}
               className="bg-gradient-to-r from-ios-blue to-blue-600 text-white py-4 px-6 rounded-2xl font-bold flex items-center justify-center space-x-2 touch-target shadow-ios"
             >
-              <User className="w-5 h-5" />
-              <span>Info</span>
+              {isKidsMode ? <Baby className="w-5 h-5" /> : <User className="w-5 h-5" />}
+              <span>{isKidsMode ? 'Niños' : 'Adultos'}</span>
             </motion.button>
           </motion.div>
 
@@ -209,28 +211,46 @@ export default function POIDetail({
             </motion.button>
           </motion.div>
 
-          {/* Resumen expandible */}
-          <AnimatePresence>
-            {showSummary && (
-              <motion.div
-                initial={{ opacity: 0, height: 0 }}
-                animate={{ opacity: 1, height: 'auto' }}
-                exit={{ opacity: 0, height: 0 }}
-                transition={{ duration: 0.3 }}
-                className="glass rounded-2xl p-5 overflow-hidden"
-              >
-                <div className="flex items-center space-x-2 mb-3">
-                  <Sparkles className="w-5 h-5 text-ios-blue" />
-                  <h3 className="font-bold text-gray-900 text-lg">
-                    {isKidsMode ? 'Para Niños' : 'Para Adultos'}
-                  </h3>
-                </div>
-                <p className="text-gray-700 leading-relaxed">
-                  {isKidsMode ? poi.summaryKids : poi.summaryAdult || 'Resumen no disponible'}
-                </p>
-              </motion.div>
-            )}
-          </AnimatePresence>
+          {/* Resumen siempre visible */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.4 }}
+            className="glass rounded-2xl p-5"
+          >
+            <div className="flex items-center space-x-2 mb-3">
+              <Sparkles className="w-5 h-5 text-ios-blue" />
+              <h3 className="font-bold text-gray-900 text-lg">
+                {isKidsMode ? 'Para Niños' : 'Para Adultos'}
+              </h3>
+            </div>
+            <p className="text-gray-700 leading-relaxed text-sm">
+              {isKidsMode ? poi.summaryKids : poi.summaryAdult || 'Resumen no disponible'}
+            </p>
+          </motion.div>
+
+          {/* Datos curiosos si existen */}
+          {poi.curiosityFacts && poi.curiosityFacts.length > 0 && (
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5 }}
+              className="glass rounded-2xl p-5"
+            >
+              <div className="flex items-center space-x-2 mb-3">
+                <Star className="w-5 h-5 text-yellow-500" />
+                <h3 className="font-bold text-gray-900 text-lg">Datos Curiosos</h3>
+              </div>
+              <ul className="space-y-2">
+                {poi.curiosityFacts.map((fact, index) => (
+                  <li key={index} className="text-gray-700 text-sm flex items-start space-x-2">
+                    <span className="text-ios-blue font-bold">•</span>
+                    <span>{fact}</span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          )}
 
           {/* Botones secundarios */}
           <motion.div

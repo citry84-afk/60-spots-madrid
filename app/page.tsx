@@ -535,6 +535,7 @@ export default function Home() {
           <POIDetail
             poi={selectedPOI}
             isKidsMode={isKidsMode}
+            setIsKidsMode={setIsKidsMode}
             onClose={handleClosePOI}
             onNavigate={handleNavigate}
             onVideoPlay={handleVideoPlay}
