@@ -28,6 +28,9 @@ export default function Home() {
   const [showHero, setShowHero] = useState(true);
   const [showInstallBanner, setShowInstallBanner] = useState(true);
   const [showCitySummary, setShowCitySummary] = useState(false);
+  const [showVideoPlayer, setShowVideoPlayer] = useState(false);
+  const [currentVideoUrl, setCurrentVideoUrl] = useState('');
+  const [currentVideoTitle, setCurrentVideoTitle] = useState('');
 
   // Cargar manifest de contenidos al inicio
   useEffect(() => {
@@ -114,102 +117,10 @@ export default function Home() {
     if (selectedPOI) {
       const videoUrl = isKids ? selectedPOI.videoUrlKids : selectedPOI.videoUrlAdult;
       if (videoUrl) {
-        // Crear modal para el vídeo
-        const modal = document.createElement('div');
-        modal.style.position = 'fixed';
-        modal.style.top = '0';
-        modal.style.left = '0';
-        modal.style.width = '100%';
-        modal.style.height = '100%';
-        modal.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
-        modal.style.zIndex = '9999';
-        modal.style.display = 'flex';
-        modal.style.alignItems = 'center';
-        modal.style.justifyContent = 'center';
-        modal.style.padding = '20px';
-        modal.style.boxSizing = 'border-box';
-        
-        // Contenedor del vídeo
-        const videoContainer = document.createElement('div');
-        videoContainer.style.position = 'relative';
-        videoContainer.style.width = '100%';
-        videoContainer.style.maxWidth = '800px';
-        videoContainer.style.height = 'auto';
-        videoContainer.style.aspectRatio = '9/16';
-        videoContainer.style.borderRadius = '20px';
-        videoContainer.style.overflow = 'hidden';
-        videoContainer.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.5)';
-        
-        // Crear elemento de vídeo
-        const video = document.createElement('video');
-        video.src = videoUrl;
-        video.controls = true;
-        video.autoplay = true;
-        video.muted = true; // Muted para permitir autoplay
-        video.style.width = '100%';
-        video.style.height = '100%';
-        video.style.objectFit = 'cover';
-        video.style.borderRadius = '20px';
-        
-        // Manejar errores de carga
-        video.onerror = () => {
-          console.error('Error cargando vídeo:', videoUrl);
-          const errorDiv = document.createElement('div');
-          errorDiv.style.padding = '40px';
-          errorDiv.style.textAlign = 'center';
-          errorDiv.style.color = 'white';
-          errorDiv.innerHTML = `
-            <div style="font-size: 48px; margin-bottom: 20px;">🎬</div>
-            <h3 style="margin-bottom: 10px;">Error cargando vídeo</h3>
-            <p style="opacity: 0.7;">El vídeo no se pudo cargar correctamente</p>
-          `;
-          videoContainer.innerHTML = '';
-          videoContainer.appendChild(errorDiv);
-        };
-        
-        // Botón cerrar
-        const closeBtn = document.createElement('button');
-        closeBtn.innerHTML = '✕';
-        closeBtn.style.position = 'absolute';
-        closeBtn.style.top = '15px';
-        closeBtn.style.right = '15px';
-        closeBtn.style.background = 'rgba(0, 0, 0, 0.7)';
-        closeBtn.style.border = 'none';
-        closeBtn.style.color = 'white';
-        closeBtn.style.fontSize = '20px';
-        closeBtn.style.width = '35px';
-        closeBtn.style.height = '35px';
-        closeBtn.style.borderRadius = '50%';
-        closeBtn.style.cursor = 'pointer';
-        closeBtn.style.zIndex = '10';
-        closeBtn.style.display = 'flex';
-        closeBtn.style.alignItems = 'center';
-        closeBtn.style.justifyContent = 'center';
-        
-        closeBtn.onclick = () => {
-          document.body.removeChild(modal);
-        };
-        
-        videoContainer.appendChild(video);
-        videoContainer.appendChild(closeBtn);
-        modal.appendChild(videoContainer);
-        document.body.appendChild(modal);
-        
-        // Cerrar al hacer clic fuera del vídeo
-        modal.onclick = (e) => {
-          if (e.target === modal) {
-            document.body.removeChild(modal);
-          }
-        };
-        
-        // Cerrar con Escape
-        const handleEscape = (e) => {
-          if (e.key === 'Escape') {
-            document.body.removeChild(modal);
-            document.removeEventListener('keydown', handleEscape);
-          }
-        };
-        document.addEventListener('keydown', handleEscape);
+        console.log('Intentando reproducir vídeo:', videoUrl);
+        setCurrentVideoUrl(videoUrl);
+        setCurrentVideoTitle(`${selectedPOI.name} - ${isKids ? 'Niños' : 'Adultos'}`);
+        setShowVideoPlayer(true);
       }
     }
   };
@@ -583,6 +494,17 @@ export default function Home() {
             onClose={handleClosePOI}
             onNavigate={handleNavigate}
             onVideoPlay={handleVideoPlay}
+          />
+        )}
+      </AnimatePresence>
+
+      {/* Video Player */}
+      <AnimatePresence>
+        {showVideoPlayer && (
+          <VideoPlayer
+            videoUrl={currentVideoUrl}
+            title={currentVideoTitle}
+            onClose={() => setShowVideoPlayer(false)}
           />
         )}
       </AnimatePresence>
