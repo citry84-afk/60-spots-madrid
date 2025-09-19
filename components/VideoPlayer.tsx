@@ -49,7 +49,7 @@ export default function VideoPlayer({ videoUrl, onClose, title }: VideoPlayerPro
       setProgress((video.currentTime / video.duration) * 100);
     };
 
-    const handleError = (e) => {
+    const handleError = (e: Event) => {
       console.error('Error del vídeo:', e);
       setError('Error cargando el vídeo. Verifica tu conexión.');
       setIsLoading(false);

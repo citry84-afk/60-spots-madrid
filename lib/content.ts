@@ -16,6 +16,11 @@ export interface City {
   id: string;
   name: string;
   center: { lat: number; lng: number };
+  imageUrl?: string;
+  summaryAdult?: string;
+  summaryKids?: string;
+  videoUrlAdult?: string;
+  videoUrlKids?: string;
   pois: POI[];
 }
 
