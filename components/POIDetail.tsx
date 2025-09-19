@@ -172,9 +172,9 @@ export default function POIDetail({
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => setShowSummary(!showSummary)}
-              className="glass py-4 px-6 rounded-2xl font-bold flex items-center justify-center space-x-2 touch-target"
+              className="bg-gradient-to-r from-ios-blue to-blue-600 text-white py-4 px-6 rounded-2xl font-bold flex items-center justify-center space-x-2 touch-target shadow-ios"
             >
-              <User className="w-5 h-5 text-ios-blue" />
+              <User className="w-5 h-5" />
               <span>Info</span>
             </motion.button>
           </motion.div>

@@ -114,7 +114,58 @@ export default function Home() {
     if (selectedPOI) {
       const videoUrl = isKids ? selectedPOI.videoUrlKids : selectedPOI.videoUrlAdult;
       if (videoUrl) {
-        console.log('Playing video:', videoUrl);
+        // Crear un elemento de vídeo y reproducirlo
+        const video = document.createElement('video');
+        video.src = videoUrl;
+        video.controls = true;
+        video.autoplay = true;
+        video.style.width = '100%';
+        video.style.height = '100%';
+        video.style.objectFit = 'cover';
+        
+        // Crear modal para el vídeo
+        const modal = document.createElement('div');
+        modal.style.position = 'fixed';
+        modal.style.top = '0';
+        modal.style.left = '0';
+        modal.style.width = '100%';
+        modal.style.height = '100%';
+        modal.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+        modal.style.zIndex = '9999';
+        modal.style.display = 'flex';
+        modal.style.alignItems = 'center';
+        modal.style.justifyContent = 'center';
+        modal.style.padding = '20px';
+        
+        // Botón cerrar
+        const closeBtn = document.createElement('button');
+        closeBtn.innerHTML = '✕';
+        closeBtn.style.position = 'absolute';
+        closeBtn.style.top = '20px';
+        closeBtn.style.right = '20px';
+        closeBtn.style.background = 'rgba(255, 255, 255, 0.2)';
+        closeBtn.style.border = 'none';
+        closeBtn.style.color = 'white';
+        closeBtn.style.fontSize = '24px';
+        closeBtn.style.width = '40px';
+        closeBtn.style.height = '40px';
+        closeBtn.style.borderRadius = '50%';
+        closeBtn.style.cursor = 'pointer';
+        
+        closeBtn.onclick = () => {
+          document.body.removeChild(modal);
+        };
+        
+        modal.appendChild(video);
+        modal.appendChild(closeBtn);
+        document.body.appendChild(modal);
+        
+        // Cerrar al hacer clic fuera del vídeo
+        modal.onclick = (e) => {
+          if (e.target === modal) {
+            document.body.removeChild(modal);
+          }
+        };
       }
     }
   };
