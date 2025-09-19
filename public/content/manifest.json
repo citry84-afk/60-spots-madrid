@@ -4,7 +4,10 @@
     {
       "id": "madrid-es",
       "name": "Madrid",
-      "center": { "lat": 40.4168, "lng": -3.7038 },
+      "center": {
+        "lat": 40.4168,
+        "lng": -3.7038
+      },
       "summaryAdult": "Madrid, capital de España desde 1561, encarna la evolución de una villa medieval hacia una metrópoli cosmopolita de más de 6.7 millones de habitantes. Su posición geográfica central y su altitud de 650 metros sobre el mar la convierten en la capital europea más alta. La ciudad combina patrimonio histórico excepcional con vanguardia cultural: el Triángulo Dorado del Arte (Prado, Reina Sofía, Thyssen), el Madrid de los Austrias y el ensanche decimonónico coexisten con arquitectura contemporánea.",
       "summaryKids": "¡Madrid es la capital de España y está justo en el centro del país, como el corazón! Es una ciudad súper grande donde viven casi 7 millones de personas, ¡como si todos los niños de España vivieran en el mismo lugar! Tiene museos increíbles llenos de cuadros famosos, parques enormes para jugar, y pastelerías donde hacen churros con chocolate súper ricos. En mayo celebran las fiestas de San Isidro con gigantes, cabezudos y muchas sorpresas. Los domingos hay un mercadillo súper grande llamado El Rastro donde venden tesoros antiguos.",
       "videoUrlAdult": "",
@@ -14,10 +17,13 @@
           "id": "plaza-mayor",
           "name": "Plaza Mayor",
           "category": "Histórico",
-          "coordinates": { "lat": 40.4155, "lng": -3.7074 },
+          "coordinates": {
+            "lat": 40.4155,
+            "lng": -3.7074
+          },
           "imageUrl": "https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?w=800&h=1200&fit=crop",
-          "videoUrlAdult": "",
-          "videoUrlKids": "",
+          "videoUrlAdult": "/videos/pois/plaza-mayor_adult.mp4",
+          "videoUrlKids": "/videos/pois/plaza-mayor_kids.mp4",
           "summaryAdult": "La Plaza Mayor de Madrid, construida entre 1617 y 1619 durante el reinado de Felipe III, representa uno de los mejores ejemplos de arquitectura barroca española. Con sus 129 metros de largo por 94 de ancho, está rodeada por edificios de tres plantas con 237 balcones que miran hacia el interior. La Casa de la Panadería, con sus magníficos frescos, domina el lado norte de la plaza. Este espacio ha sido testigo de coronaciones, ejecuciones, corridas de toros y mercados.",
           "summaryKids": "¡La Plaza Mayor es como un enorme salón rectangular rodeado de casas rojas! Imagínate una plaza tan grande que podrían jugar 1000 niños al mismo tiempo. Hace muchos, muchos años, aquí se celebraban fiestas con toros, obras de teatro y hasta bodas de reyes. Los edificios tienen 237 balcones, ¡podrías contar uno cada día durante casi 8 meses! En el centro hay una estatua de un rey montado en su caballo. Y lo más divertido: en Navidad ponen un mercado lleno de figuras del Belén. ¡Es como un cuento de hadas en pleno centro de Madrid!",
           "curiosityFacts": [
@@ -30,10 +36,13 @@
           "id": "palacio-real",
           "name": "Palacio Real",
           "category": "Monumento",
-          "coordinates": { "lat": 40.4179, "lng": -3.7143 },
+          "coordinates": {
+            "lat": 40.4179,
+            "lng": -3.7143
+          },
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
-          "videoUrlAdult": "",
-          "videoUrlKids": "",
+          "videoUrlAdult": "/videos/pois/palacio-real_adult.mp4",
+          "videoUrlKids": "/videos/pois/palacio-real_kids.mp4",
           "summaryAdult": "El Palacio Real de Madrid, construido sobre las ruinas del antiguo Alcázar tras su incendio en 1734, es una joya arquitectónica diseñada por Filippo Juvarra y Francesco Sabatini. Con más de 3000 habitaciones, es uno de los palacios más grandes de Europa occidental. Su fachada barroca combina piedra caliza blanca de Colmenar y granito de la Sierra de Guadarrama. Alberga la mayor colección de instrumentos Stradivarius del mundo, frescos de Giambattista Tiepolo y una armería real excepcional.",
           "summaryKids": "¡El Palacio Real es la casa más grande de Madrid! Tiene 3000 habitaciones, ¡tardarías 8 años en dormir una noche en cada una! Los reyes ya no viven aquí, pero viene a trabajar cuando hay fiestas importantes. Dentro hay violines súper especiales hechos por un señor llamado Stradivarius hace 300 años. También hay una sala llena de armaduras brillantes como las de los caballeros de los cuentos. Y en el techo hay pinturas tan grandes como una piscina olímpica. ¡Es como un castillo de Disney pero de verdad!",
           "curiosityFacts": [
@@ -46,7 +55,10 @@
           "id": "puerta-alcala",
           "name": "Puerta de Alcalá",
           "category": "Monumento",
-          "coordinates": { "lat": 40.4200, "lng": -3.6883 },
+          "coordinates": {
+            "lat": 40.42,
+            "lng": -3.6883
+          },
           "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
@@ -62,7 +74,10 @@
           "id": "retiro",
           "name": "Parque del Retiro",
           "category": "Naturaleza",
-          "coordinates": { "lat": 40.4152, "lng": -3.6846 },
+          "coordinates": {
+            "lat": 40.4152,
+            "lng": -3.6846
+          },
           "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
@@ -78,7 +93,10 @@
           "id": "templo-debod",
           "name": "Templo de Debod",
           "category": "Histórico",
-          "coordinates": { "lat": 40.4240, "lng": -3.7179 },
+          "coordinates": {
+            "lat": 40.424,
+            "lng": -3.7179
+          },
           "imageUrl": "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
@@ -95,7 +113,10 @@
     {
       "id": "barcelona-es",
       "name": "Barcelona",
-      "center": { "lat": 41.3851, "lng": 2.1734 },
+      "center": {
+        "lat": 41.3851,
+        "lng": 2.1734
+      },
       "summaryAdult": "Barcelona, capital de Cataluña y segunda ciudad de España, representa la síntesis perfecta entre tradición mediterránea e innovación contemporánea. Fundada por los romanos como Barcino, conserva vestigios de 2000 años de historia en su Barrio Gótico. El modernismo catalán, con Gaudí como máximo exponente, define su identidad arquitectónica única. Su posición costera, con 4.6 km de playas urbanas, y su clima mediterráneo la convierten en destino turístico global.",
       "summaryKids": "¡Barcelona es una ciudad súper especial que tiene playa y montaña al mismo tiempo! Está al lado del mar Mediterráneo, así que puedes ir a la playa y ver barcos grandes como hoteles flotantes. Tiene edificios súper raros y bonitos hechos por Gaudí, que era como un arquitecto mágico que construía casas que parecían de cuentos. Las Ramblas son una calle súper larga llena de artistas que hacen estatuas vivientes, ¡se quedan quietos como robots hasta que les das una moneda! Se habla catalán y español, así que es como tener dos idiomas en el mismo lugar.",
       "videoUrlAdult": "",
@@ -105,7 +126,10 @@
           "id": "sagrada-familia",
           "name": "Sagrada Familia",
           "category": "Monumento",
-          "coordinates": { "lat": 41.4036, "lng": 2.1744 },
+          "coordinates": {
+            "lat": 41.4036,
+            "lng": 2.1744
+          },
           "imageUrl": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
@@ -121,7 +145,10 @@
           "id": "park-guell",
           "name": "Park Güell",
           "category": "Naturaleza",
-          "coordinates": { "lat": 41.4145, "lng": 2.1527 },
+          "coordinates": {
+            "lat": 41.4145,
+            "lng": 2.1527
+          },
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
@@ -137,7 +164,10 @@
           "id": "casa-batllo",
           "name": "Casa Batlló",
           "category": "Monumento",
-          "coordinates": { "lat": 41.3917, "lng": 2.1649 },
+          "coordinates": {
+            "lat": 41.3917,
+            "lng": 2.1649
+          },
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
@@ -154,7 +184,10 @@
     {
       "id": "granada-es",
       "name": "Granada",
-      "center": { "lat": 37.1773, "lng": -3.5986 },
+      "center": {
+        "lat": 37.1773,
+        "lng": -3.5986
+      },
       "summaryAdult": "Granada, situada al pie de Sierra Nevada y atravesada por los ríos Darro y Genil, constituye un testimonio vivo de la convivencia de culturas. Capital del último reino nazarí hasta 1492, conserva el conjunto monumental hispanomusulmán más importante de Occidente. Su universidad, fundada por Carlos V en 1531, la convierte en ciudad estudiantil vibrante que fusiona historia y juventud. Los barrios del Albaicín y Sacromonte, con sus cuevas flamencas, mantienen tradiciones centenarias.",
       "summaryKids": "¡Granada es una ciudad súper especial donde vivían los últimos reyes árabes de España! Está rodeada de montañas con nieve que se llama Sierra Nevada, ¡como si fuera el castillo de Elsa de Frozen! Tiene barrios súper curiosos: en el Albaicín las casas son blancas como nubes, y en Sacromonte la gente vive en cuevas (¡pero cuevas súper elegantes!). Allí bailan flamenco con guitarras que suenan como magia. Lo más genial es que cuando pides un refresco en un bar, ¡te dan comida gratis! Se llaman tapas y cada bar tiene las suyas.",
       "videoUrlAdult": "",
@@ -164,7 +197,10 @@
           "id": "alhambra",
           "name": "La Alhambra",
           "category": "Monumento",
-          "coordinates": { "lat": 37.1760, "lng": -3.5886 },
+          "coordinates": {
+            "lat": 37.176,
+            "lng": -3.5886
+          },
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
@@ -180,7 +216,10 @@
           "id": "generalife",
           "name": "Generalife",
           "category": "Naturaleza",
-          "coordinates": { "lat": 37.1776, "lng": -3.5849 },
+          "coordinates": {
+            "lat": 37.1776,
+            "lng": -3.5849
+          },
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
@@ -197,7 +236,10 @@
     {
       "id": "sevilla-es",
       "name": "Sevilla",
-      "center": { "lat": 37.3891, "lng": -5.9845 },
+      "center": {
+        "lat": 37.3891,
+        "lng": -5.9845
+      },
       "summaryAdult": "Sevilla, capital andaluza bañada por el Guadalquivir, encarna la esencia de la Andalucía histórica y monumental. Como puerto de las Américas durante los siglos XVI-XVII, concentró las riquezas coloniales que financiaron sus monumentos excepcionales. Su Semana Santa, reconocida internacionalmente, y la Feria de Abril representan manifestaciones culturales únicas que combinan religiosidad, tradición y alegría de vivir. El flamenco, arte declarado Patrimonio Inmaterial de la Humanidad, encuentra en Sevilla uno de sus templos principales.",
       "summaryKids": "¡Sevilla es la ciudad más alegre y colorida de España! Hace mucho tiempo, todos los barcos que venían de América con tesoros llegaban aquí, por eso tiene tantos palacios y iglesias súper grandes. Tiene un río que se llama Guadalquivir donde puedes pasear en barco. En Semana Santa salen procesiones súper largas con figuras vestidas de colores que parecen desfiles mágicos. Y en abril hacen una feria súper divertida donde todo el mundo se viste con trajes de colores, baila sevillanas y monta en caballitos. ¡El flamenco nació aquí! Es como un baile súper emocionante donde la gente zapatea fuerte y canta con el corazón.",
       "videoUrlAdult": "",
@@ -207,7 +249,10 @@
           "id": "catedral-sevilla",
           "name": "Catedral de Sevilla",
           "category": "Monumento",
-          "coordinates": { "lat": 37.3859, "lng": -5.9926 },
+          "coordinates": {
+            "lat": 37.3859,
+            "lng": -5.9926
+          },
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
@@ -223,7 +268,10 @@
           "id": "alcazar-sevilla",
           "name": "Reales Alcázares",
           "category": "Monumento",
-          "coordinates": { "lat": 37.3839, "lng": -5.9914 },
+          "coordinates": {
+            "lat": 37.3839,
+            "lng": -5.9914
+          },
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
@@ -240,7 +288,10 @@
     {
       "id": "cordoba-es",
       "name": "Córdoba",
-      "center": { "lat": 37.8882, "lng": -4.7794 },
+      "center": {
+        "lat": 37.8882,
+        "lng": -4.7794
+      },
       "summaryAdult": "Córdoba, antigua capital del Califato de Al-Ándalus, representa uno de los centros culturales más importantes de la Edad Media europea. Durante los siglos VIII-XI, fue la urbe más poblada de Occidente y faro intelectual donde convivían musulmanes, judíos y cristianos. Su casco histórico, Patrimonio de la Humanidad, conserva vestigios romanos, islámicos, judíos y cristianos en perfecta armonía. Los patios cordobeses, tradición heredada de Roma y perfeccionada por los árabes, explotan cada mayo en el Festival de los Patios, declarado Patrimonio Inmaterial.",
       "summaryKids": "¡Córdoba era la ciudad más importante del mundo hace más de 1000 años! Era tan famosa que venían estudiantes de toda Europa a aprender aquí, como si fuera la universidad más guay del planeta. Lo más bonito son los patios: casas con jardines en el centro llenos de flores, especialmente geranios rojos que parecen fuegos artificiales de colores. En mayo hay un concurso de patios y toda la ciudad se llena de flores y olores súper ricos. También inventaron aquí el salmorejo, que es como el gazpacho pero más espeso y sabroso. Por la calle hay muchas tiendas donde hacen bolsos y cinturones de cuero súper bonitos. ¡Es como un museo al aire libre donde cada esquina cuenta una historia diferente!",
       "videoUrlAdult": "",
@@ -250,7 +301,10 @@
           "id": "mezquita-cordoba",
           "name": "Mezquita-Catedral de Córdoba",
           "category": "Monumento",
-          "coordinates": { "lat": 37.8789, "lng": -4.7794 },
+          "coordinates": {
+            "lat": 37.8789,
+            "lng": -4.7794
+          },
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
@@ -266,7 +320,10 @@
           "id": "alcazar-cordoba",
           "name": "Alcázar de los Reyes Cristianos",
           "category": "Monumento",
-          "coordinates": { "lat": 37.8776, "lng": -4.7794 },
+          "coordinates": {
+            "lat": 37.8776,
+            "lng": -4.7794
+          },
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
