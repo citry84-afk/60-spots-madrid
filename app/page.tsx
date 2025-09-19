@@ -10,6 +10,7 @@ import ModeToggle from '@/components/ModeToggle';
 import CitySelector from '@/components/CitySelector';
 import POIDetail from '@/components/POIDetail';
 import RoutePlanner from '@/components/RoutePlanner';
+import CitySummary from '@/components/CitySummary';
 import { loadContentManifest, getNearbyPOIs, calculateOptimalRoute, City, POI } from '@/lib/content';
 import { MapPin, Play, Star, Heart, Share2, Download, Sparkles, Compass, Globe } from 'lucide-react';
 
@@ -26,6 +27,7 @@ export default function Home() {
   const [showRoutePlanner, setShowRoutePlanner] = useState(false);
   const [showHero, setShowHero] = useState(true);
   const [showInstallBanner, setShowInstallBanner] = useState(true);
+  const [showCitySummary, setShowCitySummary] = useState(false);
 
   // Cargar manifest de contenidos al inicio
   useEffect(() => {
@@ -84,6 +86,7 @@ export default function Home() {
     setSelectedCity(city);
     setShowHero(false);
     setShowInstallBanner(false);
+    setShowCitySummary(true);
     if (userLocation) {
       const pois = getNearbyPOIs(userLocation[0], userLocation[1], city, 10000);
       setNearbyPOIs(pois);
@@ -119,6 +122,14 @@ export default function Home() {
   const handleStartRoute = (route: POI[]) => {
     setShowRoutePlanner(false);
     console.log('Starting route:', route);
+  };
+
+  const handleCloseCitySummary = () => {
+    setShowCitySummary(false);
+  };
+
+  const handleStartExploring = () => {
+    setShowCitySummary(false);
   };
 
   if (isLoading) {
@@ -452,6 +463,18 @@ export default function Home() {
               )}
             </div>
           </motion.div>
+        )}
+      </AnimatePresence>
+
+      {/* City Summary Modal */}
+      <AnimatePresence>
+        {showCitySummary && selectedCity && (
+          <CitySummary
+            city={selectedCity}
+            isKidsMode={isKidsMode}
+            onClose={handleCloseCitySummary}
+            onStartExploring={handleStartExploring}
+          />
         )}
       </AnimatePresence>
 

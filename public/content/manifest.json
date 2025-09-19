@@ -6,24 +6,141 @@
       "name": "Madrid",
       "center": { "lat": 40.4168, "lng": -3.7038 },
       "pois": [
-        { "id": "plaza-mayor", "name": "Plaza Mayor", "category": "Histórico", "coordinates": { "lat": 40.4155, "lng": -3.7074 }, "imageUrl": "https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
-        { "id": "templo-de-debod", "name": "Templo de Debod", "category": "Místico", "coordinates": { "lat": 40.4240, "lng": -3.7177 }, "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
-        { "id": "palacio-real", "name": "Palacio Real", "category": "Real", "coordinates": { "lat": 40.4170, "lng": -3.7144 }, "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
-        { "id": "retiro", "name": "Parque del Retiro", "category": "Naturaleza", "coordinates": { "lat": 40.4153, "lng": -3.6844 }, "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
-        { "id": "puerta-del-sol", "name": "Puerta del Sol", "category": "Céntrico", "coordinates": { "lat": 40.4170, "lng": -3.7034 }, "imageUrl": "https://images.unsplash.com/photo-1533236897111-3e94666b2edf?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
-        { "id": "prado", "name": "Museo del Prado", "category": "Arte", "coordinates": { "lat": 40.4138, "lng": -3.6921 }, "imageUrl": "https://images.unsplash.com/photo-1533236897111-3e94666b2edf?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" }
+        {
+          "id": "plaza-mayor",
+          "name": "Plaza Mayor",
+          "category": "Histórico",
+          "coordinates": { "lat": 40.4155, "lng": -3.7074 },
+          "imageUrl": "https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?w=800&h=1200&fit=crop",
+          "videoUrlAdult": "",
+          "videoUrlKids": "",
+          "summaryAdult": "La Plaza Mayor se ha quemado 3 veces completa y las 237 estatuas de los balcones son todas diferentes. Fue diseñada por Juan de Herrera y Juan Gómez de Mora. En el centro está la estatua de Felipe III, pero el caballo está mirando hacia el lugar donde murió el rey. Durante siglos fue el centro de la vida social madrileña: corridas de toros, autos de fe, ejecuciones públicas y mercados.",
+          "summaryKids": "¡Esta plaza se quemó 3 veces como si fuera maldita, pero siempre la volvieron a construir! Tiene 237 estatuas en los balcones y ¡todas son diferentes! Es como un puzzle gigante de piedra. Aquí se hacían fiestas súper grandes y hasta corridas de toros hace muchísimo tiempo. En el centro hay una estatua de un rey a caballo que mira hacia donde murió - ¡es súper misterioso!",
+          "curiosityFacts": [
+            "Se quemó completamente 3 veces en su historia",
+            "Tiene 237 estatuas diferentes en los balcones",
+            "La estatua de Felipe III mira hacia donde murió el rey"
+          ]
+        },
+        {
+          "id": "palacio-real",
+          "name": "Palacio Real",
+          "category": "Monumento",
+          "coordinates": { "lat": 40.4179, "lng": -3.7143 },
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "videoUrlAdult": "",
+          "videoUrlKids": "",
+          "summaryAdult": "El Palacio Real tiene 3.418 habitaciones (más que Versalles) pero ningún rey ha dormido nunca allí. Es el palacio real más grande de Europa Occidental. Fue construido sobre las ruinas del Alcázar de los Austrias que se quemó en 1734. La colección de armas y armaduras es la más importante del mundo, con piezas de los siglos XIII al XIX.",
+          "summaryKids": "¡Este palacio tiene más habitaciones que días tiene el año! ¡3.418 habitaciones! Pero el rey nunca duerme aquí porque prefiere una casa más pequeñita. Es el palacio más grande de toda Europa. Tiene una colección súper grande de espadas y armaduras de caballeros de hace muchísimo tiempo - ¡es como un museo de superhéroes de verdad!",
+          "curiosityFacts": [
+            "3.418 habitaciones (más que Versalles)",
+            "Ningún rey ha dormido nunca allí",
+            "Colección de armas más importante del mundo"
+          ]
+        },
+        {
+          "id": "puerta-alcala",
+          "name": "Puerta de Alcalá",
+          "category": "Monumento",
+          "coordinates": { "lat": 40.4200, "lng": -3.6883 },
+          "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=1200&fit=crop",
+          "videoUrlAdult": "",
+          "videoUrlKids": "",
+          "summaryAdult": "La Puerta de Alcalá es más antigua que el Arco del Triunfo de París. Fue construida en 1778 por Sabatini para conmemorar la entrada de Carlos III en Madrid. Tiene dos caras diferentes: una más clásica hacia el exterior y otra más barroca hacia el interior. Durante la Guerra Civil fue usada como refugio antiaéreo y aún conserva las marcas de los proyectiles.",
+          "summaryKids": "¡Esta puerta es más antigua que el Arco del Triunfo de París! Es como una puerta gigante de piedra que da la bienvenida a Madrid. Tiene dos caras diferentes - una más seria y otra más divertida. Durante una guerra muy triste, la gente se escondía aquí para protegerse de las bombas, ¡y todavía se pueden ver las marcas!",
+          "curiosityFacts": [
+            "Más antigua que el Arco del Triunfo de París",
+            "Tiene dos caras arquitectónicas diferentes",
+            "Marcas de proyectiles de la Guerra Civil"
+          ]
+        },
+        {
+          "id": "retiro",
+          "name": "Parque del Retiro",
+          "category": "Naturaleza",
+          "coordinates": { "lat": 40.4152, "lng": -3.6846 },
+          "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=1200&fit=crop",
+          "videoUrlAdult": "",
+          "videoUrlKids": "",
+          "summaryAdult": "El Retiro era cárcel para plebeyos - solo la realeza podía entrar hasta 1868. Tiene 125 hectáreas y más de 15.000 árboles. El Palacio de Cristal fue construido para la Exposición de Filipinas de 1887. El estanque del Retiro tiene 280 metros de largo y se puede navegar en barca. Durante la Guerra Civil fue bombardeado 44 veces.",
+          "summaryKids": "¡Este parque gigante antes era solo para reyes! Si eras una persona normal te arrestaban si intentabas entrar. Ahora es súper grande - ¡tiene más de 15.000 árboles! Hay un palacio de cristal súper bonito que parece de cuento de hadas. Y un lago gigante donde puedes navegar en barca como un pirata. ¡Es como tener un bosque mágico en medio de la ciudad!",
+          "curiosityFacts": [
+            "Solo realeza hasta 1868, plebeyos iban a la cárcel",
+            "Más de 15.000 árboles",
+            "Bombardeado 44 veces en la Guerra Civil"
+          ]
+        },
+        {
+          "id": "templo-debod",
+          "name": "Templo de Debod",
+          "category": "Histórico",
+          "coordinates": { "lat": 40.4240, "lng": -3.7179 },
+          "imageUrl": "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&h=1200&fit=crop",
+          "videoUrlAdult": "",
+          "videoUrlKids": "",
+          "summaryAdult": "El Templo de Debod es un regalo egipcio auténtico de 2.200 años trasladado piedra por piedra. Fue donado por Egipto en 1968 como agradecimiento por la ayuda española en la construcción de la presa de Asuán. Es el único templo egipcio original en España. Está orientado hacia el Nilo y tiene inscripciones jeroglíficas auténticas.",
+          "summaryKids": "¡Este templo vino desde Egipto como un regalo súper especial! Tiene más de 2.000 años y lo trajeron piedra por piedra como un puzzle gigante. Es el único templo egipcio de verdad en España. Está orientado hacia el río Nilo como en Egipto y tiene dibujitos súper antiguos que cuentan historias de faraones y dioses. ¡Es como tener un pedacito de Egipto en Madrid!",
+          "curiosityFacts": [
+            "Regalo egipcio de 2.200 años",
+            "Trasladado piedra por piedra",
+            "Único templo egipcio original en España"
+          ]
+        }
       ]
     },
     {
       "id": "barcelona-es",
       "name": "Barcelona",
-      "center": { "lat": 41.3874, "lng": 2.1686 },
+      "center": { "lat": 41.3851, "lng": 2.1734 },
       "pois": [
-        { "id": "sagrada-familia", "name": "Sagrada Familia", "category": "Arquitectura", "coordinates": { "lat": 41.4036, "lng": 2.1744 }, "imageUrl": "https://images.unsplash.com/photo-1542219550-37153d387c5f?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
-        { "id": "park-guell", "name": "Park Güell", "category": "Parque", "coordinates": { "lat": 41.4145, "lng": 2.1527 }, "imageUrl": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
-        { "id": "casa-batllo", "name": "Casa Batlló", "category": "Arquitectura", "coordinates": { "lat": 41.3917, "lng": 2.1649 }, "imageUrl": "https://images.unsplash.com/photo-1536160928513-3d2b3b5ee716?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
-        { "id": "la-rambla", "name": "La Rambla", "category": "Paseo", "coordinates": { "lat": 41.3809, "lng": 2.1730 }, "imageUrl": "https://images.unsplash.com/photo-1528747045269-390fe33c19d6?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
-        { "id": "barri-gotic", "name": "Barri Gòtic", "category": "Histórico", "coordinates": { "lat": 41.3839, "lng": 2.1763 }, "imageUrl": "https://images.unsplash.com/photo-1534447677768-be436bb09401?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" }
+        {
+          "id": "sagrada-familia",
+          "name": "Sagrada Familia",
+          "category": "Monumento",
+          "coordinates": { "lat": 41.4036, "lng": 2.1744 },
+          "imageUrl": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=1200&fit=crop",
+          "videoUrlAdult": "",
+          "videoUrlKids": "",
+          "summaryAdult": "La Sagrada Familia lleva 142 años construyéndose y no se terminará hasta 2026 - será el proyecto arquitectónico más largo de la historia. Gaudí trabajó 43 años en ella y murió atropellado por un tranvía. La fachada del Nacimiento está terminada, la de la Pasión es de Subirachs, y la de la Gloria aún no existe. Tiene 18 torres que representan a los 12 apóstoles, 4 evangelistas, la Virgen y Jesús.",
+          "summaryKids": "¡Esta iglesia lleva más de 100 años construyéndose! ¡Tus bisabuelos la vieron igual que la ves tú! El arquitecto Gaudí trabajó 43 años en ella y murió atropellado por un tranvía. Tiene 18 torres súper altas que representan a los apóstoles, evangelistas, la Virgen y Jesús. ¡Es como un castillo de arena gigante que nunca termina de construirse!",
+          "curiosityFacts": [
+            "142 años construyéndose",
+            "Gaudí trabajó 43 años en ella",
+            "18 torres con significado religioso"
+          ]
+        },
+        {
+          "id": "park-guell",
+          "name": "Park Güell",
+          "category": "Naturaleza",
+          "coordinates": { "lat": 41.4145, "lng": 2.1527 },
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "videoUrlAdult": "",
+          "videoUrlKids": "",
+          "summaryAdult": "Park Güell era un fracaso comercial - solo vendieron 2 de 60 parcelas previstas. Gaudí lo diseñó como una ciudad-jardín utópica. La escalinata del dragón tiene 3 fuentes que representan los países catalanes. El banco ondulado de la plaza principal tiene 110 metros y está decorado con trencadís (mosaico de cerámica rota). Gaudí vivió en la casa del parque durante 20 años.",
+          "summaryKids": "¡Este parque era un fracaso comercial! Solo vendieron 2 casas de 60 que querían construir. Gaudí lo hizo como una ciudad-jardín de cuento de hadas. Hay un dragón gigante hecho de azulejos de colores que escupe agua. El banco más largo del mundo está aquí - ¡110 metros! Y está decorado con pedacitos de cerámica de colores como un puzzle gigante. ¡Es como un parque de diversiones de piedra!",
+          "curiosityFacts": [
+            "Solo se vendieron 2 de 60 parcelas",
+            "Banco ondulado de 110 metros",
+            "Gaudí vivió aquí 20 años"
+          ]
+        },
+        {
+          "id": "casa-batllo",
+          "name": "Casa Batlló",
+          "category": "Monumento",
+          "coordinates": { "lat": 41.3917, "lng": 2.1649 },
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "videoUrlAdult": "",
+          "videoUrlKids": "",
+          "summaryAdult": "Casa Batlló imita un dragón y la azotea representa su lomo. Gaudí transformó una casa existente en 1904. La fachada está hecha de cerámica vidriada que cambia de color según la luz. Los balcones parecen máscaras de carnaval. El interior tiene formas orgánicas y la escalera principal parece una columna vertebral. La azotea tiene chimeneas que parecen guerreros.",
+          "summaryKids": "¡Esta casa parece un dragón gigante! Gaudí la hizo para que pareciera que un dragón se había dormido en la calle. La azotea es el lomo del dragón con escamas de colores. Los balcones parecen máscaras de carnaval súper raras. Por dentro tiene formas súper raras que parecen de otro planeta. ¡Es como vivir dentro de un cuento de hadas!",
+          "curiosityFacts": [
+            "Diseñada como un dragón",
+            "Fachada de cerámica que cambia de color",
+            "Balcones como máscaras de carnaval"
+          ]
+        }
       ]
     },
     {
@@ -31,9 +148,38 @@
       "name": "Granada",
       "center": { "lat": 37.1773, "lng": -3.5986 },
       "pois": [
-        { "id": "alhambra", "name": "La Alhambra", "category": "Patrimonio", "coordinates": { "lat": 37.1761, "lng": -3.5881 }, "imageUrl": "https://images.unsplash.com/photo-1520697222860-1ce8b2a3f6da?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
-        { "id": "mirador-san-nicolas", "name": "Mirador de San Nicolás", "category": "Mirador", "coordinates": { "lat": 37.1815, "lng": -3.5900 }, "imageUrl": "https://images.unsplash.com/photo-1615388161217-03ad3cbf29d2?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
-        { "id": "albaicin", "name": "Albaicín", "category": "Barrio", "coordinates": { "lat": 37.1811, "lng": -3.5922 }, "imageUrl": "https://images.unsplash.com/photo-1615388179199-3a39b4a2a3b9?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" }
+        {
+          "id": "alhambra",
+          "name": "La Alhambra",
+          "category": "Monumento",
+          "coordinates": { "lat": 37.1760, "lng": -3.5886 },
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "videoUrlAdult": "",
+          "videoUrlKids": "",
+          "summaryAdult": "La Alhambra es el palacio islámico mejor conservado del mundo y la única 'ciudad palatina' completa que sobrevive. Su nombre significa 'castillo rojo' por el color de sus muros al atardecer. Los Palacios Nazaríes tienen el sistema de climatización más sofisticado de la Edad Media - agua corriente, calefacción por suelo radiante y refrigeración natural. La Sala de los Abencerrajes tiene una acústica perfecta: un susurro en el centro se oye en toda la sala.",
+          "summaryKids": "¡La Alhambra es el palacio más bonito del mundo entero! Está hecha de piedra roja que brilla como el fuego cuando se pone el sol. Por dentro tiene agua que corre por todas partes como ríos pequeñitos que refrescan en verano y calientan en invierno. Hay una sala donde si susurras en el centro, ¡se oye en toda la habitación como por arte de magia! ¡Es como un castillo de cuento de hadas pero de verdad!",
+          "curiosityFacts": [
+            "Palacio islámico mejor conservado del mundo",
+            "Sistema de climatización medieval",
+            "Acústica perfecta en Sala de los Abencerrajes"
+          ]
+        },
+        {
+          "id": "generalife",
+          "name": "Generalife",
+          "category": "Naturaleza",
+          "coordinates": { "lat": 37.1776, "lng": -3.5849 },
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "videoUrlAdult": "",
+          "videoUrlKids": "",
+          "summaryAdult": "El Generalife era la villa de recreo de los reyes nazaríes. Su nombre significa 'jardín del arquitecto' o 'jardín elevado'. Tiene el sistema de riego más sofisticado de la época medieval. Los jardines están diseñados para crear microclimas y los patios tienen fuentes que crean música con el agua. Es el jardín árabe más antiguo de España.",
+          "summaryKids": "¡Este era el jardín de recreo de los reyes! Su nombre significa 'jardín elevado' porque está súper alto. Tiene un sistema de riego súper inteligente que hace que las plantas crezcan perfectas. Los patios tienen fuentes que hacen música con el agua - ¡es como un concierto de agua! Es el jardín árabe más antiguo de España. ¡Es como un parque de diversiones para plantas!",
+          "curiosityFacts": [
+            "Villa de recreo de reyes nazaríes",
+            "Sistema de riego medieval sofisticado",
+            "Jardín árabe más antiguo de España"
+          ]
+        }
       ]
     },
     {
@@ -41,9 +187,38 @@
       "name": "Sevilla",
       "center": { "lat": 37.3891, "lng": -5.9845 },
       "pois": [
-        { "id": "giralda", "name": "La Giralda", "category": "Monumento", "coordinates": { "lat": 37.3860, "lng": -5.9920 }, "imageUrl": "https://images.unsplash.com/photo-1522439515276-1b4b1bce9d5d?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
-        { "id": "plaza-espana", "name": "Plaza de España", "category": "Plaza", "coordinates": { "lat": 37.3772, "lng": -5.9869 }, "imageUrl": "https://images.unsplash.com/photo-1526772662000-3f88f10405ff?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
-        { "id": "alcazar", "name": "Real Alcázar", "category": "Palacio", "coordinates": { "lat": 37.3831, "lng": -5.9903 }, "imageUrl": "https://images.unsplash.com/photo-1625660566817-6b7d7f8d7bd8?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" }
+        {
+          "id": "catedral-sevilla",
+          "name": "Catedral de Sevilla",
+          "category": "Monumento",
+          "coordinates": { "lat": 37.3859, "lng": -5.9926 },
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "videoUrlAdult": "",
+          "videoUrlKids": "",
+          "summaryAdult": "Es la catedral gótica más grande del mundo y la tercera iglesia cristiana tras San Pedro del Vaticano y San Pablo de Londres. La Giralda era el alminar de la mezquita almohade más alta del mundo. Cristóbal Colón está enterrado aquí... probablemente - hay 4 ciudades que reclaman sus restos. La cúpula se derrumbó en 1511 y tardó 100 años en reconstruirse.",
+          "summaryKids": "¡Esta es la iglesia más grande de España! ¡Es tan grande que cabrían 3 campos de fútbol dentro! La torre súper alta antes era de cuando aquí vivían personas de otros países que rezaban diferente. Y aquí está enterrado el señor que descubrió América, ¡pero no están seguros de si es él de verdad! ¡Es como tener un castillo gigante para rezar!",
+          "curiosityFacts": [
+            "Catedral gótica más grande del mundo",
+            "Cristóbal Colón enterrado aquí (probablemente)",
+            "Cúpula tardó 100 años en reconstruirse"
+          ]
+        },
+        {
+          "id": "alcazar-sevilla",
+          "name": "Reales Alcázares",
+          "category": "Monumento",
+          "coordinates": { "lat": 37.3839, "lng": -5.9914 },
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "videoUrlAdult": "",
+          "videoUrlKids": "",
+          "summaryAdult": "Los Reales Alcázares llevan 1000 años de construcción continua - cada cultura añadió su capa. El Palacio de Pedro I es el edificio mudéjar más importante de España. La Torre del Oro nunca fue dorada - se llamaba así por el reflejo del sol en azulejos amarillos. Durante la Guerra Civil fue usado como prisión y los presos grabaron sus nombres en las paredes.",
+          "summaryKids": "¡Este palacio lleva 1000 años construyéndose! Cada grupo de personas que vivía aquí añadía algo nuevo. ¡Es como una casa que nunca termina de crecer! Hay una torre dorada que en realidad nunca fue dorada - solo brillaba como el oro cuando le daba el sol. ¡Es como tener un palacio de cuento de hadas que crece solo!",
+          "curiosityFacts": [
+            "1000 años de construcción continua",
+            "Edificio mudéjar más importante de España",
+            "Torre del Oro nunca fue dorada"
+          ]
+        }
       ]
     },
     {
@@ -51,11 +226,39 @@
       "name": "Córdoba",
       "center": { "lat": 37.8882, "lng": -4.7794 },
       "pois": [
-        { "id": "mezquita", "name": "Mezquita-Catedral", "category": "Patrimonio", "coordinates": { "lat": 37.8790, "lng": -4.7794 }, "imageUrl": "https://images.unsplash.com/photo-1558981403-c5f9899a28bc?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
-        { "id": "alcazar-cordoba", "name": "Alcázar de los Reyes Cristianos", "category": "Palacio", "coordinates": { "lat": 37.8765, "lng": -4.7840 }, "imageUrl": "https://images.unsplash.com/photo-1558980394-0a3a49b0ec7d?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" },
-        { "id": "puente-romano", "name": "Puente Romano", "category": "Puente", "coordinates": { "lat": 37.8760, "lng": -4.7775 }, "imageUrl": "https://images.unsplash.com/photo-1558980343-3ecfbbefa8c4?w=1200&h=1600&fit=crop", "videoUrlAdult": "", "videoUrlKids": "" }
+        {
+          "id": "mezquita-cordoba",
+          "name": "Mezquita-Catedral de Córdoba",
+          "category": "Monumento",
+          "coordinates": { "lat": 37.8789, "lng": -4.7794 },
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "videoUrlAdult": "",
+          "videoUrlKids": "",
+          "summaryAdult": "Es la única mezquita-catedral del mundo. Tiene 856 columnas de mármol, jaspe y granito recicladas de templos romanos y visigodos. El mihrab está mal orientado a propósito - no apunta a La Meca sino al sur, hacia Damasco, sede del califato omeya. La biblioteca del califato tenía 400.000 volúmenes cuando Europa apenas sabía leer.",
+          "summaryKids": "¡Esta es súper especial porque es una mezquita y una iglesia a la vez! ¡Como si fuera dos casas de rezar en una! Tiene más de 800 columnas súper bonitas que son todas diferentes porque las cogieron de edificios súper antiguos de romanos y otros pueblos. ¡Es como un puzzle gigante de piedras de colores!",
+          "curiosityFacts": [
+            "Única mezquita-catedral del mundo",
+            "856 columnas recicladas de templos antiguos",
+            "Mihrab orientado hacia Damasco, no La Meca"
+          ]
+        },
+        {
+          "id": "alcazar-cordoba",
+          "name": "Alcázar de los Reyes Cristianos",
+          "category": "Monumento",
+          "coordinates": { "lat": 37.8776, "lng": -4.7794 },
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "videoUrlAdult": "",
+          "videoUrlKids": "",
+          "summaryAdult": "Aquí se firmó la capitulación de Granada en 1492. Los Reyes Católicos vivieron aquí 8 años. Tiene baños árabes del siglo X que son los mejor conservados de España. Los jardines tienen más de 100 especies de plantas traídas de América. Fue prisión de la Inquisición y cárcel durante la Guerra Civil.",
+          "summaryKids": "¡Aquí vivieron los Reyes Católicos 8 años! Tiene baños súper antiguos del siglo X que son los mejor conservados de España. Los jardines tienen más de 100 plantas diferentes que trajeron de América. ¡Es como tener un jardín de todos los continentes! ¡Es como un palacio de cuento de hadas con jardines mágicos!",
+          "curiosityFacts": [
+            "Aquí se firmó la capitulación de Granada",
+            "Baños árabes del siglo X mejor conservados",
+            "Más de 100 especies de plantas americanas"
+          ]
+        }
       ]
     }
   ]
 }
-
