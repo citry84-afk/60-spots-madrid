@@ -76,9 +76,12 @@ export default function CitySummary({
         transition={{ type: 'spring', damping: 30, stiffness: 300 }}
         className="w-full bg-white rounded-t-3xl shadow-ios-xl max-h-[90vh] overflow-hidden relative"
       >
-        {/* Header con gradiente */}
-        <div className="h-48 bg-gradient-to-br from-ios-blue to-purple-500 relative">
-          <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+        {/* Header con imagen de ciudad */}
+        <div 
+          className="h-48 bg-cover bg-center relative"
+          style={{ backgroundImage: `url(${city.imageUrl})` }}
+        >
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
           
           {/* Botón cerrar */}
           <motion.button

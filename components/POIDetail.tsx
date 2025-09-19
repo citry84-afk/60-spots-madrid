@@ -224,6 +224,16 @@ export default function POIDetail({
                 {isKidsMode ? 'Para Niños' : 'Para Adultos'}
               </h3>
             </div>
+            
+            {/* Imagen del POI */}
+            <div className="mb-4">
+              <img
+                src={poi.imageUrl}
+                alt={poi.name}
+                className="w-full h-32 object-cover rounded-xl shadow-ios"
+              />
+            </div>
+            
             <p className="text-gray-700 leading-relaxed text-sm">
               {isKidsMode ? poi.summaryKids : poi.summaryAdult || 'Resumen no disponible'}
             </p>

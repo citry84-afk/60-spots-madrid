@@ -157,12 +157,17 @@ export default function CitySelector({
                   {/* City Avatar */}
                   <motion.div
                     whileHover={{ scale: 1.1, rotate: 5 }}
-                    className={`w-12 h-12 ${getCityGradient(index)} rounded-2xl flex items-center justify-center shadow-ios relative overflow-hidden`}
+                    className="w-12 h-12 rounded-2xl flex items-center justify-center shadow-ios relative overflow-hidden"
                   >
-                    <span className="text-2xl relative z-10">
+                    <img
+                      src={city.imageUrl}
+                      alt={city.name}
+                      className="w-full h-full object-cover"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+                    <span className="absolute bottom-1 right-1 text-lg relative z-10">
                       {getCityEmoji(city.name)}
                     </span>
-                    <div className="absolute inset-0 bg-white/20" />
                   </motion.div>
                   
                   {/* City Info */}

@@ -8,6 +8,7 @@
         "lat": 40.4168,
         "lng": -3.7038
       },
+      "imageUrl": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1200&h=800&fit=crop&q=80",
       "summaryAdult": "Madrid, capital de España desde 1561, encarna la evolución de una villa medieval hacia una metrópoli cosmopolita de más de 6.7 millones de habitantes. Su posición geográfica central y su altitud de 650 metros sobre el mar la convierten en la capital europea más alta. La ciudad combina patrimonio histórico excepcional con vanguardia cultural: el Triángulo Dorado del Arte (Prado, Reina Sofía, Thyssen), el Madrid de los Austrias y el ensanche decimonónico coexisten con arquitectura contemporánea.",
       "summaryKids": "¡Madrid es la capital de España y está justo en el centro del país, como el corazón! Es una ciudad súper grande donde viven casi 7 millones de personas, ¡como si todos los niños de España vivieran en el mismo lugar! Tiene museos increíbles llenos de cuadros famosos, parques enormes para jugar, y pastelerías donde hacen churros con chocolate súper ricos. En mayo celebran las fiestas de San Isidro con gigantes, cabezudos y muchas sorpresas. Los domingos hay un mercadillo súper grande llamado El Rastro donde venden tesoros antiguos.",
       "videoUrlAdult": "",
@@ -21,7 +22,7 @@
             "lat": 40.4155,
             "lng": -3.7074
           },
-          "imageUrl": "https://images.unsplash.com/photo-1513635269975-59663e0ae4c0?w=800&h=1200&fit=crop&q=80",
+          "imageUrl": "https://images.unsplash.com/photo-1513635269975-59663e0ae4c0?w=1200&h=800&fit=crop&q=80",
           "videoUrlAdult": "/videos/pois/plaza-mayor_adult.mp4",
           "videoUrlKids": "/videos/pois/plaza-mayor_kids.mp4",
           "summaryAdult": "La Plaza Mayor de Madrid, construida entre 1617 y 1619 durante el reinado de Felipe III, representa uno de los mejores ejemplos de arquitectura barroca española. Con sus 129 metros de largo por 94 de ancho, está rodeada por edificios de tres plantas con 237 balcones que miran hacia el interior. La Casa de la Panadería, con sus magníficos frescos, domina el lado norte de la plaza. Este espacio ha sido testigo de coronaciones, ejecuciones, corridas de toros y mercados.",
@@ -40,7 +41,7 @@
             "lat": 40.4179,
             "lng": -3.7143
           },
-          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop&q=80",
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop&q=80",
           "videoUrlAdult": "/videos/pois/palacio-real_adult.mp4",
           "videoUrlKids": "/videos/pois/palacio-real_kids.mp4",
           "summaryAdult": "El Palacio Real de Madrid, construido sobre las ruinas del antiguo Alcázar tras su incendio en 1734, es una joya arquitectónica diseñada por Filippo Juvarra y Francesco Sabatini. Con más de 3000 habitaciones, es uno de los palacios más grandes de Europa occidental. Su fachada barroca combina piedra caliza blanca de Colmenar y granito de la Sierra de Guadarrama. Alberga la mayor colección de instrumentos Stradivarius del mundo, frescos de Giambattista Tiepolo y una armería real excepcional.",
@@ -59,7 +60,7 @@
             "lat": 40.42,
             "lng": -3.6883
           },
-          "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=1200&fit=crop",
+          "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=800&fit=crop&q=80",
           "videoUrlAdult": "",
           "videoUrlKids": "",
           "summaryAdult": "La Puerta de Alcalá, erigida entre 1769 y 1778 por Francesco Sabatini bajo encargo de Carlos III, constituye la primera puerta monumental post-medieval de Europa. Sus cinco vanos, flanqueados por columnas de orden dórico y jónico, están coronados por capiteles corintios y escudos reales. Durante la Guerra Civil fue usada como refugio antiaéreo y aún conserva las marcas de los proyectiles.",
@@ -78,7 +79,7 @@
             "lat": 40.4152,
             "lng": -3.6846
           },
-          "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=1200&fit=crop",
+          "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1200&h=800&fit=crop&q=80",
           "videoUrlAdult": "",
           "videoUrlKids": "",
           "summaryAdult": "El Parque del Retiro, con sus 125 hectáreas, fue originalmente jardín real del Palacio del Buen Retiro en el siglo XVII. Este pulmón verde de Madrid alberga más de 15,000 árboles y constituye un museo al aire libre con esculturas, fuentes y arquitectura paisajística. Destaca el Palacio de Cristal de 1887, inspirado en el Crystal Palace londinense, y el Estanque Grande con su monumento a Alfonso XII. En 2021, junto al Paseo del Prado, fue declarado Patrimonio Mundial de la UNESCO como 'Paisaje de las Artes y las Ciencias'.",
@@ -97,7 +98,7 @@
             "lat": 40.424,
             "lng": -3.7179
           },
-          "imageUrl": "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&h=1200&fit=crop",
+          "imageUrl": "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=1200&h=800&fit=crop&q=80",
           "videoUrlAdult": "",
           "videoUrlKids": "",
           "summaryAdult": "El Templo de Debod, datado del siglo II a.C., constituye una auténtica joya arqueológica egipcia en pleno Madrid. Originalmente ubicado en el valle de Nubia, fue donado a España en 1968 por el gobierno egipcio como agradecimiento por la ayuda prestada en el salvamento de los monumentos de Nubia durante la construcción de la presa de Asuán. Dedicado a los dioses Amón e Isis, este templo ptolemaico fue reconstruido piedra a piedra en el Parque del Oeste.",
@@ -117,6 +118,7 @@
         "lat": 41.3851,
         "lng": 2.1734
       },
+      "imageUrl": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1200&h=800&fit=crop&q=80",
       "summaryAdult": "Barcelona, capital de Cataluña y segunda ciudad de España, representa la síntesis perfecta entre tradición mediterránea e innovación contemporánea. Fundada por los romanos como Barcino, conserva vestigios de 2000 años de historia en su Barrio Gótico. El modernismo catalán, con Gaudí como máximo exponente, define su identidad arquitectónica única. Su posición costera, con 4.6 km de playas urbanas, y su clima mediterráneo la convierten en destino turístico global.",
       "summaryKids": "¡Barcelona es una ciudad súper especial que tiene playa y montaña al mismo tiempo! Está al lado del mar Mediterráneo, así que puedes ir a la playa y ver barcos grandes como hoteles flotantes. Tiene edificios súper raros y bonitos hechos por Gaudí, que era como un arquitecto mágico que construía casas que parecían de cuentos. Las Ramblas son una calle súper larga llena de artistas que hacen estatuas vivientes, ¡se quedan quietos como robots hasta que les das una moneda! Se habla catalán y español, así que es como tener dos idiomas en el mismo lugar.",
       "videoUrlAdult": "",
@@ -130,7 +132,7 @@
             "lat": 41.4036,
             "lng": 2.1744
           },
-          "imageUrl": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=1200&fit=crop",
+          "imageUrl": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1200&h=800&fit=crop&q=80",
           "videoUrlAdult": "",
           "videoUrlKids": "",
           "summaryAdult": "La Basílica de la Sagrada Familia, obra cumbre de Antoni Gaudí, representa la síntesis perfecta entre arquitectura gótica, art nouveau y modernismo catalán. Iniciada en 1882, esta catedral única en el mundo combina simbolismo religioso cristiano con formas orgánicas inspiradas en la naturaleza. Sus 18 torres simbolizan los 12 apóstoles, los 4 evangelistas, la Virgen María y Jesucristo. Las fachadas narran la vida de Cristo: Natividad, Pasión y Gloria. Su interior, un bosque de columnas que imitan árboles, crea un ambiente místico único.",
@@ -149,7 +151,7 @@
             "lat": 41.4145,
             "lng": 2.1527
           },
-          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop&q=80",
           "videoUrlAdult": "",
           "videoUrlKids": "",
           "summaryAdult": "El Park Güell, diseñado entre 1900 y 1914 por Antoni Gaudí para el empresario Eusebi Güell, constituye una obra maestra del modernismo catalán. Originally concebido como urbanización residencial de lujo, se transformó en parque público tras su fracaso comercial. Sus 17 hectáreas combinan arquitectura, paisajismo y decoración en perfecta armonía. La famosa salamandra de trencadís, la sala hipóstila con 86 columnas dóricas, y los bancos serpenteantes de la plaza principal, decorados con mosaicos de cerámica rota, ejemplifican la genialidad de Gaudí.",
@@ -168,7 +170,7 @@
             "lat": 41.3917,
             "lng": 2.1649
           },
-          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop&q=80",
           "videoUrlAdult": "",
           "videoUrlKids": "",
           "summaryAdult": "La Casa Batlló, remodelada por Antoni Gaudí entre 1904-1906 para el industrial textil Josep Batlló, representa la culminación del genio creativo del arquitecto catalán. Ubicada en el Passeig de Gràcia, forma parte de la 'Manzana de la Discordia' junto a obras de Lluís Domènech i Montaner y Josep Puig i Cadafalch. Su fachada, inspirada en el mundo marino y la leyenda de Sant Jordi, combina piedra arenisca, hierro forjado, cristal y cerámica vidriada. El interior revoluciona el concepto espacial con formas orgánicas, patios de luces con degradé cromático y ventilación natural.",
@@ -188,6 +190,7 @@
         "lat": 37.1773,
         "lng": -3.5986
       },
+      "imageUrl": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1200&h=800&fit=crop&q=80",
       "summaryAdult": "Granada, situada al pie de Sierra Nevada y atravesada por los ríos Darro y Genil, constituye un testimonio vivo de la convivencia de culturas. Capital del último reino nazarí hasta 1492, conserva el conjunto monumental hispanomusulmán más importante de Occidente. Su universidad, fundada por Carlos V en 1531, la convierte en ciudad estudiantil vibrante que fusiona historia y juventud. Los barrios del Albaicín y Sacromonte, con sus cuevas flamencas, mantienen tradiciones centenarias.",
       "summaryKids": "¡Granada es una ciudad súper especial donde vivían los últimos reyes árabes de España! Está rodeada de montañas con nieve que se llama Sierra Nevada, ¡como si fuera el castillo de Elsa de Frozen! Tiene barrios súper curiosos: en el Albaicín las casas son blancas como nubes, y en Sacromonte la gente vive en cuevas (¡pero cuevas súper elegantes!). Allí bailan flamenco con guitarras que suenan como magia. Lo más genial es que cuando pides un refresco en un bar, ¡te dan comida gratis! Se llaman tapas y cada bar tiene las suyas.",
       "videoUrlAdult": "",
@@ -201,7 +204,7 @@
             "lat": 37.176,
             "lng": -3.5886
           },
-          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop&q=80",
           "videoUrlAdult": "",
           "videoUrlKids": "",
           "summaryAdult": "La Alhambra de Granada constituye la culminación del arte nazarí y uno de los monumentos más excepcionales de la arquitectura islámica occidental. Construida entre los siglos XIII-XIV por los reyes nazaríes, combina funciones palatinas, defensivas y residenciales. Sus cuatro zonas principales (Alcazaba, Palacios Nazaríes, Generalife y Palacio de Carlos V) representan ocho siglos de historia. Los Palacios Nazaríes destacan por sus mocárabes, yeserías, alicatados y inscripciones coránicas que transforman la arquitectura en poesía petrificada. El sistema hidráulico, con acequias, fuentes y estanques, crea un microclima único.",
@@ -220,7 +223,7 @@
             "lat": 37.1776,
             "lng": -3.5849
           },
-          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop&q=80",
           "videoUrlAdult": "",
           "videoUrlKids": "",
           "summaryAdult": "El Generalife, cuyo nombre deriva del árabe 'Yannat al-Arif' (Jardín del Arquitecto), constituía la villa de recreo de los sultanes nazaríes del siglo XIV. Situado en la colina del Cerro del Sol, representa la culminación del arte de la jardinería hispano-musulmana. Sus jardines escalonados, acequias, surtidores y pabellones crean una sinfonía sensorial donde el agua actúa como elemento vertebrador. El Patio de la Acequia, con sus surtidores arqueados, y los jardines altos con sus cipreses centenarios, ejemplifican la concepción islámica del paraíso terrenal.",
@@ -240,6 +243,7 @@
         "lat": 37.3891,
         "lng": -5.9845
       },
+      "imageUrl": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1200&h=800&fit=crop&q=80",
       "summaryAdult": "Sevilla, capital andaluza bañada por el Guadalquivir, encarna la esencia de la Andalucía histórica y monumental. Como puerto de las Américas durante los siglos XVI-XVII, concentró las riquezas coloniales que financiaron sus monumentos excepcionales. Su Semana Santa, reconocida internacionalmente, y la Feria de Abril representan manifestaciones culturales únicas que combinan religiosidad, tradición y alegría de vivir. El flamenco, arte declarado Patrimonio Inmaterial de la Humanidad, encuentra en Sevilla uno de sus templos principales.",
       "summaryKids": "¡Sevilla es la ciudad más alegre y colorida de España! Hace mucho tiempo, todos los barcos que venían de América con tesoros llegaban aquí, por eso tiene tantos palacios y iglesias súper grandes. Tiene un río que se llama Guadalquivir donde puedes pasear en barco. En Semana Santa salen procesiones súper largas con figuras vestidas de colores que parecen desfiles mágicos. Y en abril hacen una feria súper divertida donde todo el mundo se viste con trajes de colores, baila sevillanas y monta en caballitos. ¡El flamenco nació aquí! Es como un baile súper emocionante donde la gente zapatea fuerte y canta con el corazón.",
       "videoUrlAdult": "",
@@ -253,7 +257,7 @@
             "lat": 37.3859,
             "lng": -5.9926
           },
-          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop&q=80",
           "videoUrlAdult": "",
           "videoUrlKids": "",
           "summaryAdult": "La Catedral de Sevilla, construida entre 1402-1506 sobre la gran mezquita almohade, representa una de las mayores catedrales góticas del mundo y la más grande de España. Su construcción siguió el ambicioso lema del Cabildo: 'Hagamos una iglesia tan hermosa y tan grandiosa que los que la vieren labrada nos tengan por locos'. Conserva elementos andalusíes como la Giralda (antiguo alminar) y el Patio de los Naranjos. Alberga el mausoleo de Cristóbal Colón y obras maestras de Murillo, Zurbarán y Goya. Su retablo mayor, considerado el mayor del mundo, contiene más de 1000 figuras talladas.",
@@ -272,7 +276,7 @@
             "lat": 37.3839,
             "lng": -5.9914
           },
-          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop&q=80",
           "videoUrlAdult": "",
           "videoUrlKids": "",
           "summaryAdult": "El Real Alcázar de Sevilla constituye el palacio real en uso más antiguo de Europa, con más de siete siglos de construcción continua desde 1364. Pedro I de Castilla encargó el Palacio Mudéjar, obra maestra que fusiona arte cristiano, islámico y renacentista. Sus salones, como el de Embajadores con su cúpula de mocárabes, ejemplifican la perfección del arte mudéjar. Los jardines, evolucionados a través de los siglos, combinan trazado andalusí, renacentista y romántico. Las azulejería, yeserías y artesonados constituyen un compendio de las artes decorativas hispanomusulmanas.",
@@ -292,6 +296,7 @@
         "lat": 37.8882,
         "lng": -4.7794
       },
+      "imageUrl": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1200&h=800&fit=crop&q=80",
       "summaryAdult": "Córdoba, antigua capital del Califato de Al-Ándalus, representa uno de los centros culturales más importantes de la Edad Media europea. Durante los siglos VIII-XI, fue la urbe más poblada de Occidente y faro intelectual donde convivían musulmanes, judíos y cristianos. Su casco histórico, Patrimonio de la Humanidad, conserva vestigios romanos, islámicos, judíos y cristianos en perfecta armonía. Los patios cordobeses, tradición heredada de Roma y perfeccionada por los árabes, explotan cada mayo en el Festival de los Patios, declarado Patrimonio Inmaterial.",
       "summaryKids": "¡Córdoba era la ciudad más importante del mundo hace más de 1000 años! Era tan famosa que venían estudiantes de toda Europa a aprender aquí, como si fuera la universidad más guay del planeta. Lo más bonito son los patios: casas con jardines en el centro llenos de flores, especialmente geranios rojos que parecen fuegos artificiales de colores. En mayo hay un concurso de patios y toda la ciudad se llena de flores y olores súper ricos. También inventaron aquí el salmorejo, que es como el gazpacho pero más espeso y sabroso. Por la calle hay muchas tiendas donde hacen bolsos y cinturones de cuero súper bonitos. ¡Es como un museo al aire libre donde cada esquina cuenta una historia diferente!",
       "videoUrlAdult": "",
@@ -305,7 +310,7 @@
             "lat": 37.8789,
             "lng": -4.7794
           },
-          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop&q=80",
           "videoUrlAdult": "",
           "videoUrlKids": "",
           "summaryAdult": "La Mezquita-Catedral de Córdoba representa una síntesis arquitectónica única entre el arte islámico y cristiano. Iniciada por Abd al-Rahman I en 785, alcanzó su máximo esplendor bajo Al-Hakam II. Su bosque de 856 columnas de mármol, jaspe y granito, coronadas por arcos de herradura bicolores, crea un espacio místico sin parangón. La transformación en catedral tras la Reconquista (1236) añadió elementos góticos, renacentistas y barrocos sin destruir la estructura islámica. El mihrab, orientado hacia La Meca, constituye una joya del arte califal con sus mosaicos bizantinos.",
@@ -324,7 +329,7 @@
             "lat": 37.8776,
             "lng": -4.7794
           },
-          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
+          "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=800&fit=crop&q=80",
           "videoUrlAdult": "",
           "videoUrlKids": "",
           "summaryAdult": "El Alcázar de los Reyes Cristianos, construido en 1328 por Alfonso XI sobre restos de palacios islámicos y visigodos, constituyó residencia real durante la Reconquista. Sus cuatro torres (Homenaje, Palomas, Leones y Inquisición) atestiguan su función defensiva y administrativa. El edificio fue sede del Santo Oficio durante tres siglos, tribunal de los Reyes Católicos y prisión durante el siglo XIX. Sus jardines, diseñados en el siglo XX siguiendo patrones hispano-árabes, recrean el concepto islámico de jardín como anticipo del paraíso. Los mosaicos romanos del siglo II-III d.C., los baños reales y la biblioteca medieval convierten este conjunto en un palimpsesto de la historia cordobesa.",
