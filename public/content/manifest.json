@@ -14,8 +14,8 @@
           "imageUrl": "https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
-          "summaryAdult": "La Plaza Mayor se ha quemado 3 veces completa y las 237 estatuas de los balcones son todas diferentes. Fue diseñada por Juan de Herrera y Juan Gómez de Mora. En el centro está la estatua de Felipe III, pero el caballo está mirando hacia el lugar donde murió el rey. Durante siglos fue el centro de la vida social madrileña: corridas de toros, autos de fe, ejecuciones públicas y mercados.",
-          "summaryKids": "¡Esta plaza se quemó 3 veces como si fuera maldita, pero siempre la volvieron a construir! Tiene 237 estatuas en los balcones y ¡todas son diferentes! Es como un puzzle gigante de piedra. Aquí se hacían fiestas súper grandes y hasta corridas de toros hace muchísimo tiempo. En el centro hay una estatua de un rey a caballo que mira hacia donde murió - ¡es súper misterioso!",
+          "summaryAdult": "La Plaza Mayor se quemó 3 veces. Tiene 237 estatuas diferentes en los balcones. La estatua de Felipe III mira hacia donde murió el rey. Aquí se hacían corridas de toros y ejecuciones públicas.",
+          "summaryKids": "¡Esta plaza se quemó 3 veces pero siempre la reconstruyeron! Tiene 237 estatuas súper diferentes. ¡Hay una estatua de un rey a caballo que mira hacia donde murió!",
           "curiosityFacts": [
             "Se quemó completamente 3 veces en su historia",
             "Tiene 237 estatuas diferentes en los balcones",
@@ -30,8 +30,8 @@
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
-          "summaryAdult": "El Palacio Real tiene 3.418 habitaciones (más que Versalles) pero ningún rey ha dormido nunca allí. Es el palacio real más grande de Europa Occidental. Fue construido sobre las ruinas del Alcázar de los Austrias que se quemó en 1734. La colección de armas y armaduras es la más importante del mundo, con piezas de los siglos XIII al XIX.",
-          "summaryKids": "¡Este palacio tiene más habitaciones que días tiene el año! ¡3.418 habitaciones! Pero el rey nunca duerme aquí porque prefiere una casa más pequeñita. Es el palacio más grande de toda Europa. Tiene una colección súper grande de espadas y armaduras de caballeros de hace muchísimo tiempo - ¡es como un museo de superhéroes de verdad!",
+          "summaryAdult": "El Palacio Real tiene 3.418 habitaciones (más que Versalles) pero ningún rey ha dormido nunca allí. Es el palacio real más grande de Europa. Tiene la colección de armas más importante del mundo.",
+          "summaryKids": "¡Este palacio tiene más habitaciones que días del año! ¡3.418 habitaciones! Pero el rey nunca duerme aquí. Tiene espadas y armaduras de caballeros - ¡es como un museo de superhéroes!",
           "curiosityFacts": [
             "3.418 habitaciones (más que Versalles)",
             "Ningún rey ha dormido nunca allí",
