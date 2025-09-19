@@ -264,19 +264,19 @@ export default function Home() {
                 className="grid grid-cols-3 gap-4 max-w-sm mx-auto"
               >
                 {[
-                  { icon: <Play className="w-6 h-6" />, text: "Videos 60s" },
-                  { icon: <MapPin className="w-6 h-6" />, text: "GPS" },
-                  { icon: <Heart className="w-6 h-6" />, text: "Offline" }
+                  { icon: <Play className="w-6 h-6 text-ios-blue" />, text: "Videos 60s" },
+                  { icon: <MapPin className="w-6 h-6 text-green-500" />, text: "GPS" },
+                  { icon: <Heart className="w-6 h-6 text-pink-500" />, text: "Offline" }
                 ].map((feature, index) => (
                   <motion.div
                     key={index}
                     whileHover={{ scale: 1.1, y: -5 }}
                     className="glass rounded-2xl p-4 text-center"
                   >
-                    <div className="text-white mb-2 flex justify-center">
+                    <div className="mb-2 flex justify-center">
                       {feature.icon}
                     </div>
-                    <p className="text-white/80 text-sm font-medium">
+                    <p className="text-gray-900 text-sm font-semibold">
                       {feature.text}
                     </p>
                   </motion.div>
