@@ -25,6 +25,7 @@ export default function Home() {
   const [error, setError] = useState<string | null>(null);
   const [showRoutePlanner, setShowRoutePlanner] = useState(false);
   const [showHero, setShowHero] = useState(true);
+  const [showInstallBanner, setShowInstallBanner] = useState(true);
 
   // Cargar manifest de contenidos al inicio
   useEffect(() => {
@@ -45,6 +46,7 @@ export default function Home() {
     setUserLocation([lat, lng]);
     setIsDetectingLocation(false);
     setShowHero(false);
+    setShowInstallBanner(false);
     
     // Buscar ciudad más cercana
     let closestCity = cities[0];
@@ -75,11 +77,13 @@ export default function Home() {
   const handleUseLocation = () => {
     setIsDetectingLocation(true);
     setShowHero(false);
+    setShowInstallBanner(false);
   };
 
   const handleCitySelect = (city: City) => {
     setSelectedCity(city);
     setShowHero(false);
+    setShowInstallBanner(false);
     if (userLocation) {
       const pois = getNearbyPOIs(userLocation[0], userLocation[1], city, 10000);
       setNearbyPOIs(pois);
@@ -359,7 +363,7 @@ export default function Home() {
             </div>
 
             {/* Content */}
-            <div className="px-6 pb-24">
+            <div className="px-6 pb-32">
               {nearbyPOIs.length > 0 && (
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -464,47 +468,56 @@ export default function Home() {
         )}
       </AnimatePresence>
 
-      {/* PWA Install Prompt */}
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 3 }}
-        className="fixed bottom-6 left-6 right-6 z-20"
-      >
-        <div className="glass rounded-3xl p-4 shadow-ios-xl">
-          <div className="flex items-center space-x-4">
-            <motion.div
-              animate={{ 
-                scale: [1, 1.1, 1],
-                rotate: [0, 10, -10, 0]
-              }}
-              transition={{ 
-                duration: 2, 
-                repeat: Infinity, 
-                ease: "easeInOut" 
-              }}
-              className="text-3xl"
-            >
-              📱
-            </motion.div>
-            <div className="flex-1">
-              <h3 className="font-bold text-gray-900 text-lg">
-                Instala 60secondstrip
-              </h3>
-              <p className="text-ios-gray text-sm">
-                Acceso instantáneo desde tu pantalla de inicio
-              </p>
+      {/* PWA Install Prompt - Solo mostrar en hero y ocultar al interactuar */}
+      <AnimatePresence>
+        {showInstallBanner && showHero && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: 20 }}
+            transition={{ delay: 3 }}
+            className="fixed bottom-6 left-6 right-6 z-20"
+          >
+            <div className="glass rounded-3xl p-4 shadow-ios-xl">
+              <div className="flex items-center space-x-4">
+                <motion.div
+                  animate={{ 
+                    scale: [1, 1.1, 1],
+                    rotate: [0, 10, -10, 0]
+                  }}
+                  transition={{ 
+                    duration: 2, 
+                    repeat: Infinity, 
+                    ease: "easeInOut" 
+                  }}
+                  className="text-3xl"
+                >
+                  📱
+                </motion.div>
+                <div className="flex-1">
+                  <h3 className="font-bold text-gray-900 text-lg">
+                    Instala 60secondstrip
+                  </h3>
+                  <p className="text-ios-gray text-sm">
+                    Acceso instantáneo desde tu pantalla de inicio
+                  </p>
+                </div>
+                <motion.button
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                  onClick={() => {
+                    setShowInstallBanner(false);
+                    console.log('Instalando PWA...');
+                  }}
+                  className="btn-primary px-6 py-2 text-sm"
+                >
+                  Instalar
+                </motion.button>
+              </div>
             </div>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="btn-primary px-6 py-2 text-sm"
-            >
-              Instalar
-            </motion.button>
-          </div>
-        </div>
-      </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
