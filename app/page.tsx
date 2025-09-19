@@ -114,15 +114,6 @@ export default function Home() {
     if (selectedPOI) {
       const videoUrl = isKids ? selectedPOI.videoUrlKids : selectedPOI.videoUrlAdult;
       if (videoUrl) {
-        // Crear un elemento de vídeo y reproducirlo
-        const video = document.createElement('video');
-        video.src = videoUrl;
-        video.controls = true;
-        video.autoplay = true;
-        video.style.width = '100%';
-        video.style.height = '100%';
-        video.style.objectFit = 'cover';
-        
         // Crear modal para el vídeo
         const modal = document.createElement('div');
         modal.style.position = 'fixed';
@@ -130,34 +121,78 @@ export default function Home() {
         modal.style.left = '0';
         modal.style.width = '100%';
         modal.style.height = '100%';
-        modal.style.backgroundColor = 'rgba(0, 0, 0, 0.9)';
+        modal.style.backgroundColor = 'rgba(0, 0, 0, 0.95)';
         modal.style.zIndex = '9999';
         modal.style.display = 'flex';
         modal.style.alignItems = 'center';
         modal.style.justifyContent = 'center';
         modal.style.padding = '20px';
+        modal.style.boxSizing = 'border-box';
+        
+        // Contenedor del vídeo
+        const videoContainer = document.createElement('div');
+        videoContainer.style.position = 'relative';
+        videoContainer.style.width = '100%';
+        videoContainer.style.maxWidth = '800px';
+        videoContainer.style.height = 'auto';
+        videoContainer.style.aspectRatio = '9/16';
+        videoContainer.style.borderRadius = '20px';
+        videoContainer.style.overflow = 'hidden';
+        videoContainer.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.5)';
+        
+        // Crear elemento de vídeo
+        const video = document.createElement('video');
+        video.src = videoUrl;
+        video.controls = true;
+        video.autoplay = true;
+        video.muted = true; // Muted para permitir autoplay
+        video.style.width = '100%';
+        video.style.height = '100%';
+        video.style.objectFit = 'cover';
+        video.style.borderRadius = '20px';
+        
+        // Manejar errores de carga
+        video.onerror = () => {
+          console.error('Error cargando vídeo:', videoUrl);
+          const errorDiv = document.createElement('div');
+          errorDiv.style.padding = '40px';
+          errorDiv.style.textAlign = 'center';
+          errorDiv.style.color = 'white';
+          errorDiv.innerHTML = `
+            <div style="font-size: 48px; margin-bottom: 20px;">🎬</div>
+            <h3 style="margin-bottom: 10px;">Error cargando vídeo</h3>
+            <p style="opacity: 0.7;">El vídeo no se pudo cargar correctamente</p>
+          `;
+          videoContainer.innerHTML = '';
+          videoContainer.appendChild(errorDiv);
+        };
         
         // Botón cerrar
         const closeBtn = document.createElement('button');
         closeBtn.innerHTML = '✕';
         closeBtn.style.position = 'absolute';
-        closeBtn.style.top = '20px';
-        closeBtn.style.right = '20px';
-        closeBtn.style.background = 'rgba(255, 255, 255, 0.2)';
+        closeBtn.style.top = '15px';
+        closeBtn.style.right = '15px';
+        closeBtn.style.background = 'rgba(0, 0, 0, 0.7)';
         closeBtn.style.border = 'none';
         closeBtn.style.color = 'white';
-        closeBtn.style.fontSize = '24px';
-        closeBtn.style.width = '40px';
-        closeBtn.style.height = '40px';
+        closeBtn.style.fontSize = '20px';
+        closeBtn.style.width = '35px';
+        closeBtn.style.height = '35px';
         closeBtn.style.borderRadius = '50%';
         closeBtn.style.cursor = 'pointer';
+        closeBtn.style.zIndex = '10';
+        closeBtn.style.display = 'flex';
+        closeBtn.style.alignItems = 'center';
+        closeBtn.style.justifyContent = 'center';
         
         closeBtn.onclick = () => {
           document.body.removeChild(modal);
         };
         
-        modal.appendChild(video);
-        modal.appendChild(closeBtn);
+        videoContainer.appendChild(video);
+        videoContainer.appendChild(closeBtn);
+        modal.appendChild(videoContainer);
         document.body.appendChild(modal);
         
         // Cerrar al hacer clic fuera del vídeo
@@ -166,6 +201,15 @@ export default function Home() {
             document.body.removeChild(modal);
           }
         };
+        
+        // Cerrar con Escape
+        const handleEscape = (e) => {
+          if (e.key === 'Escape') {
+            document.body.removeChild(modal);
+            document.removeEventListener('keydown', handleEscape);
+          }
+        };
+        document.addEventListener('keydown', handleEscape);
       }
     }
   };
