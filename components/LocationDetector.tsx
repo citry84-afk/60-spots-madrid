@@ -120,3 +120,4 @@ export default function LocationDetector({ onLocationFound, onLocationError }: L
     </motion.div>
   );
 }
+

@@ -89,3 +89,4 @@ Después de subir cada vídeo:
 - Formato **MP4 vertical** (1080x1920)
 - **No olvides** ejecutar `node update-video-urls.js` después de cada subida
 - Los vídeos se despliegan automáticamente en Netlify
+

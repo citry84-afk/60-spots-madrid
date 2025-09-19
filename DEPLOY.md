@@ -166,3 +166,4 @@ Tu app PWA estará disponible en:
 - **Offline**: Funciona sin conexión
 
 ¡Disfruta explorando Madrid! 🏛️✨
+

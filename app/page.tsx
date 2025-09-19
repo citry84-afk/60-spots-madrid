@@ -13,6 +13,7 @@ import RoutePlanner from '@/components/RoutePlanner';
 import CitySummary from '@/components/CitySummary';
 import { loadContentManifest, getNearbyPOIs, calculateOptimalRoute, City, POI } from '@/lib/content';
 import { MapPin, Play, Star, Heart, Share2, Download, Sparkles, Compass, Globe } from 'lucide-react';
+import AdSense from '@/components/AdSense';
 
 export default function Home() {
   const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
@@ -154,7 +155,13 @@ export default function Home() {
             <Compass className="w-full h-full text-white" />
           </motion.div>
           <h2 className="text-2xl font-bold text-white mb-2">60secondstrip</h2>
-          <p className="text-white/80">Cargando aventuras...</p>
+          <motion.p 
+            animate={{ opacity: [0.5, 1, 0.5] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="text-white/80"
+          >
+            Cargando aventuras...
+          </motion.p>
         </motion.div>
       </div>
     );
@@ -168,19 +175,27 @@ export default function Home() {
           animate={{ opacity: 1, scale: 1 }}
           className="glass rounded-3xl p-8 max-w-sm w-full text-center shadow-ios-xl"
         >
-          <div className="text-6xl mb-4">😔</div>
+          <motion.div 
+            animate={{ scale: [1, 1.1, 1] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="text-6xl mb-4"
+          >
+            😔
+          </motion.div>
           <h2 className="text-xl font-semibold text-gray-900 mb-2">
             Ups, algo salió mal
           </h2>
           <p className="text-ios-gray mb-6">
             {error}
           </p>
-          <button
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             onClick={() => window.location.reload()}
             className="btn-primary w-full"
           >
             Intentar de nuevo
-          </button>
+          </motion.button>
         </motion.div>
       </div>
     );
@@ -314,13 +329,21 @@ export default function Home() {
             transition={{ duration: 0.5 }}
             className="min-h-screen"
           >
-            {/* Header */}
-            <div className="p-6 pb-0">
-              <motion.div
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                className="flex items-center justify-between mb-6"
-              >
+                        {/* Header */}
+                        <div className="p-6 pb-0">
+                          {/* AdSense Banner */}
+                          <div className="mb-4">
+                            <AdSense 
+                              slot="1234567890" 
+                              className="w-full h-20 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500"
+                            />
+                          </div>
+                          
+                          <motion.div
+                            initial={{ opacity: 0, y: -20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            className="flex items-center justify-between mb-6"
+                          >
                 <div className="flex items-center space-x-3">
                   <motion.div
                     animate={{ rotate: 360 }}
@@ -410,8 +433,16 @@ export default function Home() {
                         </motion.button>
                       </div>
                       
-                      <div className="space-y-3">
-                        {nearbyPOIs.slice(0, 5).map((poi, index) => (
+                                  <div className="space-y-3">
+                                    {/* AdSense entre POIs */}
+                                    <div className="my-4">
+                                      <AdSense 
+                                        slot="0987654321" 
+                                        className="w-full h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500"
+                                      />
+                                    </div>
+                                    
+                                    {nearbyPOIs.slice(0, 5).map((poi, index) => (
                           <motion.div
                             key={poi.id}
                             initial={{ opacity: 0, y: 20 }}

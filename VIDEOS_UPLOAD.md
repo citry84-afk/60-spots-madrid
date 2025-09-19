@@ -148,3 +148,4 @@ Los vídeos están optimizados para:
 ### **Vídeo no dura 60s**
 - Usa un editor de vídeo para ajustar la duración
 - Añade frames al final o corta si es necesario
+

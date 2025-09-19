@@ -300,3 +300,4 @@ export function getNearbySpots(
     .filter(spot => spot.distance! <= maxDistance)
     .sort((a, b) => a.distance! - b.distance!);
 }
+

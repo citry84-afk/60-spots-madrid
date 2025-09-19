@@ -58,3 +58,4 @@ generate_test_video "public/videos/pois/alhambra_kids.mp4" "Alhambra - Infantil"
 echo "🎉 ¡Vídeos de prueba generados!"
 echo "📁 Ubicación: public/videos/"
 echo "🔄 Ejecuta: node update-video-urls.js para actualizar el manifest"
+
