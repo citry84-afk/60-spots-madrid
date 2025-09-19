@@ -5,6 +5,10 @@
       "id": "madrid-es",
       "name": "Madrid",
       "center": { "lat": 40.4168, "lng": -3.7038 },
+      "summaryAdult": "Madrid, capital de España desde 1561, encarna la evolución de una villa medieval hacia una metrópoli cosmopolita de más de 6.7 millones de habitantes. Su posición geográfica central y su altitud de 650 metros sobre el mar la convierten en la capital europea más alta. La ciudad combina patrimonio histórico excepcional con vanguardia cultural: el Triángulo Dorado del Arte (Prado, Reina Sofía, Thyssen), el Madrid de los Austrias y el ensanche decimonónico coexisten con arquitectura contemporánea.",
+      "summaryKids": "¡Madrid es la capital de España y está justo en el centro del país, como el corazón! Es una ciudad súper grande donde viven casi 7 millones de personas, ¡como si todos los niños de España vivieran en el mismo lugar! Tiene museos increíbles llenos de cuadros famosos, parques enormes para jugar, y pastelerías donde hacen churros con chocolate súper ricos. En mayo celebran las fiestas de San Isidro con gigantes, cabezudos y muchas sorpresas. Los domingos hay un mercadillo súper grande llamado El Rastro donde venden tesoros antiguos.",
+      "videoUrlAdult": "",
+      "videoUrlKids": "",
       "pois": [
         {
           "id": "plaza-mayor",
@@ -14,8 +18,8 @@
           "imageUrl": "https://images.unsplash.com/photo-1539650116574-75c0c6d73c6e?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
-          "summaryAdult": "La Plaza Mayor se quemó 3 veces. Tiene 237 estatuas diferentes en los balcones. La estatua de Felipe III mira hacia donde murió el rey. Aquí se hacían corridas de toros y ejecuciones públicas.",
-          "summaryKids": "¡Esta plaza se quemó 3 veces pero siempre la reconstruyeron! Tiene 237 estatuas súper diferentes. ¡Hay una estatua de un rey a caballo que mira hacia donde murió!",
+          "summaryAdult": "La Plaza Mayor de Madrid, construida entre 1617 y 1619 durante el reinado de Felipe III, representa uno de los mejores ejemplos de arquitectura barroca española. Con sus 129 metros de largo por 94 de ancho, está rodeada por edificios de tres plantas con 237 balcones que miran hacia el interior. La Casa de la Panadería, con sus magníficos frescos, domina el lado norte de la plaza. Este espacio ha sido testigo de coronaciones, ejecuciones, corridas de toros y mercados.",
+          "summaryKids": "¡La Plaza Mayor es como un enorme salón rectangular rodeado de casas rojas! Imagínate una plaza tan grande que podrían jugar 1000 niños al mismo tiempo. Hace muchos, muchos años, aquí se celebraban fiestas con toros, obras de teatro y hasta bodas de reyes. Los edificios tienen 237 balcones, ¡podrías contar uno cada día durante casi 8 meses! En el centro hay una estatua de un rey montado en su caballo. Y lo más divertido: en Navidad ponen un mercado lleno de figuras del Belén. ¡Es como un cuento de hadas en pleno centro de Madrid!",
           "curiosityFacts": [
             "Se quemó completamente 3 veces en su historia",
             "Tiene 237 estatuas diferentes en los balcones",
@@ -30,8 +34,8 @@
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
-          "summaryAdult": "El Palacio Real tiene 3.418 habitaciones (más que Versalles) pero ningún rey ha dormido nunca allí. Es el palacio real más grande de Europa. Tiene la colección de armas más importante del mundo.",
-          "summaryKids": "¡Este palacio tiene más habitaciones que días del año! ¡3.418 habitaciones! Pero el rey nunca duerme aquí. Tiene espadas y armaduras de caballeros - ¡es como un museo de superhéroes!",
+          "summaryAdult": "El Palacio Real de Madrid, construido sobre las ruinas del antiguo Alcázar tras su incendio en 1734, es una joya arquitectónica diseñada por Filippo Juvarra y Francesco Sabatini. Con más de 3000 habitaciones, es uno de los palacios más grandes de Europa occidental. Su fachada barroca combina piedra caliza blanca de Colmenar y granito de la Sierra de Guadarrama. Alberga la mayor colección de instrumentos Stradivarius del mundo, frescos de Giambattista Tiepolo y una armería real excepcional.",
+          "summaryKids": "¡El Palacio Real es la casa más grande de Madrid! Tiene 3000 habitaciones, ¡tardarías 8 años en dormir una noche en cada una! Los reyes ya no viven aquí, pero viene a trabajar cuando hay fiestas importantes. Dentro hay violines súper especiales hechos por un señor llamado Stradivarius hace 300 años. También hay una sala llena de armaduras brillantes como las de los caballeros de los cuentos. Y en el techo hay pinturas tan grandes como una piscina olímpica. ¡Es como un castillo de Disney pero de verdad!",
           "curiosityFacts": [
             "3.418 habitaciones (más que Versalles)",
             "Ningún rey ha dormido nunca allí",
@@ -46,8 +50,8 @@
           "imageUrl": "https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
-          "summaryAdult": "La Puerta de Alcalá es más antigua que el Arco del Triunfo de París. Fue construida en 1778 por Sabatini para conmemorar la entrada de Carlos III en Madrid. Tiene dos caras diferentes: una más clásica hacia el exterior y otra más barroca hacia el interior. Durante la Guerra Civil fue usada como refugio antiaéreo y aún conserva las marcas de los proyectiles.",
-          "summaryKids": "¡Esta puerta es más antigua que el Arco del Triunfo de París! Es como una puerta gigante de piedra que da la bienvenida a Madrid. Tiene dos caras diferentes - una más seria y otra más divertida. Durante una guerra muy triste, la gente se escondía aquí para protegerse de las bombas, ¡y todavía se pueden ver las marcas!",
+          "summaryAdult": "La Puerta de Alcalá, erigida entre 1769 y 1778 por Francesco Sabatini bajo encargo de Carlos III, constituye la primera puerta monumental post-medieval de Europa. Sus cinco vanos, flanqueados por columnas de orden dórico y jónico, están coronados por capiteles corintios y escudos reales. Durante la Guerra Civil fue usada como refugio antiaéreo y aún conserva las marcas de los proyectiles.",
+          "summaryKids": "¡La Puerta de Alcalá parece la entrada a un castillo gigante! Hace mucho tiempo, Madrid era una ciudad pequeñita rodeada de murallas, y esta puerta era como la entrada principal. Un rey llamado Carlos III la construyó porque quería que Madrid fuera la ciudad más bonita de Europa. Tiene cinco puertas: tres redondas en el medio y dos cuadradas a los lados. ¡Es como un juego de formas geométricas gigante!",
           "curiosityFacts": [
             "Más antigua que el Arco del Triunfo de París",
             "Tiene dos caras arquitectónicas diferentes",
@@ -62,8 +66,8 @@
           "imageUrl": "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
-          "summaryAdult": "El Retiro era cárcel para plebeyos - solo la realeza podía entrar hasta 1868. Tiene 125 hectáreas y más de 15.000 árboles. El Palacio de Cristal fue construido para la Exposición de Filipinas de 1887. El estanque del Retiro tiene 280 metros de largo y se puede navegar en barca. Durante la Guerra Civil fue bombardeado 44 veces.",
-          "summaryKids": "¡Este parque gigante antes era solo para reyes! Si eras una persona normal te arrestaban si intentabas entrar. Ahora es súper grande - ¡tiene más de 15.000 árboles! Hay un palacio de cristal súper bonito que parece de cuento de hadas. Y un lago gigante donde puedes navegar en barca como un pirata. ¡Es como tener un bosque mágico en medio de la ciudad!",
+          "summaryAdult": "El Parque del Retiro, con sus 125 hectáreas, fue originalmente jardín real del Palacio del Buen Retiro en el siglo XVII. Este pulmón verde de Madrid alberga más de 15,000 árboles y constituye un museo al aire libre con esculturas, fuentes y arquitectura paisajística. Destaca el Palacio de Cristal de 1887, inspirado en el Crystal Palace londinense, y el Estanque Grande con su monumento a Alfonso XII. En 2021, junto al Paseo del Prado, fue declarado Patrimonio Mundial de la UNESCO como 'Paisaje de las Artes y las Ciencias'.",
+          "summaryKids": "¡El Retiro es como el jardín más grande y divertido de Madrid! Imagínate un parque tan grande que necesitarías todo un día para recorrerlo. Antes era el jardín privado de los reyes, ¡como su patio trasero gigante! Tiene un lago donde puedes montar en barca como un pirata, y un palacio hecho completamente de cristal que parece la casa de Elsa de Frozen. Hay tortugas que toman el sol, ardillas que juegan en los árboles y patos que nadan felices. ¡También hay estatuas de leones, princesas y guerreros esperando a que los descubras!",
           "curiosityFacts": [
             "Solo realeza hasta 1868, plebeyos iban a la cárcel",
             "Más de 15.000 árboles",
@@ -78,8 +82,8 @@
           "imageUrl": "https://images.unsplash.com/photo-1545558014-8692077e9b5c?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
-          "summaryAdult": "El Templo de Debod es un regalo egipcio auténtico de 2.200 años trasladado piedra por piedra. Fue donado por Egipto en 1968 como agradecimiento por la ayuda española en la construcción de la presa de Asuán. Es el único templo egipcio original en España. Está orientado hacia el Nilo y tiene inscripciones jeroglíficas auténticas.",
-          "summaryKids": "¡Este templo vino desde Egipto como un regalo súper especial! Tiene más de 2.000 años y lo trajeron piedra por piedra como un puzzle gigante. Es el único templo egipcio de verdad en España. Está orientado hacia el río Nilo como en Egipto y tiene dibujitos súper antiguos que cuentan historias de faraones y dioses. ¡Es como tener un pedacito de Egipto en Madrid!",
+          "summaryAdult": "El Templo de Debod, datado del siglo II a.C., constituye una auténtica joya arqueológica egipcia en pleno Madrid. Originalmente ubicado en el valle de Nubia, fue donado a España en 1968 por el gobierno egipcio como agradecimiento por la ayuda prestada en el salvamento de los monumentos de Nubia durante la construcción de la presa de Asuán. Dedicado a los dioses Amón e Isis, este templo ptolemaico fue reconstruido piedra a piedra en el Parque del Oeste.",
+          "summaryKids": "¡Hay un templo egipcio de verdad en Madrid! Hace muchísimos años, unos faraones lo construyeron en Egipto, al lado del río Nilo donde vivían los cocodrilos. Pero cuando iban a construir una presa muy grande, el templo se iba a quedar bajo el agua. ¡Entonces Egipto se lo regaló a España como si fuera un regalo de cumpleaños gigante! Lo desmontaron piedra a piedra como un puzzle súper complicado y lo volvieron a construir en Madrid. Dentro hay dibujos misteriosos llamados jeroglíficos que son como emojis muy antiguos. ¡Es como tener una máquina del tiempo que te lleva al tiempo de las momias y las pirámides!",
           "curiosityFacts": [
             "Regalo egipcio de 2.200 años",
             "Trasladado piedra por piedra",
@@ -92,6 +96,10 @@
       "id": "barcelona-es",
       "name": "Barcelona",
       "center": { "lat": 41.3851, "lng": 2.1734 },
+      "summaryAdult": "Barcelona, capital de Cataluña y segunda ciudad de España, representa la síntesis perfecta entre tradición mediterránea e innovación contemporánea. Fundada por los romanos como Barcino, conserva vestigios de 2000 años de historia en su Barrio Gótico. El modernismo catalán, con Gaudí como máximo exponente, define su identidad arquitectónica única. Su posición costera, con 4.6 km de playas urbanas, y su clima mediterráneo la convierten en destino turístico global.",
+      "summaryKids": "¡Barcelona es una ciudad súper especial que tiene playa y montaña al mismo tiempo! Está al lado del mar Mediterráneo, así que puedes ir a la playa y ver barcos grandes como hoteles flotantes. Tiene edificios súper raros y bonitos hechos por Gaudí, que era como un arquitecto mágico que construía casas que parecían de cuentos. Las Ramblas son una calle súper larga llena de artistas que hacen estatuas vivientes, ¡se quedan quietos como robots hasta que les das una moneda! Se habla catalán y español, así que es como tener dos idiomas en el mismo lugar.",
+      "videoUrlAdult": "",
+      "videoUrlKids": "",
       "pois": [
         {
           "id": "sagrada-familia",
@@ -101,8 +109,8 @@
           "imageUrl": "https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
-          "summaryAdult": "La Sagrada Familia lleva 142 años construyéndose y no se terminará hasta 2026 - será el proyecto arquitectónico más largo de la historia. Gaudí trabajó 43 años en ella y murió atropellado por un tranvía. La fachada del Nacimiento está terminada, la de la Pasión es de Subirachs, y la de la Gloria aún no existe. Tiene 18 torres que representan a los 12 apóstoles, 4 evangelistas, la Virgen y Jesús.",
-          "summaryKids": "¡Esta iglesia lleva más de 100 años construyéndose! ¡Tus bisabuelos la vieron igual que la ves tú! El arquitecto Gaudí trabajó 43 años en ella y murió atropellado por un tranvía. Tiene 18 torres súper altas que representan a los apóstoles, evangelistas, la Virgen y Jesús. ¡Es como un castillo de arena gigante que nunca termina de construirse!",
+          "summaryAdult": "La Basílica de la Sagrada Familia, obra cumbre de Antoni Gaudí, representa la síntesis perfecta entre arquitectura gótica, art nouveau y modernismo catalán. Iniciada en 1882, esta catedral única en el mundo combina simbolismo religioso cristiano con formas orgánicas inspiradas en la naturaleza. Sus 18 torres simbolizan los 12 apóstoles, los 4 evangelistas, la Virgen María y Jesucristo. Las fachadas narran la vida de Cristo: Natividad, Pasión y Gloria. Su interior, un bosque de columnas que imitan árboles, crea un ambiente místico único.",
+          "summaryKids": "¡La Sagrada Familia parece un castillo de arena gigante hecho por el arquitecto más imaginativo del mundo! Antoni Gaudí era como un mago que convertía piedra en cuentos. Lleva más de 140 años construyéndose, ¡más tiempo del que han vivido tus bisabuelos! Por fuera parece que tiene muchas torres que quieren tocar las nubes. Por dentro es como un bosque mágico donde las columnas son árboles de piedra y la luz entra por ventanas de colores como el arcoíris. Cada parte cuenta una historia de Jesús, desde cuando nació hasta cuando se hizo mayor. ¡Es como leer un libro gigante hecho de piedra y colores!",
           "curiosityFacts": [
             "142 años construyéndose",
             "Gaudí trabajó 43 años en ella",
@@ -117,8 +125,8 @@
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
-          "summaryAdult": "Park Güell era un fracaso comercial - solo vendieron 2 de 60 parcelas previstas. Gaudí lo diseñó como una ciudad-jardín utópica. La escalinata del dragón tiene 3 fuentes que representan los países catalanes. El banco ondulado de la plaza principal tiene 110 metros y está decorado con trencadís (mosaico de cerámica rota). Gaudí vivió en la casa del parque durante 20 años.",
-          "summaryKids": "¡Este parque era un fracaso comercial! Solo vendieron 2 casas de 60 que querían construir. Gaudí lo hizo como una ciudad-jardín de cuento de hadas. Hay un dragón gigante hecho de azulejos de colores que escupe agua. El banco más largo del mundo está aquí - ¡110 metros! Y está decorado con pedacitos de cerámica de colores como un puzzle gigante. ¡Es como un parque de diversiones de piedra!",
+          "summaryAdult": "El Park Güell, diseñado entre 1900 y 1914 por Antoni Gaudí para el empresario Eusebi Güell, constituye una obra maestra del modernismo catalán. Originally concebido como urbanización residencial de lujo, se transformó en parque público tras su fracaso comercial. Sus 17 hectáreas combinan arquitectura, paisajismo y decoración en perfecta armonía. La famosa salamandra de trencadís, la sala hipóstila con 86 columnas dóricas, y los bancos serpenteantes de la plaza principal, decorados con mosaicos de cerámica rota, ejemplifican la genialidad de Gaudí.",
+          "summaryKids": "¡El Park Güell es como un parque de atracciones diseñado por un genio! Gaudí quería hacer casas súper especiales, pero al final hizo algo mejor: ¡un parque mágico! La estrella es una salamandra gigante hecha con pedacitos de azulejos de colores, como si fuera un puzzle. Hay bancos que parecen serpientes arcoíris donde puedes sentarte y ver toda Barcelona. Las columnas parecen palmeras de piedra que sostienen el techo de una cueva misteriosa. Todo está hecho con trocitos de cerámica rota que brillan al sol. ¡Es como si un dragón amigable hubiera decorado su casa y te invitara a jugar en su jardín!",
           "curiosityFacts": [
             "Solo se vendieron 2 de 60 parcelas",
             "Banco ondulado de 110 metros",
@@ -133,8 +141,8 @@
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
-          "summaryAdult": "Casa Batlló imita un dragón y la azotea representa su lomo. Gaudí transformó una casa existente en 1904. La fachada está hecha de cerámica vidriada que cambia de color según la luz. Los balcones parecen máscaras de carnaval. El interior tiene formas orgánicas y la escalera principal parece una columna vertebral. La azotea tiene chimeneas que parecen guerreros.",
-          "summaryKids": "¡Esta casa parece un dragón gigante! Gaudí la hizo para que pareciera que un dragón se había dormido en la calle. La azotea es el lomo del dragón con escamas de colores. Los balcones parecen máscaras de carnaval súper raras. Por dentro tiene formas súper raras que parecen de otro planeta. ¡Es como vivir dentro de un cuento de hadas!",
+          "summaryAdult": "La Casa Batlló, remodelada por Antoni Gaudí entre 1904-1906 para el industrial textil Josep Batlló, representa la culminación del genio creativo del arquitecto catalán. Ubicada en el Passeig de Gràcia, forma parte de la 'Manzana de la Discordia' junto a obras de Lluís Domènech i Montaner y Josep Puig i Cadafalch. Su fachada, inspirada en el mundo marino y la leyenda de Sant Jordi, combina piedra arenisca, hierro forjado, cristal y cerámica vidriada. El interior revoluciona el concepto espacial con formas orgánicas, patios de luces con degradé cromático y ventilación natural.",
+          "summaryKids": "¡La Casa Batlló parece la casa de un dragón súper elegante! Gaudí la diseñó como si fuera el fondo del mar, con ventanas que parecen burbujas y balcones que parecen calaveras de dinosaurios (¡pero no dan miedo!). El tejado es como las escamas brillantes de un dragón dormido, con una chimenea que parece la espada de Sant Jordi. Por dentro es aún más mágico: las puertas no tienen esquinas, todo es redondito como las cuevas de los hobbits. Las escaleras brillan como si estuvieran hechas de sirenas y hay un patio que cambia de color desde el azul oscuro hasta el celeste. ¡Es como vivir dentro de un cuento de hadas bajo el mar!",
           "curiosityFacts": [
             "Diseñada como un dragón",
             "Fachada de cerámica que cambia de color",
@@ -147,6 +155,10 @@
       "id": "granada-es",
       "name": "Granada",
       "center": { "lat": 37.1773, "lng": -3.5986 },
+      "summaryAdult": "Granada, situada al pie de Sierra Nevada y atravesada por los ríos Darro y Genil, constituye un testimonio vivo de la convivencia de culturas. Capital del último reino nazarí hasta 1492, conserva el conjunto monumental hispanomusulmán más importante de Occidente. Su universidad, fundada por Carlos V en 1531, la convierte en ciudad estudiantil vibrante que fusiona historia y juventud. Los barrios del Albaicín y Sacromonte, con sus cuevas flamencas, mantienen tradiciones centenarias.",
+      "summaryKids": "¡Granada es una ciudad súper especial donde vivían los últimos reyes árabes de España! Está rodeada de montañas con nieve que se llama Sierra Nevada, ¡como si fuera el castillo de Elsa de Frozen! Tiene barrios súper curiosos: en el Albaicín las casas son blancas como nubes, y en Sacromonte la gente vive en cuevas (¡pero cuevas súper elegantes!). Allí bailan flamenco con guitarras que suenan como magia. Lo más genial es que cuando pides un refresco en un bar, ¡te dan comida gratis! Se llaman tapas y cada bar tiene las suyas.",
+      "videoUrlAdult": "",
+      "videoUrlKids": "",
       "pois": [
         {
           "id": "alhambra",
@@ -156,8 +168,8 @@
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
-          "summaryAdult": "La Alhambra es el palacio islámico mejor conservado del mundo y la única 'ciudad palatina' completa que sobrevive. Su nombre significa 'castillo rojo' por el color de sus muros al atardecer. Los Palacios Nazaríes tienen el sistema de climatización más sofisticado de la Edad Media - agua corriente, calefacción por suelo radiante y refrigeración natural. La Sala de los Abencerrajes tiene una acústica perfecta: un susurro en el centro se oye en toda la sala.",
-          "summaryKids": "¡La Alhambra es el palacio más bonito del mundo entero! Está hecha de piedra roja que brilla como el fuego cuando se pone el sol. Por dentro tiene agua que corre por todas partes como ríos pequeñitos que refrescan en verano y calientan en invierno. Hay una sala donde si susurras en el centro, ¡se oye en toda la habitación como por arte de magia! ¡Es como un castillo de cuento de hadas pero de verdad!",
+          "summaryAdult": "La Alhambra de Granada constituye la culminación del arte nazarí y uno de los monumentos más excepcionales de la arquitectura islámica occidental. Construida entre los siglos XIII-XIV por los reyes nazaríes, combina funciones palatinas, defensivas y residenciales. Sus cuatro zonas principales (Alcazaba, Palacios Nazaríes, Generalife y Palacio de Carlos V) representan ocho siglos de historia. Los Palacios Nazaríes destacan por sus mocárabes, yeserías, alicatados y inscripciones coránicas que transforman la arquitectura en poesía petrificada. El sistema hidráulico, con acequias, fuentes y estanques, crea un microclima único.",
+          "summaryKids": "¡La Alhambra es un palacio de cuento de Las Mil y Una Noches! Hace muchos años, unos reyes muy elegantes llamados nazaríes construyeron este castillo rojo en lo alto de una colina. Es como si hubieran mezclado un fuerte de soldados, un palacio de princesas y los jardines más bonitos del mundo. Dentro hay patios con fuentes que hacen música con el agua, techos decorados como si fueran de encaje, y paredes llenas de letras árabes que parecen dibujos misteriosos. Los leones de mármol escupen agua como si fueran dragones amigables. Desde sus torres puedes ver toda Granada como si fueras un príncipe o una princesa vigilando tu reino.",
           "curiosityFacts": [
             "Palacio islámico mejor conservado del mundo",
             "Sistema de climatización medieval",
@@ -172,8 +184,8 @@
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
-          "summaryAdult": "El Generalife era la villa de recreo de los reyes nazaríes. Su nombre significa 'jardín del arquitecto' o 'jardín elevado'. Tiene el sistema de riego más sofisticado de la época medieval. Los jardines están diseñados para crear microclimas y los patios tienen fuentes que crean música con el agua. Es el jardín árabe más antiguo de España.",
-          "summaryKids": "¡Este era el jardín de recreo de los reyes! Su nombre significa 'jardín elevado' porque está súper alto. Tiene un sistema de riego súper inteligente que hace que las plantas crezcan perfectas. Los patios tienen fuentes que hacen música con el agua - ¡es como un concierto de agua! Es el jardín árabe más antiguo de España. ¡Es como un parque de diversiones para plantas!",
+          "summaryAdult": "El Generalife, cuyo nombre deriva del árabe 'Yannat al-Arif' (Jardín del Arquitecto), constituía la villa de recreo de los sultanes nazaríes del siglo XIV. Situado en la colina del Cerro del Sol, representa la culminación del arte de la jardinería hispano-musulmana. Sus jardines escalonados, acequias, surtidores y pabellones crean una sinfonía sensorial donde el agua actúa como elemento vertebrador. El Patio de la Acequia, con sus surtidores arqueados, y los jardines altos con sus cipreses centenarios, ejemplifican la concepción islámica del paraíso terrenal.",
+          "summaryKids": "¡El Generalife era como el parque de atracciones privado de los reyes árabes! Imagínate tener un jardín tan grande y bonito que solo tú y tu familia podáis jugar en él. Está lleno de fuentes que hacen arcos de agua como los que haces tú con la manguera, pero mucho más elegantes. Hay un jardín con escalones donde cada nivel tiene flores diferentes, como un pastel de cumpleaños gigante hecho de plantas. Los cipreses son tan altos que parecen lápices verdes gigantes escribiendo en el cielo. En verano, el agua fresquita de todas las fuentes hace que sea el lugar más agradable de Granada. ¡Es como tener tu propio oasis secreto!",
           "curiosityFacts": [
             "Villa de recreo de reyes nazaríes",
             "Sistema de riego medieval sofisticado",
@@ -186,6 +198,10 @@
       "id": "sevilla-es",
       "name": "Sevilla",
       "center": { "lat": 37.3891, "lng": -5.9845 },
+      "summaryAdult": "Sevilla, capital andaluza bañada por el Guadalquivir, encarna la esencia de la Andalucía histórica y monumental. Como puerto de las Américas durante los siglos XVI-XVII, concentró las riquezas coloniales que financiaron sus monumentos excepcionales. Su Semana Santa, reconocida internacionalmente, y la Feria de Abril representan manifestaciones culturales únicas que combinan religiosidad, tradición y alegría de vivir. El flamenco, arte declarado Patrimonio Inmaterial de la Humanidad, encuentra en Sevilla uno de sus templos principales.",
+      "summaryKids": "¡Sevilla es la ciudad más alegre y colorida de España! Hace mucho tiempo, todos los barcos que venían de América con tesoros llegaban aquí, por eso tiene tantos palacios y iglesias súper grandes. Tiene un río que se llama Guadalquivir donde puedes pasear en barco. En Semana Santa salen procesiones súper largas con figuras vestidas de colores que parecen desfiles mágicos. Y en abril hacen una feria súper divertida donde todo el mundo se viste con trajes de colores, baila sevillanas y monta en caballitos. ¡El flamenco nació aquí! Es como un baile súper emocionante donde la gente zapatea fuerte y canta con el corazón.",
+      "videoUrlAdult": "",
+      "videoUrlKids": "",
       "pois": [
         {
           "id": "catedral-sevilla",
@@ -195,8 +211,8 @@
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
-          "summaryAdult": "Es la catedral gótica más grande del mundo y la tercera iglesia cristiana tras San Pedro del Vaticano y San Pablo de Londres. La Giralda era el alminar de la mezquita almohade más alta del mundo. Cristóbal Colón está enterrado aquí... probablemente - hay 4 ciudades que reclaman sus restos. La cúpula se derrumbó en 1511 y tardó 100 años en reconstruirse.",
-          "summaryKids": "¡Esta es la iglesia más grande de España! ¡Es tan grande que cabrían 3 campos de fútbol dentro! La torre súper alta antes era de cuando aquí vivían personas de otros países que rezaban diferente. Y aquí está enterrado el señor que descubrió América, ¡pero no están seguros de si es él de verdad! ¡Es como tener un castillo gigante para rezar!",
+          "summaryAdult": "La Catedral de Sevilla, construida entre 1402-1506 sobre la gran mezquita almohade, representa una de las mayores catedrales góticas del mundo y la más grande de España. Su construcción siguió el ambicioso lema del Cabildo: 'Hagamos una iglesia tan hermosa y tan grandiosa que los que la vieren labrada nos tengan por locos'. Conserva elementos andalusíes como la Giralda (antiguo alminar) y el Patio de los Naranjos. Alberga el mausoleo de Cristóbal Colón y obras maestras de Murillo, Zurbarán y Goya. Su retablo mayor, considerado el mayor del mundo, contiene más de 1000 figuras talladas.",
+          "summaryKids": "¡La Catedral de Sevilla es tan grande que podrías perderte como en un laberinto! Los señores que la construyeron dijeron: 'Vamos a hacer una iglesia tan increíble que la gente piense que estamos locos'. ¡Y lo consiguieron! Es tan gigante que cinco campos de fútbol cabrían dentro. La Giralda era antes la torre de una mezquita árabe, pero ahora tiene campanas que suenan por toda la ciudad. Dentro está enterrado Cristóbal Colón, el explorador que descubrió América. Hay un altar dorado enorme con más de 1000 figuras pequeñitas, como si fuera el belén más grande del mundo. En el patio hay naranjos que huelen súper bien. ¡Es como un museo, un jardín y un castillo todo junto!",
           "curiosityFacts": [
             "Catedral gótica más grande del mundo",
             "Cristóbal Colón enterrado aquí (probablemente)",
@@ -211,8 +227,8 @@
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
-          "summaryAdult": "Los Reales Alcázares llevan 1000 años de construcción continua - cada cultura añadió su capa. El Palacio de Pedro I es el edificio mudéjar más importante de España. La Torre del Oro nunca fue dorada - se llamaba así por el reflejo del sol en azulejos amarillos. Durante la Guerra Civil fue usado como prisión y los presos grabaron sus nombres en las paredes.",
-          "summaryKids": "¡Este palacio lleva 1000 años construyéndose! Cada grupo de personas que vivía aquí añadía algo nuevo. ¡Es como una casa que nunca termina de crecer! Hay una torre dorada que en realidad nunca fue dorada - solo brillaba como el oro cuando le daba el sol. ¡Es como tener un palacio de cuento de hadas que crece solo!",
+          "summaryAdult": "El Real Alcázar de Sevilla constituye el palacio real en uso más antiguo de Europa, con más de siete siglos de construcción continua desde 1364. Pedro I de Castilla encargó el Palacio Mudéjar, obra maestra que fusiona arte cristiano, islámico y renacentista. Sus salones, como el de Embajadores con su cúpula de mocárabes, ejemplifican la perfección del arte mudéjar. Los jardines, evolucionados a través de los siglos, combinan trazado andalusí, renacentista y romántico. Las azulejería, yeserías y artesonados constituyen un compendio de las artes decorativas hispanomusulmanas.",
+          "summaryKids": "¡El Alcázar es como un palacio de cuento que sigue siendo la casa de los reyes cuando vienen a Sevilla! Hace más de 600 años, un rey llamado Pedro construyó estos salones súper elegantes mezclando estilos cristianos y árabes. Es como si hubiera juntado dos juegos de construcción diferentes y hubiera hecho algo súper original. Los techos parecen de encaje dorado, las paredes están llenas de azulejos que cuentan historias, y hay jardines con laberintos donde podrías jugar al escondite durante horas. En una sala hay un techo que parece el cielo estrellado hecho de madera. Los jardines tienen fuentes, pavos reales de verdad y naranjos. ¡Es como visitar el palacio de Aladdin!",
           "curiosityFacts": [
             "1000 años de construcción continua",
             "Edificio mudéjar más importante de España",
@@ -225,6 +241,10 @@
       "id": "cordoba-es",
       "name": "Córdoba",
       "center": { "lat": 37.8882, "lng": -4.7794 },
+      "summaryAdult": "Córdoba, antigua capital del Califato de Al-Ándalus, representa uno de los centros culturales más importantes de la Edad Media europea. Durante los siglos VIII-XI, fue la urbe más poblada de Occidente y faro intelectual donde convivían musulmanes, judíos y cristianos. Su casco histórico, Patrimonio de la Humanidad, conserva vestigios romanos, islámicos, judíos y cristianos en perfecta armonía. Los patios cordobeses, tradición heredada de Roma y perfeccionada por los árabes, explotan cada mayo en el Festival de los Patios, declarado Patrimonio Inmaterial.",
+      "summaryKids": "¡Córdoba era la ciudad más importante del mundo hace más de 1000 años! Era tan famosa que venían estudiantes de toda Europa a aprender aquí, como si fuera la universidad más guay del planeta. Lo más bonito son los patios: casas con jardines en el centro llenos de flores, especialmente geranios rojos que parecen fuegos artificiales de colores. En mayo hay un concurso de patios y toda la ciudad se llena de flores y olores súper ricos. También inventaron aquí el salmorejo, que es como el gazpacho pero más espeso y sabroso. Por la calle hay muchas tiendas donde hacen bolsos y cinturones de cuero súper bonitos. ¡Es como un museo al aire libre donde cada esquina cuenta una historia diferente!",
+      "videoUrlAdult": "",
+      "videoUrlKids": "",
       "pois": [
         {
           "id": "mezquita-cordoba",
@@ -234,8 +254,8 @@
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
-          "summaryAdult": "Es la única mezquita-catedral del mundo. Tiene 856 columnas de mármol, jaspe y granito recicladas de templos romanos y visigodos. El mihrab está mal orientado a propósito - no apunta a La Meca sino al sur, hacia Damasco, sede del califato omeya. La biblioteca del califato tenía 400.000 volúmenes cuando Europa apenas sabía leer.",
-          "summaryKids": "¡Esta es súper especial porque es una mezquita y una iglesia a la vez! ¡Como si fuera dos casas de rezar en una! Tiene más de 800 columnas súper bonitas que son todas diferentes porque las cogieron de edificios súper antiguos de romanos y otros pueblos. ¡Es como un puzzle gigante de piedras de colores!",
+          "summaryAdult": "La Mezquita-Catedral de Córdoba representa una síntesis arquitectónica única entre el arte islámico y cristiano. Iniciada por Abd al-Rahman I en 785, alcanzó su máximo esplendor bajo Al-Hakam II. Su bosque de 856 columnas de mármol, jaspe y granito, coronadas por arcos de herradura bicolores, crea un espacio místico sin parangón. La transformación en catedral tras la Reconquista (1236) añadió elementos góticos, renacentistas y barrocos sin destruir la estructura islámica. El mihrab, orientado hacia La Meca, constituye una joya del arte califal con sus mosaicos bizantinos.",
+          "summaryKids": "¡La Mezquita de Córdoba es como un bosque mágico hecho de columnas! Hace más de 1200 años, los musulmanes construyeron este lugar súper especial para rezar. Tiene 856 columnas que parecen palmeras de piedra con arcos rojos y blancos que parecen caramelos rayados. Cuando caminas por dentro, parece que estás en un laberinto encantado donde todas las columnas juegan al escondite contigo. Después, cuando vinieron los cristianos, construyeron una catedral dentro, ¡como si hubieran metido una iglesia dentro de otra iglesia! Es como tener dos tesoros en una misma caja. La parte más bonita es un rincón llamado mihrab, decorado con mosaicos brillantes que parecen joyas gigantes.",
           "curiosityFacts": [
             "Única mezquita-catedral del mundo",
             "856 columnas recicladas de templos antiguos",
@@ -250,8 +270,8 @@
           "imageUrl": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&h=1200&fit=crop",
           "videoUrlAdult": "",
           "videoUrlKids": "",
-          "summaryAdult": "Aquí se firmó la capitulación de Granada en 1492. Los Reyes Católicos vivieron aquí 8 años. Tiene baños árabes del siglo X que son los mejor conservados de España. Los jardines tienen más de 100 especies de plantas traídas de América. Fue prisión de la Inquisición y cárcel durante la Guerra Civil.",
-          "summaryKids": "¡Aquí vivieron los Reyes Católicos 8 años! Tiene baños súper antiguos del siglo X que son los mejor conservados de España. Los jardines tienen más de 100 plantas diferentes que trajeron de América. ¡Es como tener un jardín de todos los continentes! ¡Es como un palacio de cuento de hadas con jardines mágicos!",
+          "summaryAdult": "El Alcázar de los Reyes Cristianos, construido en 1328 por Alfonso XI sobre restos de palacios islámicos y visigodos, constituyó residencia real durante la Reconquista. Sus cuatro torres (Homenaje, Palomas, Leones y Inquisición) atestiguan su función defensiva y administrativa. El edificio fue sede del Santo Oficio durante tres siglos, tribunal de los Reyes Católicos y prisión durante el siglo XIX. Sus jardines, diseñados en el siglo XX siguiendo patrones hispano-árabes, recrean el concepto islámico de jardín como anticipo del paraíso. Los mosaicos romanos del siglo II-III d.C., los baños reales y la biblioteca medieval convierten este conjunto en un palimpsesto de la historia cordobesa.",
+          "summaryKids": "¡El Alcázar de Córdoba es como un castillo con cuatro torres que tiene nombres súper chulos! Una se llama Torre de los Leones, otra Torre de las Palomas... ¡como si fuera el hogar de todos los animales! Los Reyes Católicos vivían aquí cuando vinieron a conquistar Granada, así que era como su base secreta. Lo más genial son los jardines: tienen formas geométricas perfectas llenas de naranjos, cipreses y fuentes que hacen música. Dentro hay mosaicos romanos súper antiguos con dibujos de dioses y héroes, como si fuera un cómic de piedra. Y tiene unos baños reales donde los reyes se bañaban hace 700 años. ¡Es como viajar en una máquina del tiempo!",
           "curiosityFacts": [
             "Aquí se firmó la capitulación de Granada",
             "Baños árabes del siglo X mejor conservados",
