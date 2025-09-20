@@ -419,10 +419,15 @@ export default function Home() {
                     />
                   ) : (
                     <div className="space-y-6">
-                      <div className="flex items-center justify-between">
-                        <h3 className="text-2xl font-bold text-white">
-                          Lugares increíbles
-                        </h3>
+                      <div className="flex items-center justify-between mb-6">
+                        <div>
+                          <h3 className="text-2xl font-bold text-white mb-2">
+                            Lugares increíbles
+                          </h3>
+                          <p className="text-white/80 text-sm">
+                            Descubre los mejores lugares de {selectedCity?.name}
+                          </p>
+                        </div>
                         <motion.button
                           whileHover={{ scale: 1.05 }}
                           whileTap={{ scale: 0.95 }}
@@ -432,6 +437,35 @@ export default function Home() {
                           <Sparkles className="w-5 h-5 text-white" />
                         </motion.button>
                       </div>
+
+                      {/* Estadísticas de la ciudad */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.2 }}
+                        className="glass rounded-2xl p-4 mb-6"
+                      >
+                        <div className="grid grid-cols-3 gap-4">
+                          <div className="text-center">
+                            <div className="text-2xl font-bold text-ios-blue mb-1">
+                              {nearbyPOIs.length}
+                            </div>
+                            <div className="text-xs text-ios-gray">Lugares</div>
+                          </div>
+                          <div className="text-center">
+                            <div className="text-2xl font-bold text-green-500 mb-1">
+                              60s
+                            </div>
+                            <div className="text-xs text-ios-gray">Por lugar</div>
+                          </div>
+                          <div className="text-center">
+                            <div className="text-2xl font-bold text-purple-500 mb-1">
+                              4.8
+                            </div>
+                            <div className="text-xs text-ios-gray">Rating</div>
+                          </div>
+                        </div>
+                      </motion.div>
                       
                                   <div className="space-y-3">
                                     {/* AdSense entre POIs */}
@@ -451,49 +485,105 @@ export default function Home() {
                             whileHover={{ scale: 1.02, y: -5 }}
                             whileTap={{ scale: 0.98 }}
                             onClick={() => handlePOISelect(poi)}
-                            className="glass card-hover rounded-3xl p-4 cursor-pointer touch-target relative overflow-hidden"
+                            className="glass card-hover rounded-3xl p-5 cursor-pointer touch-target relative overflow-hidden"
                           >
                             <div className="flex items-center space-x-4">
                               <motion.div
                                 whileHover={{ scale: 1.1, rotate: 5 }}
-                                className="w-16 h-16 rounded-2xl overflow-hidden shadow-ios"
+                                className="w-20 h-20 rounded-2xl overflow-hidden shadow-ios relative"
                               >
                                 <img
                                   src={poi.imageUrl}
                                   alt={poi.name}
                                   className="w-full h-full object-cover"
                                 />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent" />
                               </motion.div>
                               <div className="flex-1 min-w-0">
-                                <h5 className="font-bold text-gray-900 text-lg truncate">
+                                <h5 className="font-bold text-gray-900 text-lg truncate mb-1">
                                   {poi.name}
                                 </h5>
-                                <p className="text-ios-gray text-sm mb-1">
-                                  {poi.category}
-                                </p>
-                                <div className="flex items-center space-x-3">
+                                <div className="flex items-center space-x-2 mb-2">
+                                  <span className="bg-gradient-to-r from-ios-blue to-purple-500 text-white text-xs px-2 py-1 rounded-full font-medium">
+                                    {poi.category}
+                                  </span>
+                                </div>
+                                <div className="flex items-center space-x-4">
                                   <div className="flex items-center space-x-1">
-                                    <MapPin className="w-3 h-3 text-ios-blue" />
-                                    <span className="text-xs text-ios-gray">
+                                    <MapPin className="w-4 h-4 text-ios-blue" />
+                                    <span className="text-sm text-ios-gray font-medium">
                                       {poi.distance ? `${Math.round(poi.distance)}m` : 'Cerca'}
                                     </span>
                                   </div>
                                   <div className="flex items-center space-x-1">
-                                    <Star className="w-3 h-3 text-yellow-500" />
-                                    <span className="text-xs text-ios-gray">4.8</span>
+                                    <Star className="w-4 h-4 text-yellow-500" />
+                                    <span className="text-sm text-ios-gray font-medium">4.8</span>
+                                  </div>
+                                  <div className="flex items-center space-x-1">
+                                    <Clock className="w-4 h-4 text-green-500" />
+                                    <span className="text-sm text-ios-gray font-medium">60s</span>
                                   </div>
                                 </div>
                               </div>
                               <motion.div
                                 whileHover={{ scale: 1.2, rotate: 10 }}
-                                className="w-8 h-8 bg-ios-blue/20 rounded-full flex items-center justify-center"
+                                className="w-12 h-12 bg-gradient-to-r from-ios-blue to-purple-500 rounded-full flex items-center justify-center shadow-ios"
                               >
-                                <Play className="w-4 h-4 text-ios-blue" />
+                                <Play className="w-5 h-5 text-white ml-1" />
                               </motion.div>
                             </div>
                           </motion.div>
                         ))}
                       </div>
+
+                      {/* Sección de lugares destacados */}
+                      <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.6 }}
+                        className="mt-8"
+                      >
+                        <h4 className="text-xl font-bold text-white mb-4">
+                          Más lugares en {selectedCity?.name}
+                        </h4>
+                        <div className="grid grid-cols-2 gap-3">
+                          {nearbyPOIs.slice(5, 9).map((poi, index) => (
+                            <motion.div
+                              key={poi.id}
+                              initial={{ opacity: 0, scale: 0.9 }}
+                              animate={{ opacity: 1, scale: 1 }}
+                              transition={{ delay: 0.7 + index * 0.1 }}
+                              whileHover={{ scale: 1.05 }}
+                              whileTap={{ scale: 0.95 }}
+                              onClick={() => handlePOISelect(poi)}
+                              className="glass rounded-2xl p-4 cursor-pointer touch-target relative overflow-hidden"
+                            >
+                              <div className="aspect-square rounded-xl overflow-hidden mb-3 relative">
+                                <img
+                                  src={poi.imageUrl}
+                                  alt={poi.name}
+                                  className="w-full h-full object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                                <div className="absolute top-2 right-2">
+                                  <span className="bg-white/90 text-xs px-2 py-1 rounded-full font-medium">
+                                    {poi.category}
+                                  </span>
+                                </div>
+                              </div>
+                              <h5 className="font-bold text-gray-900 text-sm mb-1 truncate">
+                                {poi.name}
+                              </h5>
+                              <div className="flex items-center space-x-2">
+                                <Star className="w-3 h-3 text-yellow-500" />
+                                <span className="text-xs text-ios-gray">4.8</span>
+                                <Clock className="w-3 h-3 text-green-500 ml-2" />
+                                <span className="text-xs text-ios-gray">60s</span>
+                              </div>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </motion.div>
                     </div>
                   )}
                 </motion.div>
