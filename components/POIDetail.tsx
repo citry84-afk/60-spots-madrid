@@ -216,7 +216,7 @@ export default function POIDetail({
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="glass rounded-2xl p-5"
+            className="glass-high-contrast rounded-2xl p-5"
           >
             <div className="flex items-center space-x-2 mb-3">
               <Sparkles className="w-5 h-5 text-ios-blue" />
@@ -245,7 +245,7 @@ export default function POIDetail({
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5 }}
-              className="glass rounded-2xl p-5"
+              className="glass-high-contrast rounded-2xl p-5"
             >
               <div className="flex items-center space-x-2 mb-3">
                 <Star className="w-5 h-5 text-yellow-500" />
@@ -273,7 +273,7 @@ export default function POIDetail({
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
               onClick={handleShare}
-              className="glass py-4 px-6 rounded-2xl font-bold flex items-center justify-center space-x-2 touch-target"
+              className="btn-glass-high-contrast py-4 px-6 rounded-2xl font-bold flex items-center justify-center space-x-2 touch-target"
             >
               {copied ? (
                 <Check className="w-5 h-5 text-green-500" />
@@ -286,7 +286,7 @@ export default function POIDetail({
             <motion.button
               whileHover={{ scale: 1.05, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="glass py-4 px-6 rounded-2xl font-bold flex items-center justify-center space-x-2 touch-target"
+              className="btn-glass-high-contrast py-4 px-6 rounded-2xl font-bold flex items-center justify-center space-x-2 touch-target"
             >
               <Download className="w-5 h-5 text-ios-blue" />
               <span>Offline</span>
