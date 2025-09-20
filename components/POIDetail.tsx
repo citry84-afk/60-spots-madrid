@@ -86,7 +86,7 @@ export default function POIDetail({
             whileHover={{ scale: 1.1, rotate: 90 }}
             whileTap={{ scale: 0.9 }}
             onClick={onClose}
-            className="absolute top-6 right-6 glass rounded-full p-3 touch-target"
+            className="absolute top-6 right-6 bg-black/80 backdrop-blur-md rounded-full p-3 touch-target border-2 border-white/30"
           >
             <X className="w-5 h-5 text-white" />
           </motion.button>
@@ -96,7 +96,7 @@ export default function POIDetail({
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={handleLike}
-            className="absolute top-6 left-6 glass rounded-full p-3 touch-target"
+            className="absolute top-6 left-6 bg-black/80 backdrop-blur-md rounded-full p-3 touch-target border-2 border-white/30"
           >
             <motion.div
               animate={liked ? { scale: [1, 1.3, 1] } : {}}
