@@ -202,7 +202,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-aurora overflow-y-auto">
+    <div className="min-h-screen bg-gradient-aurora overflow-y-auto pb-32">
       {/* Hero Section */}
       <AnimatePresence>
         {showHero && (
@@ -210,7 +210,7 @@ export default function Home() {
             initial={{ opacity: 1 }}
             exit={{ opacity: 0, y: -100 }}
             transition={{ duration: 0.5 }}
-            className="min-h-screen flex flex-col items-center justify-center p-6 relative overflow-hidden"
+            className="flex flex-col items-center justify-start pt-16 pb-8 p-6 relative overflow-hidden"
           >
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden">
@@ -277,7 +277,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.4 }}
-                className="max-w-md mx-auto mb-8"
+                className="max-w-md mx-auto mb-4"
               >
                 <CitySelector
                   cities={cities}
@@ -293,7 +293,7 @@ export default function Home() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6 }}
-                className="grid grid-cols-3 gap-4 max-w-sm mx-auto"
+                className="grid grid-cols-3 gap-3 max-w-sm mx-auto mb-6"
               >
                 {[
                   { icon: <Play className="w-6 h-6 text-ios-blue" />, text: "Videos 60s" },
