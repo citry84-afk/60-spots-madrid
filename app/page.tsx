@@ -202,7 +202,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-aurora">
+    <div className="min-h-screen bg-gradient-aurora overflow-y-auto">
       {/* Hero Section */}
       <AnimatePresence>
         {showHero && (
