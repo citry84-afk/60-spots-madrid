@@ -123,16 +123,26 @@ export default function CitySelector({
         </div>
       </motion.button>
 
-      {/* Lista de ciudades que se despliega desde arriba */}
+      {/* Lista de ciudades que aparece desde arriba de la pantalla */}
       <AnimatePresence>
         {isOpen && (
-          <motion.div
-            initial={{ opacity: 0, height: 0, y: -20 }}
-            animate={{ opacity: 1, height: 'auto', y: 0 }}
-            exit={{ opacity: 0, height: 0, y: -20 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
-            className="mt-4 glass rounded-3xl shadow-ios-xl overflow-hidden"
-          >
+          <>
+            {/* Backdrop */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              className="fixed inset-0 bg-black/50 z-40"
+              onClick={() => setIsOpen(false)}
+            />
+            
+            <motion.div
+              initial={{ opacity: 0, y: -100 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -100 }}
+              transition={{ duration: 0.4, ease: "easeOut" }}
+              className="fixed top-0 left-0 right-0 z-50 bg-white shadow-2xl max-h-screen overflow-y-auto"
+            >
             {/* Header */}
             <div className="p-4 border-b border-white/20">
               <div className="flex items-center justify-between">
@@ -217,7 +227,8 @@ export default function CitySelector({
                 </motion.button>
               ))}
             </div>
-          </motion.div>
+            </motion.div>
+          </>
         )}
       </AnimatePresence>
     </div>
