@@ -1,15 +1,14 @@
-const STATIC_CACHE = 'static-v2';
-const MEDIA_CACHE = 'media-v1';
-const STATIC_ASSETS = [
-  '/',
-  '/manifest.json',
-  '/icon-192x192.png',
-  '/icon-512x512.png'
-];
+const STATIC_CACHE = 'static-v3';
+const MEDIA_CACHE = 'media-v2';
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(STATIC_CACHE).then((cache) => cache.addAll(STATIC_ASSETS))
+    caches.open(STATIC_CACHE).then((cache) => {
+      return cache.addAll([
+        '/',
+        '/manifest.json'
+      ]);
+    })
   );
   self.skipWaiting();
 });
@@ -19,7 +18,9 @@ self.addEventListener('activate', (event) => {
     caches.keys().then((keys) =>
       Promise.all(
         keys.map((k) => {
-          if (![STATIC_CACHE, MEDIA_CACHE].includes(k)) return caches.delete(k);
+          if (![STATIC_CACHE, MEDIA_CACHE].includes(k)) {
+            return caches.delete(k);
+          }
         })
       )
     )
@@ -27,59 +28,53 @@ self.addEventListener('activate', (event) => {
   self.clients.claim();
 });
 
-// Runtime strategy: cache-first for images/videos, SWR for others
 self.addEventListener('fetch', (event) => {
   const req = event.request;
-  const url = new URL(req.url);
-
-  // Only handle GET
+  
+  // Only handle GET requests
   if (req.method !== 'GET') return;
-
+  
+  const url = new URL(req.url);
   const isMedia = /\.(?:png|jpg|jpeg|gif|webp|mp4|webm|mov)$/i.test(url.pathname);
-
+  
   if (isMedia) {
+    // For media files, use cache-first strategy
     event.respondWith(
-      caches.open(MEDIA_CACHE).then(async (cache) => {
-        const cached = await cache.match(req);
-        if (cached) return cached;
-        try {
-          const fresh = await fetch(req, { mode: 'cors' });
-          // Only cache if it's not a partial response (206)
-          if (fresh.status !== 206) {
-            cache.put(req, fresh.clone());
+      caches.open(MEDIA_CACHE).then((cache) => {
+        return cache.match(req).then((cached) => {
+          if (cached) {
+            return cached;
           }
-          return fresh;
-        } catch (e) {
-          return cached || fetch(req);
-        }
+          
+          return fetch(req).then((response) => {
+            // Only cache successful responses
+            if (response.status === 200) {
+              cache.put(req, response.clone());
+            }
+            return response;
+          }).catch(() => {
+            // Return a fallback or the original request
+            return fetch(req);
+          });
+        });
       })
     );
-    return;
-  }
-
-  // SWR for other requests
-  event.respondWith(
-    caches.match(req).then((cached) => {
-      const fetchPromise = fetch(req)
-        .then((res) => {
-          const resClone = res.clone();
-          caches.open(STATIC_CACHE).then((cache) => cache.put(req, resClone));
-          return res;
-        })
-        .catch(() => cached);
-      return cached || fetchPromise;
-    })
-  );
-});
-
-// Receive list of URLs to pre-cache (nearest 25 spots media)
-self.addEventListener('message', (event) => {
-  const data = event.data || {};
-  if (data.type === 'CACHE_URLS' && Array.isArray(data.urls)) {
-    event.waitUntil(
-      caches.open(MEDIA_CACHE).then((cache) => Promise.all(
-        data.urls.map((u) => cache.match(u).then((m) => m || fetch(u, { mode: 'cors' }).then((r) => cache.put(u, r.clone())).catch(() => null)))
-      ))
+  } else {
+    // For other requests, use network-first strategy
+    event.respondWith(
+      fetch(req).then((response) => {
+        // Only cache successful responses
+        if (response.status === 200) {
+          const responseClone = response.clone();
+          caches.open(STATIC_CACHE).then((cache) => {
+            cache.put(req, responseClone);
+          });
+        }
+        return response;
+      }).catch(() => {
+        // If network fails, try cache
+        return caches.match(req);
+      })
     );
   }
 });
