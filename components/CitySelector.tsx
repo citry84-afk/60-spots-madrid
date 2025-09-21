@@ -2,7 +2,7 @@
 
 import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { MapPin, ChevronDown, Globe, Sparkles, Star } from 'lucide-react';
+import { MapPin, ChevronDown, Globe, Sparkles, Star, X } from 'lucide-react';
 import { City } from '@/lib/content';
 
 interface CitySelectorProps {
@@ -22,11 +22,13 @@ export default function CitySelector({
 }: CitySelectorProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Bloquear scroll del body cuando el selector está abierto
+  // Bloquear scroll del body cuando el selector está abierto y hacer scroll hacia arriba
   useEffect(() => {
     if (isOpen) {
       const prev = document.body.style.overflow;
       document.body.style.overflow = 'hidden';
+      // Hacer scroll hacia arriba cuando se abre el modal
+      window.scrollTo({ top: 0, behavior: 'smooth' });
       return () => {
         document.body.style.overflow = prev;
       };
@@ -120,22 +122,30 @@ export default function CitySelector({
             />
 
             <motion.div
-              initial={{ opacity: 0, y: -20, scale: 0.95 }}
-              animate={{ opacity: 1, y: 0, scale: 1 }}
-              exit={{ opacity: 0, y: -20, scale: 0.95 }}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: 20 }}
               transition={{ duration: 0.3, ease: "easeOut" }}
-              className="absolute top-full left-0 right-0 mt-3 glass-colored rounded-3xl shadow-ios-xl z-50 overflow-hidden"
+              className="fixed inset-0 bg-white z-50 overflow-y-auto"
             >
             {/* Header */}
-            <div className="p-4 border-b border-white/20">
-              <div className="flex items-center space-x-2">
-                <Sparkles className="w-5 h-5 text-ios-blue" />
-                <h3 className="font-bold text-gray-900">Ciudades disponibles</h3>
+            <div className="p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center space-x-2">
+                  <Sparkles className="w-5 h-5 text-ios-blue" />
+                  <h3 className="font-bold text-gray-900">Ciudades disponibles</h3>
+                </div>
+                <button
+                  onClick={() => setIsOpen(false)}
+                  className="p-2 rounded-full hover:bg-gray-100 transition-colors"
+                >
+                  <X className="w-5 h-5 text-gray-500" />
+                </button>
               </div>
             </div>
 
             {/* Cities List */}
-            <div className="max-h-80 overflow-y-auto overscroll-contain">
+            <div className="p-4">
               {cities.map((city, index) => (
                 <motion.button
                   key={city.id}
