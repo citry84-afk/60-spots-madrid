@@ -418,8 +418,8 @@ export default function Home() {
                       onPOISelect={handlePOISelect}
                     />
                   ) : (
-                    <div className="space-y-6">
-                      <div className="flex items-center justify-between mb-6">
+                    <div className="space-y-4">
+                      <div className="flex items-center justify-between mb-4">
                         <div>
                           <h3 className="text-2xl font-bold text-white mb-2">
                             Lugares increíbles
@@ -443,7 +443,7 @@ export default function Home() {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ delay: 0.2 }}
-                        className="glass rounded-2xl p-4 mb-6"
+                        className="glass rounded-2xl p-4 mb-4"
                       >
                         <div className="grid grid-cols-3 gap-4">
                           <div className="text-center">
@@ -467,9 +467,9 @@ export default function Home() {
                         </div>
                       </motion.div>
                       
-                                  <div className="space-y-3">
+                                  <div className="space-y-2">
                                     {/* AdSense entre POIs */}
-                                    <div className="my-4">
+                                    <div className="my-3">
                                       <AdSense 
                                         slot="0987654321" 
                                         className="w-full h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500"
