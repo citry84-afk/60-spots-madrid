@@ -22,16 +22,11 @@ export default function CitySelector({
 }: CitySelectorProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Bloquear scroll del body cuando el selector está abierto y hacer scroll hacia arriba
+  // Hacer scroll hacia arriba cuando se abre la lista
   useEffect(() => {
     if (isOpen) {
-      const prev = document.body.style.overflow;
-      document.body.style.overflow = 'hidden';
-      // Hacer scroll hacia arriba cuando se abre el modal
+      // Hacer scroll hacia arriba cuando se abre la lista
       window.scrollTo({ top: 0, behavior: 'smooth' });
-      return () => {
-        document.body.style.overflow = prev;
-      };
     }
   }, [isOpen]);
 
@@ -58,45 +53,39 @@ export default function CitySelector({
   };
 
   return (
-    <div className="relative">
-      {/* Selector principal */}
+    <div className="w-full">
+      {/* Botón principal */}
       <motion.button
-        whileHover={{ scale: 1.02, y: -2 }}
+        whileHover={{ scale: 1.02 }}
         whileTap={{ scale: 0.98 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-full glass-colored rounded-3xl p-5 flex items-center justify-between touch-target shadow-ios-lg relative overflow-hidden"
+        className="w-full glass rounded-2xl p-4 flex items-center space-x-4 touch-target text-left hover:shadow-ios-lg transition-all duration-300 group"
       >
-        {/* Shine effect */}
-        <div className="shine absolute inset-0" />
+        <motion.div
+          animate={{ 
+            rotate: isOpen ? 180 : 0,
+            scale: isOpen ? 1.1 : 1
+          }}
+          transition={{ duration: 0.3, ease: "easeInOut" }}
+          className="w-12 h-12 rounded-2xl flex items-center justify-center shadow-ios relative overflow-hidden"
+        >
+          <Globe className="w-6 h-6 text-white" />
+        </motion.div>
         
-        <div className="flex items-center space-x-4 relative z-10">
-          <motion.div
-            animate={isDetectingLocation ? { rotate: 360 } : {}}
-            transition={{ duration: 2, repeat: isDetectingLocation ? Infinity : 0 }}
-            className="w-12 h-12 bg-gradient-to-br from-ios-blue to-blue-600 rounded-2xl flex items-center justify-center shadow-ios"
-          >
-            {isDetectingLocation ? (
-              <MapPin className="w-6 h-6 text-white" />
+        <div className="text-left flex-1">
+          <p className="text-sm text-ios-gray font-medium">
+            {isDetectingLocation ? 'Detectando ubicación...' : 'Selecciona una ciudad'}
+          </p>
+          <p className="font-bold text-gray-900 text-lg">
+            {selectedCity ? (
+              <span className="flex items-center space-x-2">
+                <span>{getCityEmoji(selectedCity.name)}</span>
+                <span>{selectedCity.name}</span>
+              </span>
             ) : (
-              <Globe className="w-6 h-6 text-white" />
+              'Elige tu destino'
             )}
-          </motion.div>
-          
-          <div className="text-left">
-            <p className="text-sm text-ios-gray font-medium">
-              {isDetectingLocation ? 'Detectando ubicación...' : 'Selecciona una ciudad'}
-            </p>
-            <p className="font-bold text-gray-900 text-lg">
-              {selectedCity ? (
-                <span className="flex items-center space-x-2">
-                  <span>{getCityEmoji(selectedCity.name)}</span>
-                  <span>{selectedCity.name}</span>
-                </span>
-              ) : (
-                'Elige tu destino'
-              )}
-            </p>
-          </div>
+          </p>
         </div>
         
         <motion.div
@@ -108,28 +97,44 @@ export default function CitySelector({
         </motion.div>
       </motion.button>
 
-      {/* Lista de ciudades */}
+      {/* Botón de usar ubicación */}
+      <motion.button
+        whileHover={{ scale: 1.02 }}
+        whileTap={{ scale: 0.98 }}
+        onClick={onUseLocation}
+        disabled={isDetectingLocation}
+        className="w-full mt-3 glass rounded-2xl p-4 flex items-center space-x-4 touch-target text-left hover:shadow-ios-lg transition-all duration-300 group disabled:opacity-50"
+      >
+        <motion.div
+          animate={isDetectingLocation ? { rotate: 360 } : { rotate: 0 }}
+          transition={{ duration: 1, repeat: isDetectingLocation ? Infinity : 0 }}
+          className="w-12 h-12 rounded-2xl flex items-center justify-center shadow-ios relative overflow-hidden"
+        >
+          <MapPin className="w-6 h-6 text-white" />
+        </motion.div>
+        
+        <div className="text-left flex-1">
+          <p className="text-sm text-ios-gray font-medium">
+            {isDetectingLocation ? 'Detectando...' : 'Usar mi ubicación'}
+          </p>
+          <p className="font-bold text-gray-900 text-lg">
+            {isDetectingLocation ? 'Buscando...' : 'Encuentra la más cercana'}
+          </p>
+        </div>
+      </motion.button>
+
+      {/* Lista de ciudades que se despliega desde arriba */}
       <AnimatePresence>
         {isOpen && (
-          <>
-            {/* Backdrop para capturar clics y bloquear interacción detrás */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/30 z-40"
-              onClick={() => setIsOpen(false)}
-            />
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: 20 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="fixed inset-0 bg-white z-50 overflow-y-auto"
-            >
+          <motion.div
+            initial={{ opacity: 0, height: 0, y: -20 }}
+            animate={{ opacity: 1, height: 'auto', y: 0 }}
+            exit={{ opacity: 0, height: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="mt-4 glass rounded-3xl shadow-ios-xl overflow-hidden"
+          >
             {/* Header */}
-            <div className="p-4 border-b border-gray-200 sticky top-0 bg-white z-10">
+            <div className="p-4 border-b border-white/20">
               <div className="flex items-center justify-between">
                 <div className="flex items-center space-x-2">
                   <Sparkles className="w-5 h-5 text-ios-blue" />
@@ -162,7 +167,7 @@ export default function CitySelector({
                     onCitySelect(city);
                     setIsOpen(false);
                   }}
-                  className="w-full p-4 flex items-center space-x-4 touch-target text-left hover:bg-ios-blue/10 transition-all duration-300 group"
+                  className="w-full p-4 flex items-center space-x-4 touch-target text-left hover:bg-ios-blue/10 transition-all duration-300 group rounded-2xl mb-2"
                 >
                   {/* City Avatar */}
                   <motion.div
@@ -179,80 +184,42 @@ export default function CitySelector({
                       {getCityEmoji(city.name)}
                     </span>
                   </motion.div>
-                  
+
                   {/* City Info */}
-                  <div className="flex-1 min-w-0">
+                  <div className="flex-1 text-left">
                     <div className="flex items-center space-x-2 mb-1">
-                      <h4 className="font-bold text-gray-900 text-lg group-hover:text-ios-blue transition-colors">
-                        {city.name}
-                      </h4>
-                      <motion.div
-                        animate={{ scale: [1, 1.2, 1] }}
-                        transition={{ duration: 2, repeat: Infinity }}
-                        className="w-2 h-2 bg-green-500 rounded-full"
-                      />
+                      <h4 className="font-bold text-gray-900 text-lg">{city.name}</h4>
+                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
                     </div>
-                    <p className="text-ios-gray text-sm">
-                      {city.pois.length} lugares increíbles
+                    <p className="text-sm text-ios-gray mb-2">
+                      {city.pois?.length || 0} lugares increíbles
                     </p>
-                    <div className="flex items-center space-x-3 mt-1">
+                    <div className="flex items-center space-x-4 text-xs text-ios-gray">
                       <div className="flex items-center space-x-1">
-                        <Star className="w-3 h-3 text-yellow-500" />
-                        <span className="text-xs text-ios-gray">4.9</span>
+                        <Star className="w-4 h-4 text-yellow-500" />
+                        <span>4.9</span>
                       </div>
                       <div className="flex items-center space-x-1">
-                        <MapPin className="w-3 h-3 text-ios-blue" />
-                        <span className="text-xs text-ios-gray">España</span>
+                        <MapPin className="w-4 h-4 text-ios-blue" />
+                        <span>España</span>
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Arrow */}
                   <motion.div
-                    whileHover={{ x: 5 }}
-                    className="opacity-0 group-hover:opacity-100 transition-opacity"
+                    animate={{ x: [0, 5, 0] }}
+                    transition={{ duration: 1.5, repeat: Infinity }}
+                    className="text-ios-gray group-hover:text-ios-blue transition-colors"
                   >
-                    <ChevronDown className="w-4 h-4 text-ios-blue rotate-[-90deg]" />
+                    <ChevronDown className="w-5 h-5 rotate-[-90deg]" />
                   </motion.div>
                 </motion.button>
               ))}
             </div>
           </motion.div>
-          </>
         )}
       </AnimatePresence>
-
-      {/* Botón usar ubicación */}
-      <motion.button
-        whileHover={{ scale: 1.02, y: -2 }}
-        whileTap={{ scale: 0.98 }}
-        onClick={onUseLocation}
-        disabled={isDetectingLocation}
-        className="w-full mt-4 glass rounded-3xl p-5 flex items-center justify-center space-x-3 touch-target shadow-ios disabled:opacity-50 relative overflow-hidden"
-      >
-        {/* Shine effect */}
-        <div className="shine absolute inset-0" />
-        
-        <motion.div
-          animate={isDetectingLocation ? { rotate: 360 } : {}}
-          transition={{ duration: 2, repeat: isDetectingLocation ? Infinity : 0 }}
-          className="relative z-10"
-        >
-          <MapPin className="w-6 h-6 text-ios-blue" />
-        </motion.div>
-        
-        <span className="font-bold text-gray-900 text-lg relative z-10">
-          {isDetectingLocation ? 'Detectando ubicación...' : 'Usar mi ubicación'}
-        </span>
-        
-        {isDetectingLocation && (
-          <motion.div
-            animate={{ scale: [1, 1.2, 1] }}
-            transition={{ duration: 1, repeat: Infinity }}
-            className="w-2 h-2 bg-ios-blue rounded-full relative z-10"
-          />
-        )}
-      </motion.button>
     </div>
   );
 }
