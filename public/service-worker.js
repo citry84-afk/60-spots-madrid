@@ -44,7 +44,10 @@ self.addEventListener('fetch', (event) => {
         if (cached) return cached;
         try {
           const fresh = await fetch(req, { mode: 'cors' });
-          cache.put(req, fresh.clone());
+          // Only cache if it's not a partial response (206)
+          if (fresh.status !== 206) {
+            cache.put(req, fresh.clone());
+          }
           return fresh;
         } catch (e) {
           return cached || fetch(req);
@@ -59,7 +62,8 @@ self.addEventListener('fetch', (event) => {
     caches.match(req).then((cached) => {
       const fetchPromise = fetch(req)
         .then((res) => {
-          caches.open(STATIC_CACHE).then((cache) => cache.put(req, res.clone()));
+          const resClone = res.clone();
+          caches.open(STATIC_CACHE).then((cache) => cache.put(req, resClone));
           return res;
         })
         .catch(() => cached);

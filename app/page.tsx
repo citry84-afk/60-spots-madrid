@@ -331,13 +331,13 @@ export default function Home() {
           >
                         {/* Header */}
                         <div className="p-6 pb-0">
-                          {/* AdSense Banner */}
-                          <div className="mb-4">
+                          {/* AdSense Banner - Temporarily disabled */}
+                          {/* <div className="mb-4">
                             <AdSense 
                               slot="1234567890" 
                               className="w-full h-20 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500"
                             />
-                          </div>
+                          </div> */}
                           
                           <motion.div
                             initial={{ opacity: 0, y: -20 }}
@@ -468,13 +468,13 @@ export default function Home() {
                       </motion.div>
                       
                                   <div className="space-y-2">
-                                    {/* AdSense entre POIs */}
-                                    <div className="my-3">
+                                    {/* AdSense entre POIs - Temporarily disabled */}
+                                    {/* <div className="my-3">
                                       <AdSense 
                                         slot="0987654321" 
                                         className="w-full h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500"
                                       />
-                                    </div>
+                                    </div> */}
                                     
                                     {nearbyPOIs.slice(0, 5).map((poi, index) => (
                           <motion.div
