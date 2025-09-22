@@ -18,6 +18,7 @@ export default function VideoPlayer({ videoUrl, onClose, title }: VideoPlayerPro
   const [error, setError] = useState<string | null>(null);
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [isPortraitSource, setIsPortraitSource] = useState(false);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -30,6 +31,12 @@ export default function VideoPlayer({ videoUrl, onClose, title }: VideoPlayerPro
 
     const handleLoadedMetadata = () => {
       setDuration(video.duration);
+      // Detectar orientación del vídeo de origen
+      try {
+        const width = (video as HTMLVideoElement).videoWidth;
+        const height = (video as HTMLVideoElement).videoHeight;
+        setIsPortraitSource(height > width);
+      } catch {}
       setIsLoading(false);
     };
 
@@ -129,7 +136,7 @@ export default function VideoPlayer({ videoUrl, onClose, title }: VideoPlayerPro
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="relative w-full max-w-md aspect-[9/16] bg-black rounded-2xl overflow-hidden shadow-2xl">
+      <div className="relative w-full max-w-2xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl">
         {/* Botón cerrar */}
         <button
           onClick={onClose}
@@ -147,7 +154,7 @@ export default function VideoPlayer({ videoUrl, onClose, title }: VideoPlayerPro
         <video
           ref={videoRef}
           src={videoUrl}
-          className="w-full h-full object-cover"
+          className={`w-full h-full ${isPortraitSource ? 'object-contain' : 'object-cover'}`}
           controls
           preload="metadata"
           playsInline
