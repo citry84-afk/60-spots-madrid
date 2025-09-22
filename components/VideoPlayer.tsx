@@ -19,8 +19,39 @@ export default function VideoPlayer({ videoUrl, onClose, title }: VideoPlayerPro
   const [progress, setProgress] = useState(0);
   const [duration, setDuration] = useState(0);
   const [isPortraitSource, setIsPortraitSource] = useState(false);
+  const [useCssRotation, setUseCssRotation] = useState(false);
+  const [viewport, setViewport] = useState<{ w: number; h: number }>({ w: 0, h: 0 });
 
   useEffect(() => {
+    // Intentar bloquear orientación a landscape
+    (async () => {
+      try {
+        // Registrar viewport
+        if (typeof window !== 'undefined') {
+          setViewport({ w: window.innerWidth, h: window.innerHeight });
+          const onResize = () => setViewport({ w: window.innerWidth, h: window.innerHeight });
+          window.addEventListener('resize', onResize);
+          // Limpieza
+          return () => window.removeEventListener('resize', onResize);
+        }
+      } catch {}
+    })();
+
+    (async () => {
+      try {
+        // Algunos navegadores no soportan lock
+        const anyScreen: any = typeof screen !== 'undefined' ? screen : null;
+        if (anyScreen && anyScreen.orientation && anyScreen.orientation.lock) {
+          await anyScreen.orientation.lock('landscape');
+        } else {
+          setUseCssRotation(true);
+        }
+      } catch {
+        // Fallback a rotación por CSS
+        setUseCssRotation(true);
+      }
+    })();
+
     const video = videoRef.current;
     if (!video) return;
 
@@ -136,7 +167,15 @@ export default function VideoPlayer({ videoUrl, onClose, title }: VideoPlayerPro
         if (e.target === e.currentTarget) onClose();
       }}
     >
-      <div className="relative w-full max-w-2xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl">
+      <div
+        className={`relative bg-black rounded-2xl overflow-hidden shadow-2xl ${useCssRotation ? '' : 'w-full max-w-2xl aspect-video'}`}
+        style={useCssRotation ? {
+          width: `${viewport.h}px`,
+          height: `${viewport.w}px`,
+          transform: 'rotate(90deg)',
+          transformOrigin: 'center',
+        } : undefined}
+      >
         {/* Botón cerrar */}
         <button
           onClick={onClose}
@@ -154,7 +193,7 @@ export default function VideoPlayer({ videoUrl, onClose, title }: VideoPlayerPro
         <video
           ref={videoRef}
           src={videoUrl}
-          className={`w-full h-full ${isPortraitSource ? 'object-contain' : 'object-cover'}`}
+          className={`w-full h-full ${isPortraitSource ? 'object-contain' : 'object-contain'}`}
           controls
           preload="metadata"
           playsInline
