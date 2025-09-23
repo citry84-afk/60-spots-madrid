@@ -22,12 +22,21 @@ export default function CitySelector({
 }: CitySelectorProps) {
   const [isOpen, setIsOpen] = useState(false);
 
-  // Hacer scroll hacia arriba cuando se abre la lista
+  // Hacer scroll hacia arriba cuando se abre la lista y bloquear scroll del body
   useEffect(() => {
     if (isOpen) {
-      // Hacer scroll hacia arriba cuando se abre la lista
       window.scrollTo({ top: 0, behavior: 'smooth' });
+      // Bloquear scroll del body
+      document.body.style.overflow = 'hidden';
+    } else {
+      // Restaurar scroll del body
+      document.body.style.overflow = 'unset';
     }
+    
+    // Cleanup al desmontar
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
   }, [isOpen]);
 
   const getCityEmoji = (cityName: string) => {
@@ -132,7 +141,7 @@ export default function CitySelector({
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 z-40"
+              className="fixed inset-0 bg-black/50 z-[60]"
               onClick={() => setIsOpen(false)}
             />
             
@@ -141,7 +150,7 @@ export default function CitySelector({
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -100 }}
               transition={{ duration: 0.4, ease: "easeOut" }}
-              className="fixed top-0 left-0 right-0 z-50 bg-white shadow-2xl max-h-screen overflow-y-auto"
+              className="fixed top-0 left-0 right-0 z-[70] bg-white shadow-2xl max-h-screen overflow-y-auto"
             >
             {/* Header */}
             <div className="p-4 border-b border-white/20">

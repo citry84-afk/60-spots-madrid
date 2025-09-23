@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, MapPin, Clock, Play, User, Baby, Share2, Check, Download, Star, Heart, Sparkles } from 'lucide-react';
 import { POI } from '@/lib/content';
@@ -25,6 +25,16 @@ export default function POIDetail({
   const [copied, setCopied] = useState(false);
   const [showSummary, setShowSummary] = useState(false);
   const [liked, setLiked] = useState(false);
+
+  // Bloquear scroll del body cuando se abre el modal
+  useEffect(() => {
+    document.body.style.overflow = 'hidden';
+    
+    // Cleanup al desmontar
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, []);
 
   const handleShare = async () => {
     const shareUrl = window.location.origin + `/?poi=${poi.id}`;
