@@ -202,16 +202,16 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-aurora overflow-y-auto pb-32">
+    <div className="min-h-screen bg-gradient-aurora">
       {/* Hero Section */}
       <AnimatePresence>
         {showHero && (
-          <motion.div
-            initial={{ opacity: 1 }}
-            exit={{ opacity: 0, y: -100 }}
-            transition={{ duration: 0.5 }}
-            className="flex flex-col items-center justify-start pt-16 pb-8 p-6 relative"
-          >
+        <motion.div
+          initial={{ opacity: 1 }}
+          exit={{ opacity: 0, y: -100 }}
+          transition={{ duration: 0.5 }}
+          className="flex flex-col items-center justify-center min-h-screen p-6 relative"
+        >
             {/* Background Elements */}
             <div className="absolute inset-0 overflow-hidden">
               <motion.div
@@ -319,71 +319,6 @@ export default function Home() {
           )}
         </AnimatePresence>
 
-        {/* Lista de ciudades visible */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="px-6 mt-8"
-        >
-          <div className="glass rounded-3xl p-6 shadow-ios-xl">
-            <div className="flex items-center space-x-2 mb-6">
-              <Sparkles className="w-6 h-6 text-ios-blue" />
-              <h2 className="text-2xl font-bold text-gray-900">Ciudades disponibles</h2>
-            </div>
-            
-            <div className="grid grid-cols-1 gap-4">
-              {cities.map((city, index) => (
-                <motion.button
-                  key={city.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ delay: 0.9 + index * 0.1 }}
-                  whileHover={{ scale: 1.02, y: -2 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => handleCitySelect(city)}
-                  className="w-full p-4 flex items-center space-x-4 glass rounded-2xl shadow-ios text-left hover:shadow-ios-lg transition-all duration-300 group"
-                >
-                  {/* City Image */}
-                  <div className="w-16 h-16 rounded-2xl overflow-hidden shadow-ios relative">
-                    <img
-                      src={city.imageUrl}
-                      alt={city.name}
-                      className="w-full h-full object-cover"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
-                  </div>
-                  
-                  {/* City Info */}
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-2 mb-1">
-                      <h3 className="text-lg font-bold text-gray-900">{city.name}</h3>
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
-                    </div>
-                    <p className="text-sm text-ios-gray mb-2">
-                      {city.pois?.length || 0} lugares increíbles
-                    </p>
-                    <div className="flex items-center space-x-4 text-xs text-ios-gray">
-                      <div className="flex items-center space-x-1">
-                        <Star className="w-4 h-4 text-yellow-500" />
-                        <span>4.9</span>
-                      </div>
-                      <div className="flex items-center space-x-1">
-                        <MapPin className="w-4 h-4 text-ios-blue" />
-                        <span>España</span>
-                      </div>
-                    </div>
-                  </div>
-                  
-                  {/* Arrow */}
-                  <div className="text-ios-gray group-hover:text-ios-blue transition-colors">
-                    <ChevronDown className="w-5 h-5 rotate-[-90deg]" />
-                  </div>
-                </motion.button>
-              ))}
-            </div>
-          </div>
-        </motion.div>
 
       {/* Main App Content */}
       <AnimatePresence>
@@ -393,10 +328,10 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 100 }}
             transition={{ duration: 0.5 }}
-            className="min-h-screen"
+            className="min-h-screen pb-8"
           >
                         {/* Header */}
-                        <div className="p-6 pb-0">
+                        <div className="p-6">
                           {/* AdSense Banner - Temporarily disabled */}
                           {/* <div className="mb-4">
                             <AdSense 
@@ -469,7 +404,7 @@ export default function Home() {
             </div>
 
             {/* Content */}
-            <div className="px-6 pb-32">
+            <div className="px-6 pb-8">
               {nearbyPOIs.length > 0 && (
                 <motion.div
                   initial={{ opacity: 0, y: 30 }}
@@ -484,7 +419,7 @@ export default function Home() {
                       onPOISelect={handlePOISelect}
                     />
                   ) : (
-                    <div className="space-y-4">
+                    <div className="space-y-3">
                       <div className="flex items-center justify-between mb-4">
                         <div>
                           <h3 className="text-2xl font-bold text-white mb-2">

@@ -70,7 +70,7 @@ export default function POIDetail({
         animate={{ y: 0 }}
         exit={{ y: '100%' }}
         transition={{ type: 'spring', damping: 30, stiffness: 300 }}
-        className="w-full bg-white rounded-t-3xl shadow-ios-xl max-h-[90vh] overflow-y-auto relative"
+        className="w-full bg-white rounded-t-3xl shadow-ios-xl h-[95vh] overflow-y-auto relative"
       >
         {/* Header con imagen */}
         <div className="relative h-80">
