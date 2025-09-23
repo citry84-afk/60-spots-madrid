@@ -78,3 +78,17 @@ self.addEventListener('fetch', (event) => {
     );
   }
 });
+
+// Allow clients to forcefully clear all caches (used when stale ads/images persist)
+self.addEventListener('message', (event) => {
+  const data = event.data || {};
+  if (data && data.type === 'NUKE_CACHES') {
+    event.waitUntil(
+      caches.keys().then((keys) => Promise.all(keys.map((k) => caches.delete(k)))).then(async () => {
+        await self.registration.unregister().catch(() => {});
+        const clients = await self.clients.matchAll({ includeUncontrolled: true, type: 'window' });
+        clients.forEach((client) => client.navigate(client.url));
+      })
+    );
+  }
+});

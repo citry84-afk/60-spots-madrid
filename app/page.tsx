@@ -34,6 +34,19 @@ export default function Home() {
 
   // Cargar manifest de contenidos al inicio
   useEffect(() => {
+    // One-time SW cache clear to avoid stale ads/image requests after deployment
+    try {
+      const flagKey = 'cacheClearedV1';
+      if (typeof window !== 'undefined' && !localStorage.getItem(flagKey)) {
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.ready
+            .then((reg) => reg.active?.postMessage({ type: 'NUKE_CACHES' }))
+            .catch(() => {});
+        }
+        localStorage.setItem(flagKey, '1');
+      }
+    } catch {}
+
     const loadContent = async () => {
       try {
         const manifest = await loadContentManifest();
