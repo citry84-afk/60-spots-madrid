@@ -1,5 +1,5 @@
-const STATIC_CACHE = 'static-v3';
-const MEDIA_CACHE = 'media-v2';
+const STATIC_CACHE = 'static-v4';
+const MEDIA_CACHE = 'media-v3';
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
