@@ -13,7 +13,6 @@ import RoutePlanner from '@/components/RoutePlanner';
 import CitySummary from '@/components/CitySummary';
 import { loadContentManifest, getNearbyPOIs, calculateOptimalRoute, City, POI } from '@/lib/content';
 import { MapPin, Play, Star, Heart, Share2, Download, Sparkles, Compass, Globe, ChevronDown } from 'lucide-react';
-import AdSense from '@/components/AdSense';
 
 export default function Home() {
   const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
@@ -332,13 +331,6 @@ export default function Home() {
           >
                         {/* Header */}
                         <div className="p-6">
-                          {/* AdSense Banner - Temporarily disabled */}
-                          {/* <div className="mb-4">
-                            <AdSense 
-                              slot="1234567890" 
-                              className="w-full h-20 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500"
-                            />
-                          </div> */}
                           
                           <motion.div
                             initial={{ opacity: 0, y: -20 }}
@@ -469,13 +461,6 @@ export default function Home() {
                       </motion.div>
                       
                                   <div className="space-y-2">
-                                    {/* AdSense entre POIs - Temporarily disabled */}
-                                    {/* <div className="my-3">
-                                      <AdSense 
-                                        slot="0987654321" 
-                                        className="w-full h-32 bg-gray-100 rounded-lg flex items-center justify-center text-gray-500"
-                                      />
-                                    </div> */}
                                     
                                     {nearbyPOIs.slice(0, 5).map((poi, index) => (
                           <motion.div
