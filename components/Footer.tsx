@@ -73,6 +73,16 @@ export default function Footer() {
                   Granada
                 </Link>
               </li>
+              <li>
+                <Link href="/blog" className="text-white/80 hover:text-white transition-colors">
+                  Blog
+                </Link>
+              </li>
+              <li>
+                <Link href="/categorias" className="text-white/80 hover:text-white transition-colors">
+                  Categorías
+                </Link>
+              </li>
             </ul>
           </div>
 

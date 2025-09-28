@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import SwRegister from '@/components/SwRegister'
+import SchemaMarkup from '@/components/SchemaMarkup'
 
 export const metadata: Metadata = {
   title: '60secondstrip — Descubre el mundo en 60 segundos',
@@ -60,6 +61,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="font-sf-pro antialiased">
+        <SchemaMarkup />
         {children}
         <SwRegister />
       </body>
