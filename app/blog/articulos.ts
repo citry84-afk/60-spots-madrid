@@ -1,0 +1,122 @@
+export const blogArticles = [
+  {
+    id: 'madrid-guia-completa',
+    title: 'Guía Completa de Madrid: Los 20 Lugares Imprescindibles que Debes Conocer',
+    excerpt: 'Descubre los secretos mejor guardados de la capital española. Una guía exhaustiva con los lugares más emblemáticos, curiosidades históricas y consejos de expertos para vivir Madrid como un local.',
+    content: `Madrid, la vibrante capital de España, es una ciudad que combina a la perfección la rica historia de sus calles empedradas con la modernidad de una metrópoli europea de primer nivel...`,
+    author: 'Equipo 60secondstrip',
+    date: '2024-01-15',
+    readTime: '12 min',
+    tags: ['Madrid', 'Turismo', 'Cultura', 'Historia', 'Guía'],
+    image: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1200&h=600&fit=crop&q=80',
+    category: 'turismo'
+  },
+  {
+    id: 'arte-madrid-secretos',
+    title: 'Los Secretos Mejor Guardados del Arte en Madrid: Más Allá del Prado',
+    excerpt: 'Explora los rincones artísticos menos conocidos de Madrid. Desde galerías clandestinas hasta obras maestras ocultas en iglesias y palacios.',
+    content: `Madrid, reconocida mundialmente por el Triángulo del Arte formado por el Prado, el Reina Sofía y el Thyssen, esconde una red de espacios artísticos que van mucho más allá de estos museos icónicos...`,
+    author: 'Equipo 60secondstrip',
+    date: '2024-01-10',
+    readTime: '15 min',
+    tags: ['Arte', 'Museos', 'Cultura', 'Madrid', 'Historia'],
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop&q=80',
+    category: 'cultura'
+  },
+  {
+    id: 'gastronomia-madrid-guia',
+    title: 'Guía Gastronómica de Madrid: De las Tabernas Centenarias a la Vanguardia Culinaria',
+    excerpt: 'Descubre la evolución gastronómica de Madrid a través de sus tabernas históricas, mercados tradicionales y restaurantes de vanguardia que han puesto a la capital en el mapa culinario mundial.',
+    content: `Madrid, capital de España y epicentro de la gastronomía peninsular, ha experimentado una revolución culinaria sin precedentes en las últimas décadas...`,
+    author: 'Equipo 60secondstrip',
+    date: '2024-01-05',
+    readTime: '18 min',
+    tags: ['Gastronomía', 'Madrid', 'Restaurantes', 'Cultura', 'Tradición'],
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=600&fit=crop&q=80',
+    category: 'gastronomia'
+  },
+  {
+    id: 'barcelona-3-dias',
+    title: 'Barcelona en 3 Días: Itinerario Perfecto para Descubrir la Ciudad Condal',
+    excerpt: 'Planifica tu visita a Barcelona con esta guía completa de 3 días. Incluye los lugares imprescindibles, horarios optimizados y consejos prácticos para aprovechar al máximo tu estancia.',
+    content: `Barcelona, la capital de Cataluña, es una ciudad que enamora desde el primer momento. Con su arquitectura modernista, sus playas mediterráneas y su rica cultura, ofrece una experiencia única que combina historia, arte y vida urbana...`,
+    author: 'Equipo 60secondstrip',
+    date: '2024-01-20',
+    readTime: '14 min',
+    tags: ['Barcelona', 'Turismo', 'Itinerario', 'Guía', 'Viajes'],
+    image: 'https://images.unsplash.com/photo-1539037116277-4db20889f2d4?w=1200&h=600&fit=crop&q=80',
+    category: 'turismo'
+  },
+  {
+    id: 'sevilla-culturas',
+    title: 'Sevilla: La Ciudad de las Mil Culturas y su Patrimonio Inmaterial',
+    excerpt: 'Explora la rica herencia cultural de Sevilla, desde su legado árabe hasta el flamenco, pasando por sus tradiciones más arraigadas y su arquitectura única.',
+    content: `Sevilla, capital de Andalucía, es una ciudad que respira historia por cada uno de sus poros. Su posición estratégica en el valle del Guadalquivir la convirtió en un crisol de culturas que ha dejado una huella imborrable...`,
+    author: 'Equipo 60secondstrip',
+    date: '2024-01-18',
+    readTime: '16 min',
+    tags: ['Sevilla', 'Cultura', 'Historia', 'Flamenco', 'Patrimonio'],
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop&q=80',
+    category: 'cultura'
+  },
+  {
+    id: 'granada-alhambra',
+    title: 'La Alhambra de Granada: Una Joya del Arte Islámico en España',
+    excerpt: 'Descubre los secretos de la Alhambra, el palacio nazarí más importante de Europa y uno de los monumentos más visitados del mundo.',
+    content: `La Alhambra de Granada representa la culminación del arte nazarí y uno de los monumentos más excepcionales de la arquitectura islámica occidental. Construida entre los siglos XIII y XIV...`,
+    author: 'Equipo 60secondstrip',
+    date: '2024-01-12',
+    readTime: '13 min',
+    tags: ['Granada', 'Alhambra', 'Arte Islámico', 'Historia', 'Arquitectura'],
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=600&fit=crop&q=80',
+    category: 'historia'
+  },
+  {
+    id: 'fotografia-viajes',
+    title: 'Fotografía de Viajes: Técnicas Profesionales para Capturar Momentos Únicos',
+    excerpt: 'Aprende las mejores técnicas de fotografía de viajes para documentar tus aventuras como un profesional. Desde composición hasta edición.',
+    content: `La fotografía de viajes es un arte que combina la pasión por explorar nuevos lugares con la habilidad de capturar momentos únicos e irrepetibles...`,
+    author: 'Equipo 60secondstrip',
+    date: '2024-01-08',
+    readTime: '11 min',
+    tags: ['Fotografía', 'Viajes', 'Técnicas', 'Consejos', 'Tutorial'],
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop&q=80',
+    category: 'fotografia'
+  },
+  {
+    id: 'camino-santiago',
+    title: 'El Camino de Santiago: Una Ruta Milenaria que Transforma Vidas',
+    excerpt: 'Descubre la magia del Camino de Santiago, una de las rutas de peregrinación más importantes del mundo y una experiencia transformadora.',
+    content: `El Camino de Santiago, también conocido como Camino Francés, es una de las rutas de peregrinación más antiguas y famosas del mundo...`,
+    author: 'Equipo 60secondstrip',
+    date: '2024-01-03',
+    readTime: '17 min',
+    tags: ['Camino de Santiago', 'Peregrinación', 'Historia', 'Espiritualidad', 'Viajes'],
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=600&fit=crop&q=80',
+    category: 'historia'
+  },
+  {
+    id: 'vino-espana',
+    title: 'Vinos de España: Una Guía Completa de las Mejores Denominaciones',
+    excerpt: 'Explora la rica tradición vinícola española, desde Rioja hasta Priorat, pasando por las denominaciones menos conocidas pero igualmente excepcionales.',
+    content: `España es uno de los países con mayor tradición vinícola del mundo, con una historia que se remonta a más de 3,000 años...`,
+    author: 'Equipo 60secondstrip',
+    date: '2024-01-01',
+    readTime: '19 min',
+    tags: ['Vino', 'España', 'Denominaciones', 'Gastronomía', 'Cultura'],
+    image: 'https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=1200&h=600&fit=crop&q=80',
+    category: 'gastronomia'
+  },
+  {
+    id: 'arquitectura-modernista',
+    title: 'Arquitectura Modernista en España: Gaudí y Más Allá',
+    excerpt: 'Descubre el movimiento modernista español, desde las obras maestras de Gaudí hasta los arquitectos menos conocidos que marcaron una época.',
+    content: `El modernismo español, también conocido como Art Nouveau, fue un movimiento artístico que floreció a finales del siglo XIX y principios del XX...`,
+    author: 'Equipo 60secondstrip',
+    date: '2023-12-28',
+    readTime: '15 min',
+    tags: ['Arquitectura', 'Modernismo', 'Gaudí', 'Barcelona', 'Arte'],
+    image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&h=600&fit=crop&q=80',
+    category: 'cultura'
+  }
+];
