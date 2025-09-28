@@ -11,8 +11,9 @@ import CitySelector from '@/components/CitySelector';
 import POIDetail from '@/components/POIDetail';
 import RoutePlanner from '@/components/RoutePlanner';
 import CitySummary from '@/components/CitySummary';
+import Footer from '@/components/Footer';
 import { loadContentManifest, getNearbyPOIs, calculateOptimalRoute, City, POI } from '@/lib/content';
-import { MapPin, Play, Star, Heart, Share2, Download, Sparkles, Compass, Globe, ChevronDown } from 'lucide-react';
+import { MapPin, Play, Star, Heart, Share2, Download, Sparkles, Compass, Globe, ChevronDown, Clock } from 'lucide-react';
 
 export default function Home() {
   const [userLocation, setUserLocation] = useState<[number, number] | null>(null);
@@ -679,6 +680,9 @@ export default function Home() {
           </motion.div>
         )}
       </AnimatePresence>
+
+      {/* Footer */}
+      <Footer />
     </div>
   );
 }
