@@ -3,11 +3,18 @@ import './globals.css'
 import SwRegister from '@/components/SwRegister'
 import SchemaMarkup from '@/components/SchemaMarkup'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import CookieConsent from '@/components/CookieConsent'
 
 export const metadata: Metadata = {
   title: '60secondstrip — Descubre el mundo en 60 segundos',
   description: 'App visual, mobile-first, para descubrir lugares y curiosidades cerca de ti en 60 segundos. Simplicidad como Apple.',
   metadataBase: new URL('https://60secondstrip-app.netlify.app'),
+  alternates: {
+    canonical: '/',
+    languages: {
+      'es-ES': '/',
+    },
+  },
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
@@ -62,6 +69,7 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className="font-sf-pro antialiased">
+        <CookieConsent />
         <GoogleAnalytics />
         <SchemaMarkup />
         {children}

@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { blogArticles } from './blog/articulos'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://60secondstrip-app.netlify.app'
@@ -59,24 +60,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.3,
     },
     // Blog posts
-    {
-      url: `${baseUrl}/blog/madrid-guia-completa`,
-      lastModified: new Date('2024-01-15'),
-      changeFrequency: 'monthly',
+    // Entradas del blog
+    ...blogArticles.map((a) => ({
+      url: `${baseUrl}/blog/${a.id}`,
+      lastModified: new Date(a.date),
+      changeFrequency: 'monthly' as const,
       priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/arte-madrid-secretos`,
-      lastModified: new Date('2024-01-10'),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/blog/gastronomia-madrid-guia`,
-      lastModified: new Date('2024-01-05'),
-      changeFrequency: 'monthly',
-      priority: 0.8,
-    },
+    })),
     // Categorías
     {
       url: `${baseUrl}/categorias/turismo`,
